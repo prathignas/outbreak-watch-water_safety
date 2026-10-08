@@ -30,3 +30,6 @@ npm-debug.log*
 playwright-report/
 test-results/
 frontend/e2e/screenshots/
+node_modules
+cdk.out
+.env

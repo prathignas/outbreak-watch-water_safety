@@ -1,0 +1,39 @@
+{
+  "name": "@outbreak/backend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:ses": "tsx scripts/test-ses.ts",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/db/seed.ts",
+    "db:setup": "tsx scripts/db-setup.ts",
+    "api:local": "tsx scripts/local-api.ts",
+    "detector:once": "tsx scripts/run-detector.ts",
+    "rain:once": "tsx scripts/run-rain.ts",
+    "feed:once": "tsx scripts/run-feed.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1147.0",
+    "@aws-sdk/client-secrets-manager": "^3.690.0",
+    "@aws-sdk/client-ses": "^3.690.0",
+    "@aws-sdk/client-ssm": "^3.690.0",
+    "@outbreak/contract": "*",
+    "@outbreak/detection": "*",
+    "@outbreak/pipeline": "*",
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/pg": "^8.11.10"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./metrics": "./src/metrics.ts",
+    "./package.json": "./package.json"
+  }
+}
