@@ -1,0 +1,14 @@
+{
+  "name": "outbreak-watch",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present"
+  }
+}

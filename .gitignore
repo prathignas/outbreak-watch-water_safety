@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+cdk.out/
+
+# Test coverage
+coverage/
+
+# Secrets: never commit real env files (the example is fine)
+.env
+.env.*
+!.env.example
+
+# OS noise
+.DS_Store
+
+# Local database (npm run dev:all)
+.localdb/
+
+# Claude Code local settings and logs
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Playwright and test output
+playwright-report/
+test-results/
+frontend/e2e/screenshots/
