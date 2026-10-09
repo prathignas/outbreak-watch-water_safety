@@ -13,7 +13,8 @@
     "backend"
   ],
   "scripts": {
-    "test": "npm test --workspaces --if-present"
+    "test": "npm run synth --silent -- --quiet > /dev/null && npm test --workspaces --if-present",
+    "synth": "npm run --workspace=@outbreak/infra synth"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",
