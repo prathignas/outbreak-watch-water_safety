@@ -7,6 +7,13 @@ import { preEnter } from "./helpers";
 type Size = { name: string; width: number; height: number; scale?: number };
 const SIZES: Size[] = [
   { name: "1280x720", width: 1280, height: 720 },
+  // Real browser windows on laptops: the screen minus the taskbar, tabs and address bar.
+  { name: "win-1280x540", width: 1280, height: 540 },
+  { name: "win-1280x600", width: 1280, height: 600 },
+  { name: "win-1366x625", width: 1366, height: 625 },
+  { name: "win-1440x700", width: 1440, height: 700 },
+  { name: "win-1536x730", width: 1536, height: 730 },
+  { name: "win-1920x950", width: 1920, height: 950 },
   { name: "1366x768", width: 1366, height: 768 },
   { name: "1440x900", width: 1440, height: 900 },
   { name: "1536x864", width: 1536, height: 864 },
@@ -146,11 +153,14 @@ async function open(page: Page, which: (typeof PAGES)[number], alertPath: string
   if (which === "demo") {
     await page.goto("/");
     await expect(page.getByRole("heading", { name: "City water health today" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "See the proof" })).toBeAttached({ timeout: 60_000 });
     await page.keyboard.press("Shift+D");
     await expect(page.getByRole("dialog", { name: "Demo controls" })).toBeVisible();
   } else {
     await page.goto({ home: "/", map: "/map", alert: alertPath, proof: "/proof", data: "/data", report: "/report" }[which]);
     await expect(page.locator("main h1").first()).toBeVisible();
+    // Home: wait until every tile has its data, so a clipped tile is measured with real content.
+    if (which === "home") await expect(page.getByRole("link", { name: "See the proof" })).toBeAttached({ timeout: 60_000 });
   }
   await settle(page);
 }
@@ -182,7 +192,7 @@ for (const size of SIZES) {
             ["no overlapping cards", m.overlaps.length === 0, m.overlaps.join(", ")],
             ["content centred, width capped", m.centred.ok, m.centred.detail],
           ];
-          if (which === "home" && size.width >= 1366 && size.height >= 768) checks.push(["Home fits one screen", !m.mainVScroll && !m.pageVScroll]);
+          if (which === "home" && (size.width >= 1280 || size.name.startsWith("win-")) && !size.name.startsWith("tablet")) checks.push(["Home fits one screen", !m.mainVScroll && !m.pageVScroll]);
           if (which === "alert" && size.width >= 1280) checks.push(["alert columns side by side", !!m.columns?.sideBySide]);
           for (const [name, ok, detail] of checks) {
             console.log(`${ok ? "PASS" : "FAIL"}  ${size.name} ${theme} ${which}: ${name}${!ok && detail ? ` (${detail})` : ""}`);

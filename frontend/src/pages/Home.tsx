@@ -61,7 +61,7 @@ export function HomePage() {
   return (
     <>
       <PageHeader brand><HonestyPill /></PageHeader>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:min-h-0 xl:flex-1 xl:grid-cols-12 xl:grid-rows-[minmax(0,1fr)_minmax(0,1fr)] xl:gap-[min(2rem,2.8vh)]">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:min-h-0 xl:flex-1 xl:grid-cols-12 xl:grid-rows-[auto_minmax(0,1fr)] xl:gap-[min(2rem,2.8vh)]">
         <SoftCard size="lg" touch={false} className="flex flex-col items-center gap-3 p-6 text-center md:col-span-2 xl:col-span-6 xl:row-span-2 xl:min-h-0 xl:justify-center xl:overflow-hidden xl:p-[min(2rem,2.6vh)]" aria-labelledby="health-h">
           <h2 id="health-h" className="text-2xl font-bold">City water health today</h2>
           <p className="text-muted">Share of wards calm. Relative risk from simulated health data.</p>
@@ -141,7 +141,7 @@ export function HomePage() {
             {!backtest.data || !water?.detectionRate ? <LoadingBlock label="Loading results" /> : (
               <>
                 <div className="flex items-center gap-4">
-                  <div className="hidden sm:block">
+                  <div className="hidden sm:block [@media(max-height:620px)]:hidden">
                     <Ring value={water.detectionRate.median} size={88} stroke={10} label={`${pct(water.detectionRate.median)} of water outbreaks found`}>
                       <span className="font-display text-lg font-bold">{pct(water.detectionRate.median)}</span>
                     </Ring>

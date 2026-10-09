@@ -28,7 +28,7 @@
    * and browser zoom just change the viewport size in CSS px). Phones keep 16px; 4K reaches 38.4px; the cap is 40px. */
   *, *::before, *::after { box-sizing: border-box; }
   html { background: var(--bg); font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-synthesis: none; }
-  @media (min-width: 768px) { html { font-size: clamp(12px, min(1.1111vw, 1.7778vh), 40px); } }
+  @media (min-width: 768px) { html { font-size: clamp(11px, min(1.1111vw, 1.7778vh), 40px); } }
   body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1rem; line-height: 1.625rem; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, .font-display { font-family: var(--font-display); }
   .tabular { font-variant-numeric: tabular-nums; }
