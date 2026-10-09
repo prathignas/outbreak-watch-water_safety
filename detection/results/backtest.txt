@@ -1,0 +1,225 @@
+FINAL BACKTEST: real city (243 wards), 20 seeds (42-61)
+test years 2024-2025, settings locked on 2022-2023 only, budgets 1 and 0.25 false-alarm episodes per ward-year
+matching rule v2: detected at the first alert-day in an affected ward or a neighbour, from true start to true end + grace; false alarm = an episode with no matching alert-day
+values: median [10th-90th percentile] across seeds; 'outside wave' = local outbreaks not touching the seasonal wave
+
+=== BUDGET 1 / EASY ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  4.250 [3.000-4.500]     1.02 [0.84-1.11]         1.09 [0.88-1.17]
+  cusum      6.000 [5.450-6.500]     0.98 [0.91-1.03]         1.00 [0.93-1.06]
+  bayes      0.112 [0.112-0.140]     0.75 [0.69-0.79]         0.76 [0.70-0.80]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  100% [100-100]      0.5 [0.0-1.0]
+  water (all)         cusum           8  100% [100-100]      1.0 [0.0-1.5]
+  water (all)         bayes           8  100% [100-100]      0.5 [0.0-1.1]
+  water (outside wave) threshold       5  100% [100-100]      1.0 [0.0-1.0]
+  water (outside wave) cusum           5  100% [100-100]      1.0 [1.0-2.0]
+  water (outside wave) bayes           5  100% [100-100]      1.0 [0.5-1.6]
+  food (all)          threshold       8  100% [100-100]      1.0 [0.0-1.0]
+  food (all)          cusum           8  100% [100-100]      0.8 [0.5-1.0]
+  food (all)          bayes           8  100% [100-100]      0.8 [0.0-1.1]
+  food (outside wave) threshold       6  100% [100-100]      1.0 [0.0-1.0]
+  food (outside wave) cusum           6  100% [100-100]      1.0 [0.9-1.1]
+  food (outside wave) bayes           6  100% [100-100]      1.0 [0.0-2.0]
+  p2p (all)           threshold       6  100% [100-100]      2.3 [0.5-4.1]
+  p2p (all)           cusum           6  100% [100-100]      2.5 [1.0-3.1]
+  p2p (all)           bayes           6  100% [98-100]       1.5 [0.0-4.0]
+  p2p (outside wave)  threshold       5  100% [100-100]      2.5 [0.5-4.0]
+  p2p (outside wave)  cusum           5  100% [100-100]      3.0 [1.0-3.1]
+  p2p (outside wave)  bayes           5  100% [100-100]      2.5 [0.0-4.0]
+  seasonal wave*      threshold       2  100% [100-100]      0.0 [0.0-0.0]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.0]
+  seasonal wave*      bayes           2  100% [100-100]      0.0 [0.0-0.0]
+
+=== BUDGET 1 / REALISTIC ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  4.250 [3.000-4.500]     1.05 [0.96-1.15]         1.15 [1.08-1.27]
+  cusum      6.500 [6.000-7.000]     0.86 [0.83-0.92]         0.91 [0.88-0.97]
+  bayes      0.166 [0.137-0.170]     0.77 [0.73-0.81]         0.81 [0.77-0.86]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  100% [100-100]      0.3 [0.0-1.6]
+  water (all)         cusum           8  100% [100-100]      0.0 [0.0-1.0]
+  water (all)         bayes           8  100% [100-100]      0.0 [0.0-1.0]
+  water (outside wave) threshold       5  100% [100-100]      1.0 [0.0-2.0]
+  water (outside wave) cusum           5  100% [100-100]      0.3 [0.0-2.0]
+  water (outside wave) bayes           5  100% [100-100]      0.0 [0.0-1.1]
+  food (all)          threshold       8  100% [88-100]       1.0 [0.5-1.6]
+  food (all)          cusum           8  100% [100-100]      1.0 [0.5-1.6]
+  food (all)          bayes           8  100% [100-100]      0.5 [0.0-1.6]
+  food (outside wave) threshold       6  100% [80-100]       1.0 [0.5-1.6]
+  food (outside wave) cusum           6  100% [100-100]      1.0 [1.0-2.0]
+  food (outside wave) bayes           6  100% [100-100]      1.0 [0.0-2.0]
+  p2p (all)           threshold       6  100% [100-100]      1.8 [0.5-6.0]
+  p2p (all)           cusum           6  100% [100-100]      1.0 [0.5-3.5]
+  p2p (all)           bayes           6  100% [100-100]      2.0 [0.0-4.7]
+  p2p (outside wave)  threshold       5  100% [100-100]      2.0 [0.9-6.1]
+  p2p (outside wave)  cusum           5  100% [100-100]      1.3 [0.9-4.1]
+  p2p (outside wave)  bayes           5  100% [100-100]      2.0 [0.0-6.1]
+  seasonal wave*      threshold       2  100% [100-100]      0.0 [0.0-0.0]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.0]
+  seasonal wave*      bayes           2  100% [100-100]      0.0 [0.0-0.0]
+
+=== BUDGET 1 / HARD ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  2.375 [2.250-4.000]     1.03 [0.87-1.13]         1.18 [1.09-1.30]
+  cusum      8.500 [7.950-10.000]    0.84 [0.78-0.94]         0.92 [0.84-1.02]
+  bayes      0.240 [0.201-0.334]     0.82 [0.78-0.86]         0.90 [0.84-0.94]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  100% [99-100]       0.8 [0.0-3.2]
+  water (all)         cusum           8  100% [100-100]      0.0 [0.0-1.1]
+  water (all)         bayes           8  100% [100-100]      0.0 [0.0-0.0]
+  water (outside wave) threshold       5  100% [100-100]      1.0 [0.0-5.0]
+  water (outside wave) cusum           5  100% [100-100]      0.5 [0.0-2.6]
+  water (outside wave) bayes           5  100% [100-100]      0.0 [0.0-1.1]
+  food (all)          threshold       8  94% [74-100]        1.0 [0.0-3.6]
+  food (all)          cusum           8  100% [75-100]       1.0 [0.0-3.0]
+  food (all)          bayes           8  94% [75-100]        0.5 [0.0-2.6]
+  food (outside wave) threshold       6  100% [66-100]       2.0 [0.0-4.6]
+  food (outside wave) cusum           6  100% [66-100]       2.0 [1.0-3.6]
+  food (outside wave) bayes           6  93% [67-100]        1.0 [0.0-3.0]
+  p2p (all)           threshold       6  100% [83-100]       2.0 [0.5-10.1]
+  p2p (all)           cusum           6  100% [100-100]      2.0 [0.5-4.3]
+  p2p (all)           bayes           6  100% [100-100]      2.8 [0.0-7.1]
+  p2p (outside wave)  threshold       5  100% [98-100]       2.0 [1.0-10.3]
+  p2p (outside wave)  cusum           5  100% [100-100]      2.3 [0.0-9.1]
+  p2p (outside wave)  bayes           5  100% [100-100]      3.8 [0.0-7.1]
+  seasonal wave*      threshold       2  100% [100-100]      0.0 [0.0-1.0]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.0]
+  seasonal wave*      bayes           2  100% [100-100]      0.0 [0.0-0.0]
+
+=== BUDGET 0.25 / EASY ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  5.500 [2.475-5.750]     0.23 [0.19-0.28]         0.27 [0.24-0.30]
+  cusum      12.500 [11.500-14.650]  0.22 [0.14-0.32]         0.25 [0.16-0.34]
+  bayes      0.443 [0.443-0.506]     0.20 [0.15-0.29]         0.21 [0.16-0.29]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  100% [100-100]      1.0 [0.0-1.6]
+  water (all)         cusum           8  100% [100-100]      2.0 [1.0-2.5]
+  water (all)         bayes           8  100% [100-100]      1.3 [0.0-2.0]
+  water (outside wave) threshold       5  100% [100-100]      1.0 [0.0-2.0]
+  water (outside wave) cusum           5  100% [100-100]      2.0 [2.0-2.6]
+  water (outside wave) bayes           5  100% [100-100]      1.5 [1.0-2.0]
+  food (all)          threshold       8  100% [100-100]      1.0 [0.0-1.6]
+  food (all)          cusum           8  100% [100-100]      1.5 [1.0-2.0]
+  food (all)          bayes           8  100% [100-100]      1.5 [1.0-2.0]
+  food (outside wave) threshold       6  100% [100-100]      1.0 [0.0-2.0]
+  food (outside wave) cusum           6  100% [100-100]      2.0 [1.0-2.0]
+  food (outside wave) bayes           6  100% [100-100]      1.5 [1.0-2.0]
+  p2p (all)           threshold       6  100% [83-100]       4.0 [0.0-6.5]
+  p2p (all)           cusum           6  100% [98-100]       5.0 [3.5-6.1]
+  p2p (all)           bayes           6  100% [83-100]       4.8 [3.5-6.0]
+  p2p (outside wave)  threshold       5  100% [98-100]       4.0 [0.0-6.1]
+  p2p (outside wave)  cusum           5  100% [100-100]      5.0 [4.5-6.0]
+  p2p (outside wave)  bayes           5  100% [100-100]      5.0 [4.0-6.0]
+  seasonal wave*      threshold       2  100% [100-100]      0.8 [0.0-2.0]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.5]
+  seasonal wave*      bayes           2  100% [100-100]      0.0 [0.0-1.0]
+
+=== BUDGET 0.25 / REALISTIC ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  6.000 [2.250-6.250]     0.22 [0.20-0.26]         0.36 [0.29-0.44]
+  cusum      16.500 [15.450-18.550]  0.23 [0.13-0.33]         0.28 [0.16-0.37]
+  bayes      0.715 [0.666-0.715]     0.24 [0.19-0.27]         0.28 [0.23-0.31]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  100% [100-100]      1.8 [0.0-2.5]
+  water (all)         cusum           8  100% [100-100]      2.0 [1.5-3.1]
+  water (all)         bayes           8  100% [100-100]      1.5 [0.0-3.0]
+  water (outside wave) threshold       5  100% [100-100]      2.0 [0.0-3.0]
+  water (outside wave) cusum           5  100% [100-100]      3.0 [2.0-4.0]
+  water (outside wave) bayes           5  100% [100-100]      2.5 [1.5-3.0]
+  food (all)          threshold       8  88% [50-100]        1.3 [0.0-3.0]
+  food (all)          cusum           8  88% [63-100]        3.0 [2.0-4.0]
+  food (all)          bayes           8  88% [75-100]        2.0 [1.5-3.0]
+  food (outside wave) threshold       6  87% [43-100]        1.5 [0.0-3.0]
+  food (outside wave) cusum           6  82% [62-100]        3.5 [2.0-4.1]
+  food (outside wave) bayes           6  86% [75-100]        2.8 [2.0-4.1]
+  p2p (all)           threshold       6  83% [32-100]        5.8 [0.0-12.2]
+  p2p (all)           cusum           6  100% [83-100]       8.0 [5.8-9.1]
+  p2p (all)           bayes           6  83% [65-100]        7.5 [6.0-9.0]
+  p2p (outside wave)  threshold       5  78% [38-100]        7.5 [0.0-14.1]
+  p2p (outside wave)  cusum           5  100% [100-100]      8.0 [7.0-9.1]
+  p2p (outside wave)  bayes           5  100% [66-100]       7.5 [5.9-9.0]
+  seasonal wave*      threshold       2  100% [100-100]      0.3 [0.0-2.5]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.6]
+  seasonal wave*      bayes           2  100% [100-100]      0.8 [0.0-2.5]
+
+=== BUDGET 0.25 / HARD ===
+  method     locked setting          false alarms/ward-yr     false alarms/ward-yr
+                                     (wave = outbreak)        (wave excluded)
+  threshold  6.500 [6.225-6.750]     0.22 [0.19-0.27]         0.36 [0.30-0.43]
+  cusum      22.000 [4.000-24.050]   0.27 [0.15-0.34]         0.37 [0.30-0.44]
+  bayes      0.876 [0.863-0.888]     0.26 [0.24-0.31]         0.39 [0.32-0.50]
+  cause               method     n/seed  detected            median delay (days)
+  water (all)         threshold       8  63% [49-88]         3.0 [0.5-7.0]
+  water (all)         cusum           8  100% [100-100]      3.8 [0.0-6.1]
+  water (all)         bayes           8  100% [99-100]       2.5 [0.0-5.1]
+  water (outside wave) threshold       5  50% [37-84]         3.0 [1.5-7.6]
+  water (outside wave) cusum           5  100% [100-100]      5.5 [0.0-7.0]
+  water (outside wave) bayes           5  100% [98-100]       4.0 [3.0-6.0]
+  food (all)          threshold       8  25% [13-38]         4.0 [1.4-7.0]
+  food (all)          cusum           8  56% [38-100]        2.8 [0.0-6.1]
+  food (all)          bayes           8  50% [13-63]         3.0 [1.4-5.6]
+  food (outside wave) threshold       6  17% [0-29]          5.3 [1.0-8.5]
+  food (outside wave) cusum           6  50% [0-100]         4.5 [0.6-9.0]
+  food (outside wave) bayes           6  40% [0-51]          5.0 [0.9-7.4]
+  p2p (all)           threshold       6  33% [17-83]         13.0 [4.6-20.5]
+  p2p (all)           cusum           6  83% [48-100]        10.3 [0.0-15.2]
+  p2p (all)           bayes           6  67% [33-83]         8.3 [5.1-11.8]
+  p2p (outside wave)  threshold       5  29% [0-82]          12.0 [4.6-24.4]
+  p2p (outside wave)  cusum           5  78% [32-100]        12.0 [0.0-18.0]
+  p2p (outside wave)  bayes           5  67% [38-100]        9.8 [2.4-11.5]
+  seasonal wave*      threshold       2  100% [100-100]      6.5 [2.4-9.0]
+  seasonal wave*      cusum           2  100% [100-100]      0.0 [0.0-0.6]
+  seasonal wave*      bayes           2  100% [100-100]      1.5 [0.0-5.5]
+
+* seasonal wave = the city-wide wave, reported separately.
+
+WHERE FUSION DOES NOT HELP (43):
+  - fusion does not help here: water, easy, budget 1: threshold detects 100% (median delay 0.5 d, false alarms 1.02/ward-yr) vs bayes 100% (median delay 0.5 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: water (outside the wave), easy, budget 1: threshold detects 100% (median delay 1.0 d, false alarms 1.02/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: water (outside the wave), easy, budget 1: cusum detects 100% (median delay 1.0 d, false alarms 0.98/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: food, easy, budget 1: cusum detects 100% (median delay 0.8 d, false alarms 0.98/ward-yr) vs bayes 100% (median delay 0.8 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: food (outside the wave), easy, budget 1: threshold detects 100% (median delay 1.0 d, false alarms 1.02/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: food (outside the wave), easy, budget 1: cusum detects 100% (median delay 1.0 d, false alarms 0.98/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: p2p (outside the wave), easy, budget 1: threshold detects 100% (median delay 2.5 d, false alarms 1.02/ward-yr) vs bayes 100% (median delay 2.5 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: seasonal, easy, budget 1: threshold detects 100% (median delay 0.0 d, false alarms 1.02/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: seasonal, easy, budget 1: cusum detects 100% (median delay 0.0 d, false alarms 0.98/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.75/ward-yr)
+  - fusion does not help here: water, easy, budget 0.25: threshold detects 100% (median delay 1.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 1.3 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: water (outside the wave), easy, budget 0.25: threshold detects 100% (median delay 1.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 1.5 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: food, easy, budget 0.25: threshold detects 100% (median delay 1.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 1.5 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: food, easy, budget 0.25: cusum detects 100% (median delay 1.5 d, false alarms 0.22/ward-yr) vs bayes 100% (median delay 1.5 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: food (outside the wave), easy, budget 0.25: threshold detects 100% (median delay 1.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 1.5 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: p2p, easy, budget 0.25: threshold detects 100% (median delay 4.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 4.8 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: p2p (outside the wave), easy, budget 0.25: threshold detects 100% (median delay 4.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 5.0 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: p2p (outside the wave), easy, budget 0.25: cusum detects 100% (median delay 5.0 d, false alarms 0.22/ward-yr) vs bayes 100% (median delay 5.0 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: seasonal, easy, budget 0.25: cusum detects 100% (median delay 0.0 d, false alarms 0.22/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.20/ward-yr)
+  - fusion does not help here: water, realistic, budget 1: cusum detects 100% (median delay 0.0 d, false alarms 0.86/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: food (outside the wave), realistic, budget 1: threshold detects 100% (median delay 1.0 d, false alarms 1.05/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: food (outside the wave), realistic, budget 1: cusum detects 100% (median delay 1.0 d, false alarms 0.86/ward-yr) vs bayes 100% (median delay 1.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: p2p, realistic, budget 1: threshold detects 100% (median delay 1.8 d, false alarms 1.05/ward-yr) vs bayes 100% (median delay 2.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: p2p, realistic, budget 1: cusum detects 100% (median delay 1.0 d, false alarms 0.86/ward-yr) vs bayes 100% (median delay 2.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: p2p (outside the wave), realistic, budget 1: threshold detects 100% (median delay 2.0 d, false alarms 1.05/ward-yr) vs bayes 100% (median delay 2.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: p2p (outside the wave), realistic, budget 1: cusum detects 100% (median delay 1.3 d, false alarms 0.86/ward-yr) vs bayes 100% (median delay 2.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: seasonal, realistic, budget 1: threshold detects 100% (median delay 0.0 d, false alarms 1.05/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: seasonal, realistic, budget 1: cusum detects 100% (median delay 0.0 d, false alarms 0.86/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.77/ward-yr)
+  - fusion does not help here: water (outside the wave), realistic, budget 0.25: threshold detects 100% (median delay 2.0 d, false alarms 0.22/ward-yr) vs bayes 100% (median delay 2.5 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: food, realistic, budget 0.25: threshold detects 88% (median delay 1.3 d, false alarms 0.22/ward-yr) vs bayes 88% (median delay 2.0 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: food (outside the wave), realistic, budget 0.25: threshold detects 87% (median delay 1.5 d, false alarms 0.22/ward-yr) vs bayes 86% (median delay 2.8 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: p2p, realistic, budget 0.25: threshold detects 83% (median delay 5.8 d, false alarms 0.22/ward-yr) vs bayes 83% (median delay 7.5 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: seasonal, realistic, budget 0.25: threshold detects 100% (median delay 0.3 d, false alarms 0.22/ward-yr) vs bayes 100% (median delay 0.8 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: seasonal, realistic, budget 0.25: cusum detects 100% (median delay 0.0 d, false alarms 0.23/ward-yr) vs bayes 100% (median delay 0.8 d, false alarms 0.24/ward-yr)
+  - fusion does not help here: water, hard, budget 1: cusum detects 100% (median delay 0.0 d, false alarms 0.84/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: p2p, hard, budget 1: threshold detects 100% (median delay 2.0 d, false alarms 1.03/ward-yr) vs bayes 100% (median delay 2.8 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: p2p, hard, budget 1: cusum detects 100% (median delay 2.0 d, false alarms 0.84/ward-yr) vs bayes 100% (median delay 2.8 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: p2p (outside the wave), hard, budget 1: threshold detects 100% (median delay 2.0 d, false alarms 1.03/ward-yr) vs bayes 100% (median delay 3.8 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: p2p (outside the wave), hard, budget 1: cusum detects 100% (median delay 2.3 d, false alarms 0.84/ward-yr) vs bayes 100% (median delay 3.8 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: seasonal, hard, budget 1: threshold detects 100% (median delay 0.0 d, false alarms 1.03/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: seasonal, hard, budget 1: cusum detects 100% (median delay 0.0 d, false alarms 0.84/ward-yr) vs bayes 100% (median delay 0.0 d, false alarms 0.82/ward-yr)
+  - fusion does not help here: food, hard, budget 0.25: cusum detects 56% (median delay 2.8 d, false alarms 0.27/ward-yr) vs bayes 50% (median delay 3.0 d, false alarms 0.26/ward-yr)
+  - fusion does not help here: food (outside the wave), hard, budget 0.25: cusum detects 50% (median delay 4.5 d, false alarms 0.27/ward-yr) vs bayes 40% (median delay 5.0 d, false alarms 0.26/ward-yr)
+  - fusion does not help here: seasonal, hard, budget 0.25: cusum detects 100% (median delay 0.0 d, false alarms 0.27/ward-yr) vs bayes 100% (median delay 1.5 d, false alarms 0.26/ward-yr)

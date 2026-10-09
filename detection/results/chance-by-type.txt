@@ -1,0 +1,20 @@
+CHANCE LEVEL PER OUTBREAK TYPE (phantom detection rate, median [10th-90th] over 20 seeds)
+budget  difficulty  method      water              food               p2p                seasonal
+1       easy        threshold   88% [61-100]       81% [63-100]       100% [67-100]      not computed      
+1       easy        cusum       75% [25-88]        81% [63-89]        83% [67-100]       not computed      
+1       easy        bayes       50% [36-75]        75% [49-88]        83% [50-100]       not computed      
+1       realistic   threshold   88% [75-100]       81% [61-100]       100% [82-100]      not computed      
+1       realistic   cusum       81% [50-89]        88% [63-100]       100% [67-100]      not computed      
+1       realistic   bayes       75% [61-88]        75% [63-89]        100% [82-100]      not computed      
+1       hard        threshold   100% [86-100]      100% [74-100]      100% [98-100]      not computed      
+1       hard        cusum       75% [50-89]        88% [60-100]       100% [67-100]      not computed      
+1       hard        bayes       88% [50-89]        81% [74-100]       100% [83-100]      not computed      
+0.25    easy        threshold   19% [0-100]        25% [11-100]       50% [17-100]       not computed      
+0.25    easy        cusum       13% [0-39]         38% [13-50]        17% [0-50]         not computed      
+0.25    easy        bayes       13% [0-50]         25% [0-38]         33% [17-67]        not computed      
+0.25    realistic   threshold   31% [0-100]        25% [0-100]        50% [17-100]       not computed      
+0.25    realistic   cusum       13% [0-38]         19% [0-50]         33% [15-52]        not computed      
+0.25    realistic   bayes       13% [11-38]        25% [11-39]        33% [17-50]        not computed      
+0.25    hard        threshold   38% [11-39]        13% [0-39]         33% [15-50]        not computed      
+0.25    hard        cusum       25% [11-100]       25% [11-100]       42% [0-100]        not computed      
+0.25    hard        bayes       25% [13-39]        25% [0-50]         33% [17-67]        not computed      

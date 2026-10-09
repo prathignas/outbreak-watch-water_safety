@@ -1,0 +1,87 @@
+FINAL CAUSE CLASSIFIER EVALUATION (triage hint): real city, 20 seeds, Bayes detector
+Bayes setting calibrated on tuning years 2022-2023 only (per budget); test years 2024-2025 only; first matching alert-day per outbreak (backtest rule v2); classifier settings fixed beforehand
+cell = correct / classified (pooled over seeds) = %, [10th-90th percentile of per-seed accuracy]; missed = detector never found it
+
+=== BUDGET 1 / EASY ===
+  cause      at first alert                    3 days after first alert          missed
+  water      56/160 = 35% [24-63]              105/160 = 66% [49-100]            0
+  food       94/160 = 59% [36-76]              91/160 = 57% [36-88]              0
+  p2p        0/118 = 0% [0-0]                  2/118 = 2% [0-2]                  2
+  seasonal   20/40 = 50% [0-100]               36/40 = 90% [50-100]              0
+  all        170/478 = 36% [25-46]             234/478 = 49% [33-63]             2
+  water outbreaks whose true zone was named: 33% at first alert, 61% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                             56     36      0     39     29      0
+    food                                               4     94      0     31     31      0
+    p2p                                                4     72      0     18     24      2
+    seasonal                                           3      6      0     20     11      0
+
+=== BUDGET 1 / REALISTIC ===
+  cause      at first alert                    3 days after first alert          missed
+  water      17/160 = 11% [0-26]               46/160 = 29% [13-51]              0
+  food       92/159 = 58% [36-76]              77/159 = 48% [25-64]              1
+  p2p        0/119 = 0% [0-0]                  2/119 = 2% [0-2]                  1
+  seasonal   19/40 = 48% [0-100]               26/40 = 65% [50-100]              0
+  all        128/478 = 27% [20-34]             151/478 = 32% [25-42]             2
+  water outbreaks whose true zone was named: 13% at first alert, 43% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                             17     33      0     81     29      0
+    food                                               0     92      0     40     27      1
+    p2p                                                0     59      0     31     29      1
+    seasonal                                           3      5      0     19     13      0
+
+=== BUDGET 1 / HARD ===
+  cause      at first alert                    3 days after first alert          missed
+  water      3/160 = 2% [0-13]                 11/160 = 7% [0-13]                0
+  food       75/146 = 51% [25-76]              67/146 = 46% [29-67]              14
+  p2p        0/120 = 0% [0-0]                  1/120 = 1% [0-0]                  0
+  seasonal   7/40 = 18% [0-50]                 12/40 = 30% [0-50]                0
+  all        85/466 = 18% [12-25]              91/466 = 20% [13-26]              14
+  water outbreaks whose true zone was named: 11% at first alert, 26% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                              3     18      0    122     17      0
+    food                                               0     75      0     38     33     14
+    p2p                                                2     48      0     31     39      0
+    seasonal                                           1     11      0      7     21      0
+
+=== BUDGET 0.25 / EASY ===
+  cause      at first alert                    3 days after first alert          missed
+  water      57/160 = 36% [13-63]              124/160 = 78% [49-100]            0
+  food       134/160 = 84% [63-100]            123/160 = 77% [50-100]            0
+  p2p        1/116 = 1% [0-0]                  28/116 = 24% [0-41]               4
+  seasonal   8/40 = 20% [0-50]                 36/40 = 90% [50-100]              0
+  all        200/476 = 42% [29-52]             311/476 = 65% [53-79]             4
+  water outbreaks whose true zone was named: 36% at first alert, 73% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                             57     47      1     35     20      0
+    food                                               0    134      0     21      5      0
+    p2p                                                3     76      1      9     27      4
+    seasonal                                           1     12      0      8     19      0
+
+=== BUDGET 0.25 / REALISTIC ===
+  cause      at first alert                    3 days after first alert          missed
+  water      34/160 = 21% [11-50]              75/160 = 47% [25-75]              0
+  food       117/139 = 84% [71-100]            108/139 = 78% [62-89]             21
+  p2p        10/103 = 10% [0-33]               13/103 = 13% [0-41]               17
+  seasonal   8/40 = 20% [0-50]                 24/40 = 60% [45-100]              0
+  all        169/442 = 38% [26-50]             220/442 = 50% [43-58]             38
+  water outbreaks whose true zone was named: 23% at first alert, 60% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                             34     49      1     52     24      0
+    food                                               0    117      0     19      3     21
+    p2p                                                0     59     10     19     15     17
+    seasonal                                           1     15      0      8     16      0
+
+=== BUDGET 0.25 / HARD ===
+  cause      at first alert                    3 days after first alert          missed
+  water      7/158 = 4% [0-15]                 27/158 = 17% [0-38]               2
+  food       35/73 = 48% [0-76]                41/73 = 56% [0-100]               87
+  p2p        1/76 = 1% [0-0]                   4/76 = 5% [0-21]                  44
+  seasonal   7/40 = 18% [0-50]                 14/40 = 35% [0-55]                0
+  all        50/347 = 14% [5-25]               86/347 = 25% [14-35]              133
+  water outbreaks whose true zone was named: 14% at first alert, 40% 3 days later
+  confusion at first alert (true \ predicted):    water   food    p2p  seasonal unknown  missed
+    water                                              7     53      1     69     28      2
+    food                                               1     35      0     26     11     87
+    p2p                                                1     22      1     32     20     44
+    seasonal                                           1     21      0      7     11      0
