@@ -1,0 +1,20 @@
+warning: in the working copy of 'backend/src/db/client.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/migrate.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/migrations/001_initial_schema.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/migrations/002_contract_v2.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/migrations/003_complaint_events.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/migrations/004_demo_outbreaks.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/alertEventRepository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/alertRepository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/index.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/signalRepository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/wardRepository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repositories/zoneRepository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/repository.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/seed.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/setup.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/spatial.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/db/types.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/src/index.ts', LF will be replaced by CRLF the next time Git touches it
+ backend/src/index.ts | 17 [32m+++++++++++++++++[m
+ 1 file changed, 17 insertions(+)
