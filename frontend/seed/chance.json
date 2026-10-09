@@ -1,0 +1,1053 @@
+{
+ "status": "DIAGNOSTIC",
+ "city": "real",
+ "seeds": 5,
+ "summary": [
+  {
+   "budget": 1,
+   "difficulty": "easy",
+   "method": "threshold",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6818181818181818,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "budget": 1,
+   "difficulty": "easy",
+   "method": "cusum",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6818181818181818,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "budget": 1,
+   "difficulty": "easy",
+   "method": "bayes",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantomDetected": 0.5909090909090909
+  },
+  {
+   "budget": 1,
+   "difficulty": "realistic",
+   "method": "threshold",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantomDetected": 1
+  },
+  {
+   "budget": 1,
+   "difficulty": "realistic",
+   "method": "cusum",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantomDetected": 0.7727272727272727
+  },
+  {
+   "budget": 1,
+   "difficulty": "realistic",
+   "method": "bayes",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "budget": 1,
+   "difficulty": "hard",
+   "method": "threshold",
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantomDetected": 1
+  },
+  {
+   "budget": 1,
+   "difficulty": "hard",
+   "method": "cusum",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "budget": 1,
+   "difficulty": "hard",
+   "method": "bayes",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "easy",
+   "method": "threshold",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "easy",
+   "method": "cusum",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "easy",
+   "method": "bayes",
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "realistic",
+   "method": "threshold",
+   "realDetected": 0.7727272727272727,
+   "realDetectedByDay1": 0.18181818181818182,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "realistic",
+   "method": "cusum",
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "realistic",
+   "method": "bayes",
+   "realDetected": 0.9090909090909091,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "hard",
+   "method": "threshold",
+   "realDetected": 0.4090909090909091,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "hard",
+   "method": "cusum",
+   "realDetected": 0.7727272727272727,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "budget": 0.25,
+   "difficulty": "hard",
+   "method": "bayes",
+   "realDetected": 0.6818181818181818,
+   "realDetectedByDay1": 0.22727272727272727,
+   "phantomDetected": 0.2727272727272727
+  }
+ ],
+ "rows": [
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.45454545454545453,
+   "phantoms": 22,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.7727272727272727
+  },
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0
+  },
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 0.5909090909090909
+  },
+  {
+   "difficulty": "easy",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.45454545454545453,
+   "phantoms": 22,
+   "phantomDetected": 0.09090909090909091
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.9090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.7727272727272727
+  },
+  {
+   "difficulty": "easy",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6818181818181818,
+   "phantoms": 22,
+   "phantomDetected": 0.7272727272727273
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.09090909090909091
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.45454545454545453,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.8181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "easy",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.4090909090909091
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 1,
+   "phantoms": 22,
+   "phantomDetected": 0.9090909090909091
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.5909090909090909
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.5909090909090909
+  },
+  {
+   "difficulty": "easy",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 1,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6818181818181818,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.4090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantoms": 22,
+   "phantomDetected": 0.5454545454545454
+  },
+  {
+   "difficulty": "easy",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.8636363636363636,
+   "phantoms": 22,
+   "phantomDetected": 0.9545454545454546
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.7272727272727273,
+   "realDetectedByDay1": 0.13636363636363635,
+   "phantoms": 22,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.45454545454545453,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.8636363636363636,
+   "realDetectedByDay1": 0.18181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.9090909090909091,
+   "realDetectedByDay1": 0.22727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.8181818181818182,
+   "realDetectedByDay1": 0.18181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.18181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.9090909090909091,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.13636363636363635
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.8181818181818182,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.4090909090909091
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.7272727272727273
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.9090909090909091,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.9090909090909091
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.8181818181818182,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.8181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.7727272727272727,
+   "realDetectedByDay1": 0.18181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.6818181818181818
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.6818181818181818
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.5909090909090909,
+   "realDetectedByDay1": 0.22727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.09090909090909091
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 0.7727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.4090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "realistic",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.8181818181818182,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.6818181818181818,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.3181818181818182,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.7272727272727273
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.9545454545454546,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7272727272727273,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "hard",
+   "seed": 42,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.4090909090909091,
+   "realDetectedByDay1": 0.22727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.5454545454545454,
+   "realDetectedByDay1": 0.13636363636363635,
+   "phantoms": 22,
+   "phantomDetected": 0.45454545454545453
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.6818181818181818,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 0.9090909090909091
+  },
+  {
+   "difficulty": "hard",
+   "seed": 43,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.7272727272727273,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 0.9090909090909091,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.5,
+   "realDetectedByDay1": 0.13636363636363635,
+   "phantoms": 22,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5454545454545454,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.7727272727272727,
+   "realDetectedByDay1": 0.36363636363636365,
+   "phantoms": 22,
+   "phantomDetected": 0.3181818181818182
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5,
+   "phantoms": 22,
+   "phantomDetected": 0.8181818181818182
+  },
+  {
+   "difficulty": "hard",
+   "seed": 44,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.6818181818181818,
+   "realDetectedByDay1": 0.3181818181818182,
+   "phantoms": 22,
+   "phantomDetected": 0.4090909090909091
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.6363636363636364,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.4090909090909091,
+   "realDetectedByDay1": 0.045454545454545456,
+   "phantoms": 22,
+   "phantomDetected": 0.36363636363636365
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.4090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.7727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.8181818181818182,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.2727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.45454545454545453,
+   "phantoms": 22,
+   "phantomDetected": 0.6363636363636364
+  },
+  {
+   "difficulty": "hard",
+   "seed": 45,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.6818181818181818,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.09090909090909091
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 1
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "threshold",
+   "budget": 0.25,
+   "realDetected": 0.36363636363636365,
+   "realDetectedByDay1": 0.09090909090909091,
+   "phantoms": 22,
+   "phantomDetected": 0.09090909090909091
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 1,
+   "realDetected": 0.9545454545454546,
+   "realDetectedByDay1": 0.5909090909090909,
+   "phantoms": 22,
+   "phantomDetected": 0.8636363636363636
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "cusum",
+   "budget": 0.25,
+   "realDetected": 0.7272727272727273,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 1,
+   "realDetected": 1,
+   "realDetectedByDay1": 0.7727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.9090909090909091
+  },
+  {
+   "difficulty": "hard",
+   "seed": 46,
+   "method": "bayes",
+   "budget": 0.25,
+   "realDetected": 0.6818181818181818,
+   "realDetectedByDay1": 0.2727272727272727,
+   "phantoms": 22,
+   "phantomDetected": 0.22727272727272727
+  }
+ ]
+}

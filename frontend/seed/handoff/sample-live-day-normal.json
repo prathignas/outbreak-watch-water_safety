@@ -1,0 +1,5839 @@
+{
+ "note": "SYNTHETIC. generateLiveDay(date, seed, { city: RealCity }): one normal day, every ward x complaint/pharmacy/hospital.",
+ "date": "2026-07-06",
+ "seed": 2026,
+ "rows": [
+  {
+   "wardId": 1,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 1,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 1,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 2,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 2,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 2,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 3,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 3,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 3,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 4,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 4,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 45,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 4,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 5,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 5,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 52,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 5,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 6,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 6,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 32,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 6,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 7,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 7,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 7,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 8,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 8,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 29,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 8,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 9,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 9,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 9,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 10,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 10,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 10,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 11,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 11,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 11,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 12,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 12,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 12,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 13,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 13,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 13,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 14,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 14,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 14,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 15,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 15,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 15,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 16,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 16,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 16,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 17,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 17,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 17,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 18,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 18,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 18,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 19,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 19,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 19,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 20,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 20,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 20,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 21,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 21,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 21,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 22,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 22,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 22,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 23,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 23,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 23,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 24,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 24,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 24,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 25,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 25,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 54,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 25,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 26,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 26,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 56,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 26,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 27,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 27,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 27,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 28,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 28,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 28,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 29,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 29,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 29,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 30,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 30,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 30,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 31,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 31,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 31,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 32,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 32,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 32,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 33,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 33,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 33,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 34,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 34,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 52,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 34,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 35,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 35,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 35,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 36,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 36,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 54,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 36,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 37,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 37,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 37,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 38,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 38,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 38,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 39,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 39,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 39,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 40,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 40,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 40,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 41,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 41,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 41,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 42,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 42,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 31,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 42,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 43,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 43,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 43,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 44,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 44,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 44,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 45,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 45,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 52,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 45,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 46,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 46,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 46,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 47,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 47,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 54,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 47,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 48,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 48,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 67,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 48,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 49,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 49,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 49,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 50,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 50,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 50,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 51,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 51,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 51,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 52,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 52,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 55,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 52,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 53,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 53,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 53,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 54,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 54,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 54,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 55,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 55,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 59,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 55,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 56,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 56,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 56,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 57,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 57,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 57,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 58,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 58,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 58,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 59,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 59,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 59,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 60,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 60,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 60,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 61,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 61,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 61,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 62,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 62,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 62,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 63,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 63,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 63,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 64,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 64,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 64,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 65,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 65,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 65,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 66,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 66,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 66,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 67,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 67,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 67,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 68,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 68,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 68,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 69,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 69,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 69,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 70,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 70,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 70,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 71,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 71,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 71,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 72,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 72,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 72,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 73,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 73,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 23,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 73,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 74,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 74,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 26,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 74,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 75,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 75,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 75,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 76,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 76,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 76,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 77,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 77,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 77,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 78,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 78,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 78,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 79,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 79,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 79,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 80,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 80,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 80,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 81,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 81,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 81,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 82,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 82,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 82,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 83,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 83,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 83,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 84,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 84,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 84,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 85,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 85,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 85,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 86,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 86,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 86,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 87,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 87,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 87,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 88,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 88,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 88,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 89,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 89,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 89,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 90,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 90,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 52,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 90,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 91,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 91,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 91,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 92,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 92,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 32,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 92,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 93,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 93,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 93,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 94,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 94,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 94,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 95,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 95,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 95,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 96,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 96,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 96,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 97,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 97,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 27,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 97,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 98,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 98,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 57,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 98,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 99,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 99,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 99,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 100,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 100,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 100,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 101,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 101,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 101,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 102,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 102,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 102,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 103,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 103,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 103,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 104,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 104,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 104,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 105,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 105,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 105,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 106,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 106,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 106,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 107,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 107,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 62,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 107,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 108,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 108,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 108,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 109,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 109,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 109,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 110,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 110,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 110,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 111,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 111,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 111,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 112,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 112,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 112,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 113,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 113,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 113,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 114,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 114,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 114,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 115,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 115,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 45,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 115,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 116,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 116,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 116,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 117,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 117,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 117,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 118,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 118,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 118,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 119,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 119,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 119,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 120,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 120,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 29,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 120,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 121,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 121,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 121,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 122,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 122,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 32,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 122,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 123,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 123,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 123,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 124,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 124,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 124,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 125,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 125,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 125,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 126,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 126,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 126,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 127,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 127,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 127,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 128,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 128,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 128,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 129,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 129,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 129,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 130,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 130,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 130,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 131,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 131,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 45,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 131,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 132,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 132,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 132,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 133,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 133,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 133,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 134,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 134,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 134,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 135,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 135,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 135,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 136,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 136,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 29,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 136,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 137,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 137,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 137,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 138,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 138,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 138,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 139,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 139,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 139,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 140,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 140,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 140,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 141,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 141,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 141,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 142,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 142,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 142,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 143,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 143,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 143,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 144,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 144,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 144,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 145,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 145,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 145,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 146,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 146,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 146,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 147,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 147,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 147,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 148,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 148,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 148,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 149,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 149,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 149,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 150,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 150,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 25,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 150,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 151,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 151,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 151,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 152,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 152,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 152,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 153,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 153,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 24,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 153,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 154,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 154,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 63,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 154,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 155,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 155,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 155,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 156,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 156,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 156,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 157,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 157,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 157,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 158,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 158,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 31,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 158,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 159,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 159,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 159,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 160,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 160,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 160,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 161,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 161,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 53,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 161,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 162,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 162,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 56,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 162,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 163,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 163,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 163,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 164,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 164,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 55,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 164,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 165,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 165,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 165,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 166,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 166,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 166,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 167,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 167,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 167,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 168,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 168,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 168,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 169,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 169,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 169,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 170,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 170,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 170,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 171,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 171,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 171,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 172,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 172,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 172,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 173,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 173,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 173,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 174,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 174,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 61,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 174,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 175,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 175,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 31,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 175,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 176,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 176,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 176,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 177,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 177,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 56,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 177,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 178,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 178,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 178,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 179,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 179,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 179,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 180,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 180,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 180,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 181,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 181,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 181,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 182,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 182,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 182,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 183,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 183,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 183,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 184,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 184,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 184,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 185,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 185,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 185,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 186,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 186,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 186,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 187,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 187,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 27,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 187,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 188,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 188,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 50,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 188,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 189,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 189,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 189,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 190,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 190,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 190,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 191,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 191,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 30,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 191,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 192,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 192,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 192,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 193,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 193,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 193,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 194,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 194,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 194,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 195,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 195,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 195,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 196,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 196,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 29,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 196,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 197,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 197,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 197,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 198,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 198,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 198,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 199,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 199,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 32,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 199,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 200,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 200,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 200,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 201,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 201,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 49,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 201,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 202,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 202,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 64,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 202,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 203,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 203,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 203,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 204,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 204,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 31,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 204,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 205,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 205,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 65,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 205,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 206,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 206,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 206,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 207,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 207,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 207,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 208,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 208,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 45,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 208,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 209,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 209,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 37,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 209,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 210,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 210,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 210,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 211,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 211,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 51,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 211,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 212,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 212,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 212,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 213,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 213,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 213,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 214,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 214,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 214,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 215,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 215,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 215,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 216,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 216,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 46,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 216,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 217,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 217,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 36,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 217,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 218,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 218,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 218,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 219,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 219,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 219,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 220,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 220,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 43,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 220,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 221,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 221,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 55,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 221,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 11,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 222,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 222,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 222,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 223,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 223,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 39,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 223,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 11,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 224,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 224,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 224,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 225,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 225,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 225,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 226,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 226,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 226,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 227,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 227,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 44,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 227,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 228,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 228,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 33,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 228,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 229,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 229,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 229,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 230,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 230,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 31,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 230,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 231,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 231,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 231,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 10,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 232,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 232,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 41,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 232,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 7,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 233,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 233,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 38,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 233,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 234,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 234,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 28,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 234,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 235,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 235,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 56,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 235,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 236,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 0,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 236,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 45,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 236,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 6,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 237,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 237,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 48,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 237,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  },
+  {
+   "wardId": 238,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 8,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 238,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 40,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 238,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 239,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 239,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 42,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 239,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 240,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 2,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 240,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 24,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 240,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 241,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 241,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 34,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 241,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 9,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 242,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 1,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 242,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 35,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-07"
+  },
+  {
+   "wardId": 242,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 4,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-08"
+  },
+  {
+   "wardId": 243,
+   "signalType": "complaint",
+   "date": "2026-07-06",
+   "count": 3,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 243,
+   "signalType": "pharmacy",
+   "date": "2026-07-06",
+   "count": 47,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-06"
+  },
+  {
+   "wardId": 243,
+   "signalType": "hospital",
+   "date": "2026-07-06",
+   "count": 5,
+   "sourceTag": "synthetic",
+   "reportedOn": "2026-07-09"
+  }
+ ]
+}

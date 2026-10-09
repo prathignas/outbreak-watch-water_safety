@@ -1,0 +1,43 @@
+/* Outbreak Watch design tokens (docs/FRONTEND.md section 3). The ONLY place colours,
+ * shadows, radii, spacing and type are defined. Contrast figures are in the doc. */
+:root {
+  color-scheme: light;
+  --bg: #e4edf2; --inset: #dae5eb; --ink: #183846; --muted: #3d5866;
+  --teal: #0a6670; --on-teal: #ffffff; --aqua: #2bb3c0; --gauge: #1a8f9b;
+  --pill-bg: #f5e6c4; --pill-ink: #6e4a00;
+  --shadow-hi: rgb(255 255 255 / 0.85); --shadow-lo: rgb(140 166 184 / 0.5);
+  --calm-bg: #cdeff2; --calm-ink: #0a5560; --watch-bg: #f6e2b0; --watch-ink: #6e4a00; --alert-bg: #f8cfc4; --alert-ink: #8a2e1a;
+  --map-calm: #e4f4f6; --map-watch: #efd08a; --map-alert: #d2553c; --map-out: #d3dee4; --map-line: #b9cad3; --alert-outline: #a63a24;
+  --alert-ring: #d2553c;
+  --c-water: #2c6fbf; --c-food: #b85f12; --c-p2p: #7a55c7; --c-seasonal: #2e8257; --c-unknown: #5f717b;
+  --line: #0a6670; --rain: #5a9fd6; --shine: rgb(255 255 255 / 0.95);
+  --danger-ink: #8a2e1a;
+  /* 1px card edge: ink-blue at low alpha, never pure black */
+  --edge: rgb(24 56 70 / 0.08); --edge-hover: rgb(24 56 70 / 0.15);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #13232d; --inset: #0f1d26; --ink: #e3eef2; --muted: #a9c0ca;
+  --teal: #45cad6; --on-teal: #0b1a22; --aqua: #3cc6d2; --gauge: #3cc6d2;
+  --pill-bg: #2a2a22; --pill-ink: #f1c46a;
+  --shadow-hi: rgb(40 62 76 / 0.55); --shadow-lo: rgb(4 10 14 / 0.75);
+  --calm-bg: #163e46; --calm-ink: #9be6ee; --watch-bg: #3a3220; --watch-ink: #f1c46a; --alert-bg: #43251f; --alert-ink: #f6a893;
+  --map-calm: #1a3540; --map-watch: #8f6b26; --map-alert: #e06a50; --map-out: #182a34; --map-line: #29414d; --alert-outline: #f28a73;
+  --alert-ring: #ee7a61;
+  --c-water: #6aa8ee; --c-food: #f09a4a; --c-p2p: #b39af0; --c-seasonal: #5cc28e; --c-unknown: #9aabb3;
+  --line: #45cad6; --rain: #6aa8ee; --shine: rgb(120 230 240 / 0.9);
+  --danger-ink: #f6a893;
+  --edge: rgb(2 9 14 / 0.5); --edge-hover: rgb(2 9 14 / 0.75);
+}
+:root {
+  --raise-sm: -3px -3px 8px var(--shadow-hi), 3px 3px 8px var(--shadow-lo);
+  --raise-md: -6px -6px 14px var(--shadow-hi), 6px 6px 14px var(--shadow-lo);
+  --raise-lg: -10px -10px 24px var(--shadow-hi), 10px 10px 24px var(--shadow-lo);
+  --raise-hover: -8px -8px 18px var(--shadow-hi), 8px 8px 18px var(--shadow-lo);
+  --press: inset 4px 4px 10px var(--shadow-lo), inset -4px -4px 10px var(--shadow-hi);
+  --glow: 0 0 0 2px var(--aqua), 0 0 18px 4px rgb(43 179 192 / 0.45);
+  --r-chip: 12px; --r-btn: 20px; --r-card: 24px; --r-lg: 28px;
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

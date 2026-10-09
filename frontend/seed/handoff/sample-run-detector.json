@@ -1,0 +1,261 @@
+{
+ "note": "SYNTHETIC. runDetector(rows, today, RealCity, RUN_DETECTOR_PARAMS, state) run day by day over an injected water outbreak. 'firstDetection' is the output of the first day that sent an alert inside the outbreak's zone.",
+ "params": {
+  "method": "bayes",
+  "bayesAlertProbability": 0.7152527510491986,
+  "cooldownDays": 7
+ },
+ "injection": {
+  "cause": "water",
+  "startDate": "2026-07-06",
+  "originWardId": 18,
+  "zoneId": 14,
+  "affectedWards": [
+   {
+    "wardId": 18,
+    "weight": 1
+   },
+   {
+    "wardId": 19,
+    "weight": 0.5
+   },
+   {
+    "wardId": 20,
+    "weight": 0.5
+   },
+   {
+    "wardId": 21,
+    "weight": 0.5
+   },
+   {
+    "wardId": 39,
+    "weight": 0.5
+   },
+   {
+    "wardId": 40,
+    "weight": 0.5
+   }
+  ],
+  "signalDelayDays": {
+   "complaint": 1,
+   "pharmacy": 1,
+   "hospital": 4
+  },
+  "firstSignalDate": {
+   "complaint": "2026-07-07",
+   "pharmacy": "2026-07-07",
+   "hospital": "2026-07-10"
+  }
+ },
+ "dayByDay": [
+  {
+   "today": "2026-07-03",
+   "alertsSent": 1,
+   "inOutbreakZone": 0,
+   "heldBack": 0
+  },
+  {
+   "today": "2026-07-04",
+   "alertsSent": 2,
+   "inOutbreakZone": 0,
+   "heldBack": 1
+  },
+  {
+   "today": "2026-07-05",
+   "alertsSent": 1,
+   "inOutbreakZone": 0,
+   "heldBack": 2
+  },
+  {
+   "today": "2026-07-06",
+   "alertsSent": 0,
+   "inOutbreakZone": 0,
+   "heldBack": 0
+  },
+  {
+   "today": "2026-07-07",
+   "alertsSent": 0,
+   "inOutbreakZone": 0,
+   "heldBack": 0
+  },
+  {
+   "today": "2026-07-08",
+   "alertsSent": 2,
+   "inOutbreakZone": 2,
+   "heldBack": 0
+  },
+  {
+   "today": "2026-07-09",
+   "alertsSent": 3,
+   "inOutbreakZone": 2,
+   "heldBack": 2
+  },
+  {
+   "today": "2026-07-10",
+   "alertsSent": 1,
+   "inOutbreakZone": 1,
+   "heldBack": 5
+  },
+  {
+   "today": "2026-07-11",
+   "alertsSent": 2,
+   "inOutbreakZone": 1,
+   "heldBack": 6
+  },
+  {
+   "today": "2026-07-12",
+   "alertsSent": 0,
+   "inOutbreakZone": 0,
+   "heldBack": 7
+  },
+  {
+   "today": "2026-07-13",
+   "alertsSent": 1,
+   "inOutbreakZone": 0,
+   "heldBack": 7
+  },
+  {
+   "today": "2026-07-14",
+   "alertsSent": 0,
+   "inOutbreakZone": 0,
+   "heldBack": 7
+  }
+ ],
+ "firstDetection": {
+  "today": "2026-07-08",
+  "daysAfterStart": 2,
+  "alerts": [
+   {
+    "wardId": 21,
+    "date": "2026-07-08",
+    "method": "bayes",
+    "score": 0.8306743627299047,
+    "contributingSignals": [
+     "complaint",
+     "pharmacy",
+     "hospital"
+    ],
+    "evidence": [
+     "complaints 3.3x normal for a Wednesday (5 vs usual 1.5, on 2026-07-08): 2.4 spreads above normal, odds x3.0",
+     "pharmacy sales 2.8x normal for a Wednesday (98 vs usual 35, on 2026-07-08): 9.4 spreads above normal, odds x100.0",
+     "hospital visits 3.6x normal for a Monday (9 vs usual 2.5, on 2026-07-06): 2.9 spreads above normal, odds x4.7",
+     "neighbouring wards also high (average score 3.9): odds x1.8",
+     "chance of an outbreak: 83%"
+    ],
+    "causeProbs": {
+     "water": 0.16026944635907128,
+     "food": 0.07408784622558762,
+     "p2p": 0.04596620322783092,
+     "seasonal": 0.1722372521776958,
+     "unknown": 0.5474392520098144
+    },
+    "suspectedZoneId": 14
+   },
+   {
+    "wardId": 39,
+    "date": "2026-07-08",
+    "method": "bayes",
+    "score": 0.9790047318842235,
+    "contributingSignals": [
+     "complaint",
+     "pharmacy",
+     "hospital"
+    ],
+    "evidence": [
+     "complaints 5.0x normal for a Wednesday (10 vs usual 2, on 2026-07-08): 5.4 spreads above normal, odds x33.7",
+     "pharmacy sales 2.3x normal for a Tuesday (91 vs usual 39, on 2026-07-07): 7.8 spreads above normal, odds x100.0",
+     "hospital visits 4.0x normal for a Sunday (4 vs usual 1, on 2026-07-05): 3.0 spreads above normal, odds x5.0",
+     "neighbouring wards also high (average score 2.7): odds x1.4",
+     "chance of an outbreak: 98%"
+    ],
+    "causeProbs": {
+     "water": 0.16148709890808774,
+     "food": 0.07465073114755591,
+     "p2p": 0.0387178991319597,
+     "seasonal": 0.1735458305369165,
+     "unknown": 0.5515984402754802
+    },
+    "suspectedZoneId": 14
+   }
+  ],
+  "causeEvidence": {
+   "21": [
+    "2 of 6 wards in water zone 14 are alerting (33%; city-wide 2%)",
+    "this is not a food venue ward",
+    "1 neighbouring or same-zone wards are also alerting",
+    "rose from normal to its peak in 1 day (sudden)",
+    "5 of 6 neighbouring wards have been above normal over the last 2 weeks",
+    "2% of all wards alerting, 26% quietly above normal",
+    "no heavy rain in the last 10 days (real rain data)",
+    "suspected water zone: 14",
+    "evidence is mixed: the two likeliest causes are close",
+    "triage hint, not a diagnosis: most likely unknown (55%); an officer must confirm"
+   ],
+   "39": [
+    "2 of 6 wards in water zone 14 are alerting (33%; city-wide 2%)",
+    "this is not a food venue ward",
+    "1 neighbouring or same-zone wards are also alerting",
+    "rose from normal to its peak in 1 day (sudden)",
+    "2 of 7 neighbouring wards have been above normal over the last 2 weeks",
+    "2% of all wards alerting, 26% quietly above normal",
+    "no heavy rain in the last 10 days (real rain data)",
+    "suspected water zone: 14",
+    "evidence is mixed: the two likeliest causes are close",
+    "triage hint, not a diagnosis: most likely unknown (55%); an officer must confirm"
+   ]
+  },
+  "heldBack": [],
+  "state": {
+   "version": 1,
+   "method": "bayes",
+   "lastRunDate": "2026-07-08",
+   "cusum": null,
+   "lastAlertDate": {
+    "21": "2026-07-08",
+    "39": "2026-07-08",
+    "129": "2026-07-05",
+    "183": "2026-07-05",
+    "190": "2026-07-05",
+    "197": "2026-07-04"
+   },
+   "recentAlerts": [
+    {
+     "wardId": 190,
+     "date": "2026-07-03"
+    },
+    {
+     "wardId": 183,
+     "date": "2026-07-04"
+    },
+    {
+     "wardId": 190,
+     "date": "2026-07-04"
+    },
+    {
+     "wardId": 197,
+     "date": "2026-07-04"
+    },
+    {
+     "wardId": 129,
+     "date": "2026-07-05"
+    },
+    {
+     "wardId": 183,
+     "date": "2026-07-05"
+    },
+    {
+     "wardId": 190,
+     "date": "2026-07-05"
+    },
+    {
+     "wardId": 21,
+     "date": "2026-07-08"
+    },
+    {
+     "wardId": 39,
+     "date": "2026-07-08"
+    }
+   ]
+  }
+ }
+}

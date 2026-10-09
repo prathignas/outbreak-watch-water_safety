@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+/* Tailwind reads the tokens; spacing stays on the 4 px scale (4,8,12,16,24,32,48,64). */
+@theme inline {
+  --color-bg: var(--bg); --color-inset: var(--inset); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-teal: var(--teal); --color-on-teal: var(--on-teal); --color-aqua: var(--aqua); --color-gauge: var(--gauge);
+  --color-pill-bg: var(--pill-bg); --color-pill-ink: var(--pill-ink);
+  --color-calm-bg: var(--calm-bg); --color-calm-ink: var(--calm-ink); --color-watch-bg: var(--watch-bg); --color-watch-ink: var(--watch-ink);
+  --color-alert-bg: var(--alert-bg); --color-alert-ink: var(--alert-ink);
+  --color-water: var(--c-water); --color-food: var(--c-food); --color-p2p: var(--c-p2p); --color-seasonal: var(--c-seasonal); --color-unknown: var(--c-unknown);
+  --font-display: var(--font-display); --font-body: var(--font-body);
+  --radius-chip: var(--r-chip); --radius-btn: var(--r-btn); --radius-card: var(--r-card); --radius-lg: var(--r-lg);
+  --shadow-raise-sm: var(--raise-sm); --shadow-raise-md: var(--raise-md); --shadow-raise-lg: var(--raise-lg); --shadow-press: var(--press);
+  --text-sm: 15px; --text-sm--line-height: 22px;
+  --text-base: 16px; --text-base--line-height: 26px;
+  --text-lg: 18px; --text-lg--line-height: 28px;
+  --text-xl: 20px; --text-xl--line-height: 28px;
+  --text-2xl: 24px; --text-2xl--line-height: 32px;
+  --text-3xl: 32px; --text-3xl--line-height: 40px;
+  --text-4xl: 40px; --text-4xl--line-height: 48px;
+  --text-5xl: 56px; --text-5xl--line-height: 60px;
+}
+
+@layer base {
+  html { background: var(--bg); }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 26px; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .font-display { font-family: var(--font-display); }
+  .tabular { font-variant-numeric: tabular-nums; }
+  :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+  a { color: var(--teal); text-decoration-line: underline; text-underline-offset: 3px; }
+}
+
+/* Soft UI surfaces */
+@layer components {
+  .soft { background: var(--bg); box-shadow: var(--raise-md); }
+  .soft-sm { background: var(--bg); box-shadow: var(--raise-sm); }
+  .soft-lg { background: var(--bg); box-shadow: var(--raise-lg); }
+  .soft-in { background: var(--bg); box-shadow: var(--press); }
+  .soft-btn { background: var(--bg); box-shadow: var(--raise-md); transition: box-shadow 120ms var(--ease-out), transform 120ms var(--ease-out); }
+  .soft-btn:hover { box-shadow: var(--raise-lg); transform: translateY(-2px); }
+  .soft-btn:active, .soft-btn[aria-pressed="true"], .soft-btn[aria-current="page"] { box-shadow: var(--press); transform: none; }
+  .btn-primary { background: var(--teal); color: var(--on-teal); }
+  /* Card edge: a barely-there 1px boundary so cards read clearly against the page. */
+  .edge { border: 1px solid var(--edge); }
+  .edge.shine::after { inset: -1px; }
+  /* Clickable cards: a calm 2px lift, a touch more shadow, a slightly firmer edge. */
+  .card-link { cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+  .card-link:hover { transform: translateY(-2px); box-shadow: var(--raise-hover); border-color: var(--edge-hover); }
+  .card-link:active { transform: none; box-shadow: var(--press); }
+  /* Edge shine on touch (card touch feedback) */
+  .shine::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; padding: 2px;
+    background: linear-gradient(115deg, transparent 30%, var(--shine) 50%, transparent 70%) 0 0 / 250% 100% no-repeat;
+    -webkit-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    opacity: 0; }
+  .shine.shining::after { animation: edge-shine 450ms var(--ease-out); }
+  .skeleton { position: relative; overflow: hidden; background: var(--inset); border-radius: var(--r-chip); }
+  .skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, var(--shadow-hi), transparent); animation: shimmer 1.4s infinite; }
+}
+@keyframes edge-shine { 0% { opacity: 1; background-position: 120% 0; } 100% { opacity: 0; background-position: -60% 0; } }
+@keyframes shimmer { to { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .shine.shining::after { animation: none; opacity: 1; background-position: 50% 0; }
+  .skeleton::after { display: none; }
+}
+
+/* Map details */
+.ow-popup .maplibregl-popup-content { background: var(--bg); color: var(--ink); box-shadow: var(--raise-md); border-radius: var(--r-chip); padding: 12px 16px; font: 15px/22px var(--font-body); }
+.ow-popup .maplibregl-popup-tip { display: none; }
+.ow-pulse { width: 28px; height: 28px; border-radius: 50%; box-shadow: var(--glow); animation: ow-pulse 1.2s var(--ease-out) 1; }
+@keyframes ow-pulse { from { transform: scale(0.6); opacity: 1; } to { transform: scale(2.2); opacity: 0; } }
+.maplibregl-ctrl-attrib { font: 13px/18px var(--font-body); background: color-mix(in srgb, var(--bg) 88%, transparent) !important; color: var(--ink); }
+.maplibregl-ctrl-attrib a { color: var(--ink) !important; }
+.maplibregl-ctrl-group { background: var(--bg) !important; box-shadow: var(--raise-sm) !important; border-radius: 12px !important; }
+.new-glow { animation: new-glow 1.2s var(--ease-out) 1; }
+@keyframes new-glow { 0% { box-shadow: var(--glow), var(--raise-md); } 100% { box-shadow: var(--raise-md); } }
+:root[data-theme="dark"] .maplibregl-ctrl-icon { filter: invert(1) brightness(1.4); }
+.maplibregl-ctrl-group button { width: 40px !important; height: 40px !important; }

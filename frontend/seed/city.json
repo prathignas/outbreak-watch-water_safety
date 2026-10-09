@@ -1,0 +1,6072 @@
+{
+ "sources": {
+  "wards": "data/wards.geojson (BBMP wards, KGISTownCode 2003)",
+  "zones": "data/raw/bwssb_subdivisions.kml (BWSSB sub-divisions)",
+  "foodVenues": "data/raw/osm_food.json (c) OpenStreetMap contributors, ODbL",
+  "rules": {
+   "neighbourToleranceMetres": 20,
+   "minZoneShare": 0.5,
+   "foodVenueTopShare": 0.1,
+   "foodAmenities": [
+    "restaurant",
+    "fast_food",
+    "cafe",
+    "food_court"
+   ],
+   "overpassUrl": "https://overpass-api.de/api/interpreter",
+   "osmFoodFile": "data/raw/osm_food.json",
+   "cityFile": "data/city.json"
+  }
+ },
+ "wards": [
+  {
+   "id": 1,
+   "name": "Kempegowda Ward",
+   "kgisWardId": 4878,
+   "lgdWardCode": 1303139,
+   "centroid": [
+    77.607824,
+    13.109321
+   ],
+   "areaKm2": 11.4029,
+   "neighbours": [
+    2,
+    5,
+    6,
+    8,
+    11
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4125,
+   "venueCount": 29,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 2,
+   "name": "Chowdeswari Ward",
+   "kgisWardId": 4879,
+   "lgdWardCode": 1303140,
+   "centroid": [
+    77.580111,
+    13.120036
+   ],
+   "areaKm2": 6.9788,
+   "neighbours": [
+    1,
+    3,
+    5
+   ],
+   "zoneId": 43,
+   "zoneShare": 0.6343,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 3,
+   "name": "Someshwara Ward",
+   "kgisWardId": 4882,
+   "lgdWardCode": 1303141,
+   "centroid": [
+    77.57284,
+    13.105466
+   ],
+   "areaKm2": 3.8775,
+   "neighbours": [
+    2,
+    4,
+    5,
+    11
+   ],
+   "zoneId": 40,
+   "zoneShare": 0.8916,
+   "venueCount": 63,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 4,
+   "name": "Atturu Layout",
+   "kgisWardId": 4883,
+   "lgdWardCode": 1303142,
+   "centroid": [
+    77.557455,
+    13.098025
+   ],
+   "areaKm2": 5.1603,
+   "neighbours": [
+    3,
+    11,
+    14,
+    15,
+    16
+   ],
+   "zoneId": 43,
+   "zoneShare": 0.6837,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 5,
+   "name": "Yelahanka Satellite Town",
+   "kgisWardId": 4886,
+   "lgdWardCode": 1303143,
+   "centroid": [
+    77.58618,
+    13.092445
+   ],
+   "areaKm2": 4.0591,
+   "neighbours": [
+    1,
+    2,
+    3,
+    11
+   ],
+   "zoneId": 40,
+   "zoneShare": 0.9965,
+   "venueCount": 40,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 6,
+   "name": "Kogilu",
+   "kgisWardId": 4887,
+   "lgdWardCode": 1303144,
+   "centroid": [
+    77.62635,
+    13.098295
+   ],
+   "areaKm2": 16.3201,
+   "neighbours": [
+    1,
+    7,
+    8,
+    81
+   ],
+   "zoneId": 43,
+   "zoneShare": 0.6466,
+   "venueCount": 42,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 7,
+   "name": "Thanisandra",
+   "kgisWardId": 4890,
+   "lgdWardCode": 1303145,
+   "centroid": [
+    77.633476,
+    13.057692
+   ],
+   "areaKm2": 4.1367,
+   "neighbours": [
+    6,
+    8,
+    81,
+    94
+   ],
+   "zoneId": 43,
+   "zoneShare": 0.908,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 8,
+   "name": "Jakkuru",
+   "kgisWardId": 4891,
+   "lgdWardCode": 1303146,
+   "centroid": [
+    77.617819,
+    13.06696
+   ],
+   "areaKm2": 11.6647,
+   "neighbours": [
+    1,
+    6,
+    7,
+    9,
+    10,
+    11,
+    94
+   ],
+   "zoneId": 36,
+   "zoneShare": 0.6875,
+   "venueCount": 65,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 9,
+   "name": "Amrutahalli",
+   "kgisWardId": 4894,
+   "lgdWardCode": 1303147,
+   "centroid": [
+    77.606183,
+    13.058485
+   ],
+   "areaKm2": 3.9629,
+   "neighbours": [
+    8,
+    10,
+    11
+   ],
+   "zoneId": 36,
+   "zoneShare": 0.5095,
+   "venueCount": 24,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 10,
+   "name": "Kempapura",
+   "kgisWardId": 4895,
+   "lgdWardCode": 1303148,
+   "centroid": [
+    77.596828,
+    13.049794
+   ],
+   "areaKm2": 5.8623,
+   "neighbours": [
+    8,
+    9,
+    11,
+    12,
+    67,
+    68,
+    74,
+    94
+   ],
+   "zoneId": 36,
+   "zoneShare": 0.8814,
+   "venueCount": 48,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 11,
+   "name": "Byatarayanapura",
+   "kgisWardId": 4898,
+   "lgdWardCode": 1303149,
+   "centroid": [
+    77.578537,
+    13.076624
+   ],
+   "areaKm2": 9.8495,
+   "neighbours": [
+    1,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14
+   ],
+   "zoneId": 41,
+   "zoneShare": 0.5099,
+   "venueCount": 104,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 12,
+   "name": "Kodigehalli",
+   "kgisWardId": 4899,
+   "lgdWardCode": 1303150,
+   "centroid": [
+    77.573759,
+    13.057104
+   ],
+   "areaKm2": 2.4428,
+   "neighbours": [
+    10,
+    11,
+    13,
+    66,
+    67
+   ],
+   "zoneId": 36,
+   "zoneShare": 0.8655,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 13,
+   "name": "Dodda Bommasandra",
+   "kgisWardId": 4902,
+   "lgdWardCode": 1303151,
+   "centroid": [
+    77.560756,
+    13.059233
+   ],
+   "areaKm2": 4.4654,
+   "neighbours": [
+    11,
+    12,
+    14,
+    15,
+    39,
+    59,
+    66
+   ],
+   "zoneId": 41,
+   "zoneShare": 0.9602,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 14,
+   "name": "Vidyaranyapura",
+   "kgisWardId": 4903,
+   "lgdWardCode": 1303152,
+   "centroid": [
+    77.558251,
+    13.072331
+   ],
+   "areaKm2": 2.2369,
+   "neighbours": [
+    4,
+    11,
+    13,
+    15
+   ],
+   "zoneId": 41,
+   "zoneShare": 0.9981,
+   "venueCount": 33,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 15,
+   "name": "Kuvempunagar",
+   "kgisWardId": 4906,
+   "lgdWardCode": 1303153,
+   "centroid": [
+    77.54518,
+    13.071212
+   ],
+   "areaKm2": 7.383,
+   "neighbours": [
+    4,
+    13,
+    14,
+    16,
+    39
+   ],
+   "zoneId": 41,
+   "zoneShare": 0.746,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 16,
+   "name": "Kammagondanahalli",
+   "kgisWardId": 4907,
+   "lgdWardCode": 1303154,
+   "centroid": [
+    77.528223,
+    13.071888
+   ],
+   "areaKm2": 4.364,
+   "neighbours": [
+    4,
+    15,
+    17,
+    39,
+    40
+   ],
+   "zoneId": null,
+   "zoneShare": 0.3975,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 17,
+   "name": "Shettihalli",
+   "kgisWardId": 4910,
+   "lgdWardCode": 1303155,
+   "centroid": [
+    77.513647,
+    13.063114
+   ],
+   "areaKm2": 6.5137,
+   "neighbours": [
+    16,
+    18,
+    19,
+    20,
+    21,
+    39,
+    40
+   ],
+   "zoneId": 21,
+   "zoneShare": 0.7233,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 18,
+   "name": "Bagalakunte",
+   "kgisWardId": 4911,
+   "lgdWardCode": 1303156,
+   "centroid": [
+    77.499297,
+    13.056808
+   ],
+   "areaKm2": 1.9522,
+   "neighbours": [
+    17,
+    19,
+    28
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.9975,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 19,
+   "name": "Defence Colony",
+   "kgisWardId": 4914,
+   "lgdWardCode": 1303157,
+   "centroid": [
+    77.505384,
+    13.051061
+   ],
+   "areaKm2": 1.6151,
+   "neighbours": [
+    17,
+    18,
+    20,
+    21,
+    22,
+    28
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.7567,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 20,
+   "name": "Mallasandra",
+   "kgisWardId": 4915,
+   "lgdWardCode": 1303158,
+   "centroid": [
+    77.514961,
+    13.054177
+   ],
+   "areaKm2": 1.2156,
+   "neighbours": [
+    17,
+    19,
+    21
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.9988,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 21,
+   "name": "T Dasarahalli",
+   "kgisWardId": 4918,
+   "lgdWardCode": 1303159,
+   "centroid": [
+    77.512094,
+    13.045195
+   ],
+   "areaKm2": 1.0966,
+   "neighbours": [
+    17,
+    19,
+    20,
+    22,
+    40,
+    41
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.8053,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 22,
+   "name": "Chokkasandra",
+   "kgisWardId": 4919,
+   "lgdWardCode": 1303160,
+   "centroid": [
+    77.507373,
+    13.038345
+   ],
+   "areaKm2": 2.2007,
+   "neighbours": [
+    19,
+    21,
+    23,
+    24,
+    28,
+    40,
+    41
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.9901,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 23,
+   "name": "Nelagadderanahalli",
+   "kgisWardId": 4922,
+   "lgdWardCode": 1302695,
+   "centroid": [
+    77.505008,
+    13.020924
+   ],
+   "areaKm2": 4.6789,
+   "neighbours": [
+    22,
+    24,
+    25,
+    26,
+    28,
+    29
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.976,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 24,
+   "name": "Rajagopal Nagar",
+   "kgisWardId": 4923,
+   "lgdWardCode": 1302696,
+   "centroid": [
+    77.517034,
+    13.02048
+   ],
+   "areaKm2": 1.8618,
+   "neighbours": [
+    22,
+    23,
+    25,
+    41,
+    42,
+    43
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.987,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 25,
+   "name": "Rajeshwari Nagar",
+   "kgisWardId": 4926,
+   "lgdWardCode": 1302697,
+   "centroid": [
+    77.514329,
+    13.010956
+   ],
+   "areaKm2": 1.2092,
+   "neighbours": [
+    23,
+    24,
+    26,
+    43,
+    44
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.9972,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 26,
+   "name": "Hegganahalli",
+   "kgisWardId": 4927,
+   "lgdWardCode": 1302698,
+   "centroid": [
+    77.511726,
+    13.002289
+   ],
+   "areaKm2": 1.5065,
+   "neighbours": [
+    23,
+    25,
+    27,
+    29,
+    44
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.7043,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 27,
+   "name": "Sunkadakatte",
+   "kgisWardId": 4930,
+   "lgdWardCode": 1302699,
+   "centroid": [
+    77.501666,
+    12.996375
+   ],
+   "areaKm2": 1.2486,
+   "neighbours": [
+    26,
+    29,
+    30,
+    44,
+    45,
+    46
+   ],
+   "zoneId": 32,
+   "zoneShare": 0.9933,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 28,
+   "name": "Dodda Bidarakallu",
+   "kgisWardId": 4931,
+   "lgdWardCode": 1302700,
+   "centroid": [
+    77.487881,
+    13.023414
+   ],
+   "areaKm2": 8.241,
+   "neighbours": [
+    18,
+    19,
+    22,
+    23,
+    29
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4931,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 29,
+   "name": "Vidyamanyanagar",
+   "kgisWardId": 4934,
+   "lgdWardCode": 1302701,
+   "centroid": [
+    77.484764,
+    13.00215
+   ],
+   "areaKm2": 5.0106,
+   "neighbours": [
+    23,
+    26,
+    27,
+    28,
+    30,
+    31
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.6367,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 30,
+   "name": "Herohalli",
+   "kgisWardId": 4935,
+   "lgdWardCode": 1302702,
+   "centroid": [
+    77.491789,
+    12.99028
+   ],
+   "areaKm2": 2.9007,
+   "neighbours": [
+    27,
+    29,
+    31,
+    46
+   ],
+   "zoneId": 32,
+   "zoneShare": 0.622,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 31,
+   "name": "Doddagollarahatti",
+   "kgisWardId": 4938,
+   "lgdWardCode": 1302703,
+   "centroid": [
+    77.480862,
+    12.969948
+   ],
+   "areaKm2": 7.3885,
+   "neighbours": [
+    29,
+    30,
+    32,
+    46,
+    47
+   ],
+   "zoneId": 4,
+   "zoneShare": 0.9404,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 32,
+   "name": "Ullal",
+   "kgisWardId": 4939,
+   "lgdWardCode": 1302704,
+   "centroid": [
+    77.487996,
+    12.942139
+   ],
+   "areaKm2": 5.1671,
+   "neighbours": [
+    31,
+    33,
+    47,
+    48
+   ],
+   "zoneId": 13,
+   "zoneShare": 0.5965,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 33,
+   "name": "Kengeri",
+   "kgisWardId": 4942,
+   "lgdWardCode": 1302705,
+   "centroid": [
+    77.486685,
+    12.924607
+   ],
+   "areaKm2": 2.5739,
+   "neighbours": [
+    32,
+    34,
+    48
+   ],
+   "zoneId": 13,
+   "zoneShare": 0.9439,
+   "venueCount": 17,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 34,
+   "name": "Bande Mutt",
+   "kgisWardId": 4943,
+   "lgdWardCode": 1302706,
+   "centroid": [
+    77.49101,
+    12.91733
+   ],
+   "areaKm2": 6.7973,
+   "neighbours": [
+    33,
+    35,
+    48,
+    49
+   ],
+   "zoneId": 13,
+   "zoneShare": 0.9293,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 35,
+   "name": "Hemmigepura",
+   "kgisWardId": 4946,
+   "lgdWardCode": 1302707,
+   "centroid": [
+    77.510377,
+    12.885792
+   ],
+   "areaKm2": 32.9977,
+   "neighbours": [
+    34,
+    49,
+    218,
+    219,
+    221,
+    224
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4863,
+   "venueCount": 40,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 36,
+   "name": "Chatrapati Shivaji",
+   "kgisWardId": 4947,
+   "lgdWardCode": 1302708,
+   "centroid": [
+    77.547499,
+    13.025491
+   ],
+   "areaKm2": 1.7229,
+   "neighbours": [
+    37,
+    38,
+    40,
+    41,
+    50,
+    53,
+    61,
+    62
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.5043,
+   "venueCount": 16,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 37,
+   "name": "Chanakya",
+   "kgisWardId": 4950,
+   "lgdWardCode": 1302709,
+   "centroid": [
+    77.554643,
+    13.026101
+   ],
+   "areaKm2": 0.5357,
+   "neighbours": [
+    36,
+    38,
+    59,
+    61
+   ],
+   "zoneId": 15,
+   "zoneShare": 1,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 38,
+   "name": "J P Park",
+   "kgisWardId": 4951,
+   "lgdWardCode": 1302710,
+   "centroid": [
+    77.552095,
+    13.034962
+   ],
+   "areaKm2": 1.3806,
+   "neighbours": [
+    36,
+    37,
+    39,
+    40,
+    59,
+    61
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.9991,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 39,
+   "name": "Kanneshwara Rama",
+   "kgisWardId": 4954,
+   "lgdWardCode": 1302711,
+   "centroid": [
+    77.550156,
+    13.043912
+   ],
+   "areaKm2": 2.2766,
+   "neighbours": [
+    13,
+    15,
+    16,
+    17,
+    38,
+    40,
+    59
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.5525,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 40,
+   "name": "Veeramadakari",
+   "kgisWardId": 4955,
+   "lgdWardCode": 1302712,
+   "centroid": [
+    77.537145,
+    13.041898
+   ],
+   "areaKm2": 5.5487,
+   "neighbours": [
+    16,
+    17,
+    21,
+    22,
+    36,
+    38,
+    39,
+    41
+   ],
+   "zoneId": 14,
+   "zoneShare": 0.9969,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 41,
+   "name": "Peenya",
+   "kgisWardId": 4958,
+   "lgdWardCode": 1302713,
+   "centroid": [
+    77.526855,
+    13.025018
+   ],
+   "areaKm2": 2.8704,
+   "neighbours": [
+    21,
+    22,
+    24,
+    36,
+    40,
+    42,
+    53
+   ],
+   "zoneId": 29,
+   "zoneShare": 0.998,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 42,
+   "name": "Lakshmi Devi Nagar",
+   "kgisWardId": 4959,
+   "lgdWardCode": 1302714,
+   "centroid": [
+    77.52496,
+    13.014982
+   ],
+   "areaKm2": 0.8099,
+   "neighbours": [
+    24,
+    41,
+    43,
+    53,
+    54
+   ],
+   "zoneId": 32,
+   "zoneShare": 0.5415,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 43,
+   "name": "Ranadheera Kanteerava",
+   "kgisWardId": 4962,
+   "lgdWardCode": 1302715,
+   "centroid": [
+    77.522716,
+    13.007755
+   ],
+   "areaKm2": 1.0418,
+   "neighbours": [
+    24,
+    25,
+    42,
+    44,
+    54,
+    55
+   ],
+   "zoneId": 32,
+   "zoneShare": 0.9744,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 44,
+   "name": "Veera Sindhura Lakshamana",
+   "kgisWardId": 4963,
+   "lgdWardCode": 1302716,
+   "centroid": [
+    77.515862,
+    12.999287
+   ],
+   "areaKm2": 1.3894,
+   "neighbours": [
+    25,
+    26,
+    27,
+    43,
+    45,
+    55,
+    56
+   ],
+   "zoneId": 32,
+   "zoneShare": 0.9362,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 45,
+   "name": "Vijayanagara Krishnadevaraya",
+   "kgisWardId": 4966,
+   "lgdWardCode": 1302717,
+   "centroid": [
+    77.515838,
+    12.98412
+   ],
+   "areaKm2": 2.967,
+   "neighbours": [
+    27,
+    44,
+    46,
+    48,
+    56,
+    57,
+    58,
+    149,
+    152,
+    153
+   ],
+   "zoneId": 4,
+   "zoneShare": 0.5194,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 46,
+   "name": "Sir M. Vishweshwaraiah",
+   "kgisWardId": 4967,
+   "lgdWardCode": 1302718,
+   "centroid": [
+    77.50414,
+    12.980308
+   ],
+   "areaKm2": 3.6596,
+   "neighbours": [
+    27,
+    30,
+    31,
+    45,
+    47,
+    48
+   ],
+   "zoneId": 4,
+   "zoneShare": 0.9994,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 47,
+   "name": "Nalvadi Krishnaraja Wadior Park",
+   "kgisWardId": 4970,
+   "lgdWardCode": 1302719,
+   "centroid": [
+    77.49332,
+    12.958035
+   ],
+   "areaKm2": 3.413,
+   "neighbours": [
+    31,
+    32,
+    46,
+    48
+   ],
+   "zoneId": 4,
+   "zoneShare": 0.9712,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 48,
+   "name": "Jnana Bharathi",
+   "kgisWardId": 4971,
+   "lgdWardCode": 1302720,
+   "centroid": [
+    77.516311,
+    12.944837
+   ],
+   "areaKm2": 9.9753,
+   "neighbours": [
+    32,
+    33,
+    34,
+    45,
+    46,
+    47,
+    49,
+    153,
+    154,
+    155,
+    163,
+    209
+   ],
+   "zoneId": 13,
+   "zoneShare": 0.5193,
+   "venueCount": 42,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 49,
+   "name": "Rajarajeshwari Nagar",
+   "kgisWardId": 4974,
+   "lgdWardCode": 1302721,
+   "centroid": [
+    77.520078,
+    12.911857
+   ],
+   "areaKm2": 7.5659,
+   "neighbours": [
+    34,
+    35,
+    48,
+    208,
+    209,
+    218
+   ],
+   "zoneId": 13,
+   "zoneShare": 0.8654,
+   "venueCount": 19,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 50,
+   "name": "Marappana Palya",
+   "kgisWardId": 4975,
+   "lgdWardCode": 1302722,
+   "centroid": [
+    77.543054,
+    13.014311
+   ],
+   "areaKm2": 1.9052,
+   "neighbours": [
+    36,
+    51,
+    52,
+    53,
+    62
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.9977,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 51,
+   "name": "Nagapura",
+   "kgisWardId": 4978,
+   "lgdWardCode": 1302723,
+   "centroid": [
+    77.548665,
+    13.004568
+   ],
+   "areaKm2": 1.7221,
+   "neighbours": [
+    50,
+    52,
+    55,
+    56,
+    62,
+    63,
+    140,
+    141,
+    144
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.6205,
+   "venueCount": 72,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 52,
+   "name": "Mahalakshimpuram",
+   "kgisWardId": 4979,
+   "lgdWardCode": 1302724,
+   "centroid": [
+    77.54053,
+    13.008566
+   ],
+   "areaKm2": 0.9462,
+   "neighbours": [
+    50,
+    51,
+    53,
+    54,
+    55
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.9988,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 53,
+   "name": "Nandini Layout",
+   "kgisWardId": 4982,
+   "lgdWardCode": 1302725,
+   "centroid": [
+    77.535328,
+    13.014503
+   ],
+   "areaKm2": 0.9563,
+   "neighbours": [
+    36,
+    41,
+    42,
+    50,
+    52,
+    54
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.9993,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 54,
+   "name": "Jai Maruthinagara",
+   "kgisWardId": 4983,
+   "lgdWardCode": 1302726,
+   "centroid": [
+    77.533485,
+    13.007534
+   ],
+   "areaKm2": 0.5886,
+   "neighbours": [
+    42,
+    43,
+    52,
+    53,
+    55
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.9297,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 55,
+   "name": "Puneet Rajkumar",
+   "kgisWardId": 4986,
+   "lgdWardCode": 1302727,
+   "centroid": [
+    77.533384,
+    13.001921
+   ],
+   "areaKm2": 0.6618,
+   "neighbours": [
+    43,
+    44,
+    51,
+    52,
+    54,
+    56,
+    144
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.8073,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 56,
+   "name": "Shankar Matt",
+   "kgisWardId": 4987,
+   "lgdWardCode": 1302728,
+   "centroid": [
+    77.531548,
+    12.997331
+   ],
+   "areaKm2": 0.7532,
+   "neighbours": [
+    44,
+    45,
+    51,
+    55,
+    57,
+    144
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.9961,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 57,
+   "name": "Shakthi Ganapathi Nagar",
+   "kgisWardId": 4990,
+   "lgdWardCode": 1302729,
+   "centroid": [
+    77.529946,
+    12.99398
+   ],
+   "areaKm2": 0.6728,
+   "neighbours": [
+    45,
+    56,
+    58,
+    144,
+    145
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.9994,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 58,
+   "name": "Vrisabhavathi Nagar",
+   "kgisWardId": 4991,
+   "lgdWardCode": 1302730,
+   "centroid": [
+    77.526358,
+    12.988715
+   ],
+   "areaKm2": 0.79,
+   "neighbours": [
+    45,
+    57,
+    145,
+    149
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.9973,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 59,
+   "name": "Mattikere",
+   "kgisWardId": 4994,
+   "lgdWardCode": 1302731,
+   "centroid": [
+    77.561185,
+    13.03067
+   ],
+   "areaKm2": 0.9066,
+   "neighbours": [
+    13,
+    37,
+    38,
+    39,
+    60,
+    61,
+    66
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.7733,
+   "venueCount": 12,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 60,
+   "name": "Aramane Nagara",
+   "kgisWardId": 4995,
+   "lgdWardCode": 1302732,
+   "centroid": [
+    77.576057,
+    13.016446
+   ],
+   "areaKm2": 7.4935,
+   "neighbours": [
+    59,
+    61,
+    64,
+    65,
+    66,
+    67,
+    72,
+    73,
+    127,
+    128
+   ],
+   "zoneId": 37,
+   "zoneShare": 0.6886,
+   "venueCount": 113,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 61,
+   "name": "Malleswaram",
+   "kgisWardId": 4998,
+   "lgdWardCode": 1302733,
+   "centroid": [
+    77.560439,
+    13.017861
+   ],
+   "areaKm2": 1.8145,
+   "neighbours": [
+    36,
+    37,
+    38,
+    59,
+    60,
+    62,
+    64
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.9842,
+   "venueCount": 28,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 62,
+   "name": "Subramanya Nagar",
+   "kgisWardId": 4999,
+   "lgdWardCode": 1302734,
+   "centroid": [
+    77.557169,
+    13.005925
+   ],
+   "areaKm2": 0.9438,
+   "neighbours": [
+    36,
+    50,
+    51,
+    61,
+    63,
+    64
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.8726,
+   "venueCount": 55,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 63,
+   "name": "Gayithri Nagar",
+   "kgisWardId": 5002,
+   "lgdWardCode": 1302735,
+   "centroid": [
+    77.559584,
+    12.997983
+   ],
+   "areaKm2": 0.6475,
+   "neighbours": [
+    51,
+    62,
+    64,
+    134,
+    139,
+    140,
+    141
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.7311,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 64,
+   "name": "Kadu Malleshwara",
+   "kgisWardId": 5003,
+   "lgdWardCode": 1302736,
+   "centroid": [
+    77.569447,
+    13.003149
+   ],
+   "areaKm2": 1.3645,
+   "neighbours": [
+    60,
+    61,
+    62,
+    63,
+    65,
+    132,
+    134
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.9963,
+   "venueCount": 36,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 65,
+   "name": "Rajamahal Guttahalli",
+   "kgisWardId": 5006,
+   "lgdWardCode": 1302737,
+   "centroid": [
+    77.578073,
+    13.000848
+   ],
+   "areaKm2": 0.7227,
+   "neighbours": [
+    60,
+    64,
+    128,
+    132
+   ],
+   "zoneId": 37,
+   "zoneShare": 0.6509,
+   "venueCount": 14,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 66,
+   "name": "Radhakrishna Temple Ward",
+   "kgisWardId": 5007,
+   "lgdWardCode": 1302738,
+   "centroid": [
+    77.572922,
+    13.036856
+   ],
+   "areaKm2": 1.9541,
+   "neighbours": [
+    12,
+    13,
+    59,
+    60,
+    67
+   ],
+   "zoneId": 37,
+   "zoneShare": 1,
+   "venueCount": 46,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 67,
+   "name": "Sanjaya Nagar",
+   "kgisWardId": 5010,
+   "lgdWardCode": 1302739,
+   "centroid": [
+    77.579805,
+    13.0368
+   ],
+   "areaKm2": 3.1121,
+   "neighbours": [
+    10,
+    12,
+    60,
+    66,
+    68,
+    70,
+    72
+   ],
+   "zoneId": 37,
+   "zoneShare": 0.9906,
+   "venueCount": 13,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 68,
+   "name": "Vishwanath Nagenahalli",
+   "kgisWardId": 5011,
+   "lgdWardCode": 1302740,
+   "centroid": [
+    77.601412,
+    13.037385
+   ],
+   "areaKm2": 1.017,
+   "neighbours": [
+    10,
+    67,
+    69,
+    70,
+    74,
+    94
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.9997,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 69,
+   "name": "Manorayanapalya",
+   "kgisWardId": 5014,
+   "lgdWardCode": 1302741,
+   "centroid": [
+    77.601756,
+    13.033029
+   ],
+   "areaKm2": 0.8212,
+   "neighbours": [
+    68,
+    70,
+    71,
+    74
+   ],
+   "zoneId": 39,
+   "zoneShare": 1,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 70,
+   "name": "Hebbala",
+   "kgisWardId": 5015,
+   "lgdWardCode": 1302742,
+   "centroid": [
+    77.5937,
+    13.033888
+   ],
+   "areaKm2": 1.3235,
+   "neighbours": [
+    67,
+    68,
+    69,
+    71,
+    72
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.9999,
+   "venueCount": 13,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 71,
+   "name": "Chamundi Nagara",
+   "kgisWardId": 5018,
+   "lgdWardCode": 1302743,
+   "centroid": [
+    77.596469,
+    13.025215
+   ],
+   "areaKm2": 0.6625,
+   "neighbours": [
+    69,
+    70,
+    72,
+    73,
+    74
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.8259,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 72,
+   "name": "Ganga Nagar",
+   "kgisWardId": 5019,
+   "lgdWardCode": 1302744,
+   "centroid": [
+    77.589567,
+    13.02257
+   ],
+   "areaKm2": 0.8817,
+   "neighbours": [
+    60,
+    67,
+    70,
+    71,
+    73
+   ],
+   "zoneId": 39,
+   "zoneShare": 1,
+   "venueCount": 12,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 73,
+   "name": "Jayachamarajendra  Nagar",
+   "kgisWardId": 5022,
+   "lgdWardCode": 1302745,
+   "centroid": [
+    77.593938,
+    13.017774
+   ],
+   "areaKm2": 1.5288,
+   "neighbours": [
+    60,
+    71,
+    72,
+    74,
+    127
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.7395,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 74,
+   "name": "Kaval Bairasandra",
+   "kgisWardId": 5023,
+   "lgdWardCode": 1302746,
+   "centroid": [
+    77.605013,
+    13.022299
+   ],
+   "areaKm2": 2.1009,
+   "neighbours": [
+    10,
+    68,
+    69,
+    71,
+    73,
+    75,
+    76,
+    77,
+    78,
+    94,
+    126,
+    127
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.5962,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 75,
+   "name": "Kushal Nagar",
+   "kgisWardId": 5026,
+   "lgdWardCode": 1302747,
+   "centroid": [
+    77.613586,
+    13.022763
+   ],
+   "areaKm2": 0.8993,
+   "neighbours": [
+    74,
+    76,
+    94,
+    95,
+    96,
+    97
+   ],
+   "zoneId": 39,
+   "zoneShare": 0.5437,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 76,
+   "name": "Muneshwara Nagar",
+   "kgisWardId": 5027,
+   "lgdWardCode": 1302748,
+   "centroid": [
+    77.612008,
+    13.014858
+   ],
+   "areaKm2": 0.5165,
+   "neighbours": [
+    74,
+    75,
+    77,
+    78,
+    79,
+    97
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9265,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 77,
+   "name": "Devara Jeevanahalli",
+   "kgisWardId": 5030,
+   "lgdWardCode": 1302749,
+   "centroid": [
+    77.606803,
+    13.013756
+   ],
+   "areaKm2": 0.4114,
+   "neighbours": [
+    74,
+    76,
+    78
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9973,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 78,
+   "name": "S K Garden",
+   "kgisWardId": 5031,
+   "lgdWardCode": 1302750,
+   "centroid": [
+    77.60863,
+    13.008668
+   ],
+   "areaKm2": 0.9561,
+   "neighbours": [
+    74,
+    76,
+    77,
+    79,
+    80,
+    126
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9847,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 79,
+   "name": "Sagayarapuram",
+   "kgisWardId": 5034,
+   "lgdWardCode": 1302751,
+   "centroid": [
+    77.617234,
+    13.005804
+   ],
+   "areaKm2": 0.8006,
+   "neighbours": [
+    76,
+    78,
+    80,
+    97,
+    102,
+    119
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9996,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 80,
+   "name": "Pulikeshinagar",
+   "kgisWardId": 5035,
+   "lgdWardCode": 1302752,
+   "centroid": [
+    77.609084,
+    12.99678
+   ],
+   "areaKm2": 2.2234,
+   "neighbours": [
+    78,
+    79,
+    102,
+    119,
+    126,
+    127,
+    130,
+    131
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.8538,
+   "venueCount": 76,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 81,
+   "name": "Horamavu",
+   "kgisWardId": 5038,
+   "lgdWardCode": 1302753,
+   "centroid": [
+    77.651821,
+    13.049846
+   ],
+   "areaKm2": 11.9146,
+   "neighbours": [
+    6,
+    7,
+    82,
+    83,
+    94,
+    105
+   ],
+   "zoneId": 33,
+   "zoneShare": 0.9812,
+   "venueCount": 61,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 82,
+   "name": "Babusab Palya",
+   "kgisWardId": 5039,
+   "lgdWardCode": 1302754,
+   "centroid": [
+    77.647346,
+    13.026851
+   ],
+   "areaKm2": 2.7101,
+   "neighbours": [
+    81,
+    83,
+    84,
+    94,
+    98,
+    99,
+    100
+   ],
+   "zoneId": 33,
+   "zoneShare": 0.9116,
+   "venueCount": 13,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 83,
+   "name": "Kalkere",
+   "kgisWardId": 5042,
+   "lgdWardCode": 1302755,
+   "centroid": [
+    77.675249,
+    13.034184
+   ],
+   "areaKm2": 8.025,
+   "neighbours": [
+    81,
+    82,
+    84,
+    87,
+    105
+   ],
+   "zoneId": 33,
+   "zoneShare": 0.9443,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 84,
+   "name": "Ramamurthy Nagara",
+   "kgisWardId": 5043,
+   "lgdWardCode": 1302756,
+   "centroid": [
+    77.673847,
+    13.012916
+   ],
+   "areaKm2": 1.9959,
+   "neighbours": [
+    82,
+    83,
+    85,
+    86,
+    87,
+    100,
+    117
+   ],
+   "zoneId": 10,
+   "zoneShare": 0.7871,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 85,
+   "name": "Vijinapura",
+   "kgisWardId": 5046,
+   "lgdWardCode": 1302757,
+   "centroid": [
+    77.672785,
+    13.006901
+   ],
+   "areaKm2": 1.4831,
+   "neighbours": [
+    84,
+    86,
+    91,
+    117
+   ],
+   "zoneId": 10,
+   "zoneShare": 0.9561,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 86,
+   "name": "K R Puram",
+   "kgisWardId": 5047,
+   "lgdWardCode": 1302758,
+   "centroid": [
+    77.692428,
+    13.012844
+   ],
+   "areaKm2": 4.4381,
+   "neighbours": [
+    84,
+    85,
+    87,
+    88,
+    89,
+    91
+   ],
+   "zoneId": 10,
+   "zoneShare": 1,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 87,
+   "name": "Medahalli",
+   "kgisWardId": 5050,
+   "lgdWardCode": 1302759,
+   "centroid": [
+    77.697237,
+    13.022439
+   ],
+   "areaKm2": 3.2946,
+   "neighbours": [
+    83,
+    84,
+    86,
+    88,
+    105
+   ],
+   "zoneId": 10,
+   "zoneShare": 0.9774,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 88,
+   "name": "Basavanapura",
+   "kgisWardId": 5051,
+   "lgdWardCode": 1302760,
+   "centroid": [
+    77.711924,
+    13.011963
+   ],
+   "areaKm2": 5.0203,
+   "neighbours": [
+    86,
+    87,
+    89,
+    106,
+    107
+   ],
+   "zoneId": 10,
+   "zoneShare": 0.8654,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 89,
+   "name": "Devasandra",
+   "kgisWardId": 5054,
+   "lgdWardCode": 1302761,
+   "centroid": [
+    77.694858,
+    13.000305
+   ],
+   "areaKm2": 2.839,
+   "neighbours": [
+    86,
+    88,
+    90,
+    91,
+    107
+   ],
+   "zoneId": 10,
+   "zoneShare": 0.8501,
+   "venueCount": 29,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 90,
+   "name": "Mahadevapura",
+   "kgisWardId": 5055,
+   "lgdWardCode": 1302762,
+   "centroid": [
+    77.683614,
+    12.98623
+   ],
+   "areaKm2": 3.6756,
+   "neighbours": [
+    89,
+    91,
+    92,
+    107,
+    108,
+    123
+   ],
+   "zoneId": 1,
+   "zoneShare": 0.8319,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 91,
+   "name": "A Narayanapura",
+   "kgisWardId": 5058,
+   "lgdWardCode": 1302763,
+   "centroid": [
+    77.67206,
+    12.992942
+   ],
+   "areaKm2": 1.6709,
+   "neighbours": [
+    85,
+    86,
+    89,
+    90,
+    117,
+    122,
+    123
+   ],
+   "zoneId": 1,
+   "zoneShare": 0.8441,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 92,
+   "name": "Vijnana Nagar",
+   "kgisWardId": 5059,
+   "lgdWardCode": 1302764,
+   "centroid": [
+    77.674517,
+    12.969455
+   ],
+   "areaKm2": 2.0661,
+   "neighbours": [
+    90,
+    93,
+    108,
+    122,
+    123
+   ],
+   "zoneId": 1,
+   "zoneShare": 0.9474,
+   "venueCount": 17,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 93,
+   "name": "HAL Airport",
+   "kgisWardId": 5062,
+   "lgdWardCode": 1302765,
+   "centroid": [
+    77.670706,
+    12.960148
+   ],
+   "areaKm2": 7.3061,
+   "neighbours": [
+    92,
+    108,
+    114,
+    115,
+    122,
+    124,
+    125
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4965,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 94,
+   "name": "Hennur",
+   "kgisWardId": 5063,
+   "lgdWardCode": 1302766,
+   "centroid": [
+    77.629518,
+    13.038153
+   ],
+   "areaKm2": 3.578,
+   "neighbours": [
+    7,
+    8,
+    10,
+    68,
+    74,
+    75,
+    81,
+    82,
+    95,
+    96,
+    98,
+    99
+   ],
+   "zoneId": 30,
+   "zoneShare": 0.9108,
+   "venueCount": 24,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 95,
+   "name": "Nagavara",
+   "kgisWardId": 5066,
+   "lgdWardCode": 1302767,
+   "centroid": [
+    77.618878,
+    13.033225
+   ],
+   "areaKm2": 0.9596,
+   "neighbours": [
+    75,
+    94,
+    96
+   ],
+   "zoneId": 30,
+   "zoneShare": 1,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 96,
+   "name": "Kadugondanahalli",
+   "kgisWardId": 5067,
+   "lgdWardCode": 1302768,
+   "centroid": [
+    77.620003,
+    13.024407
+   ],
+   "areaKm2": 1.3137,
+   "neighbours": [
+    75,
+    94,
+    95,
+    97,
+    98
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4573,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 97,
+   "name": "Venkateshpura",
+   "kgisWardId": 5070,
+   "lgdWardCode": 1302769,
+   "centroid": [
+    77.619601,
+    13.0146
+   ],
+   "areaKm2": 0.5962,
+   "neighbours": [
+    75,
+    76,
+    79,
+    96,
+    98,
+    102
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9991,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 98,
+   "name": "Kacharkanahalli",
+   "kgisWardId": 5071,
+   "lgdWardCode": 1302770,
+   "centroid": [
+    77.629213,
+    13.018221
+   ],
+   "areaKm2": 1.6359,
+   "neighbours": [
+    82,
+    94,
+    96,
+    97,
+    99,
+    101,
+    102
+   ],
+   "zoneId": 30,
+   "zoneShare": 0.5554,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 99,
+   "name": "HRBR Layout",
+   "kgisWardId": 5074,
+   "lgdWardCode": 1302771,
+   "centroid": [
+    77.63641,
+    13.018259
+   ],
+   "areaKm2": 2.095,
+   "neighbours": [
+    82,
+    94,
+    98,
+    100,
+    101
+   ],
+   "zoneId": 30,
+   "zoneShare": 0.6184,
+   "venueCount": 122,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 100,
+   "name": "Banasavadi",
+   "kgisWardId": 5075,
+   "lgdWardCode": 1302772,
+   "centroid": [
+    77.648601,
+    13.011318
+   ],
+   "areaKm2": 2.6337,
+   "neighbours": [
+    82,
+    84,
+    99,
+    101,
+    117,
+    118
+   ],
+   "zoneId": 8,
+   "zoneShare": 0.6549,
+   "venueCount": 36,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 101,
+   "name": "Kammanahalli",
+   "kgisWardId": 5078,
+   "lgdWardCode": 1302773,
+   "centroid": [
+    77.638077,
+    13.009233
+   ],
+   "areaKm2": 0.8181,
+   "neighbours": [
+    98,
+    99,
+    100,
+    102,
+    103,
+    118
+   ],
+   "zoneId": 8,
+   "zoneShare": 0.9959,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 102,
+   "name": "Lingarajapura",
+   "kgisWardId": 5079,
+   "lgdWardCode": 1302774,
+   "centroid": [
+    77.625857,
+    13.0062
+   ],
+   "areaKm2": 1.4369,
+   "neighbours": [
+    79,
+    80,
+    97,
+    98,
+    101,
+    103,
+    119
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.5004,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 103,
+   "name": "Maruthi Seva Nagar",
+   "kgisWardId": 5082,
+   "lgdWardCode": 1302775,
+   "centroid": [
+    77.633416,
+    12.99914
+   ],
+   "areaKm2": 1.8003,
+   "neighbours": [
+    101,
+    102,
+    118,
+    119
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.9998,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 104,
+   "name": "Kadugodi",
+   "kgisWardId": 5083,
+   "lgdWardCode": 1302776,
+   "centroid": [
+    77.766332,
+    12.994955
+   ],
+   "areaKm2": 5.3822,
+   "neighbours": [
+    105,
+    111
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4437,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 105,
+   "name": "Belathur",
+   "kgisWardId": 5086,
+   "lgdWardCode": 1302777,
+   "centroid": [
+    77.713476,
+    13.020507
+   ],
+   "areaKm2": 14.4842,
+   "neighbours": [
+    81,
+    83,
+    87,
+    104,
+    106,
+    110,
+    111
+   ],
+   "zoneId": null,
+   "zoneShare": 0.3967,
+   "venueCount": 75,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 106,
+   "name": "Hudi",
+   "kgisWardId": 5087,
+   "lgdWardCode": 1302778,
+   "centroid": [
+    77.720621,
+    12.995916
+   ],
+   "areaKm2": 9.0263,
+   "neighbours": [
+    88,
+    105,
+    107,
+    108,
+    110
+   ],
+   "zoneId": 2,
+   "zoneShare": 0.8667,
+   "venueCount": 66,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 107,
+   "name": "Garudachar Playa",
+   "kgisWardId": 5090,
+   "lgdWardCode": 1302779,
+   "centroid": [
+    77.700971,
+    12.991173
+   ],
+   "areaKm2": 2.3229,
+   "neighbours": [
+    88,
+    89,
+    90,
+    106,
+    108
+   ],
+   "zoneId": 2,
+   "zoneShare": 0.9997,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 108,
+   "name": "Dodda Nekkundi",
+   "kgisWardId": 5091,
+   "lgdWardCode": 1302780,
+   "centroid": [
+    77.696353,
+    12.972282
+   ],
+   "areaKm2": 5.8991,
+   "neighbours": [
+    90,
+    92,
+    93,
+    106,
+    107,
+    109,
+    110,
+    114
+   ],
+   "zoneId": 1,
+   "zoneShare": 0.6048,
+   "venueCount": 79,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 109,
+   "name": "AECS Layout",
+   "kgisWardId": 5094,
+   "lgdWardCode": 1302781,
+   "centroid": [
+    77.709264,
+    12.964416
+   ],
+   "areaKm2": 2.4028,
+   "neighbours": [
+    108,
+    110,
+    113,
+    114
+   ],
+   "zoneId": 2,
+   "zoneShare": 0.9638,
+   "venueCount": 144,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 110,
+   "name": "Whitefield",
+   "kgisWardId": 5095,
+   "lgdWardCode": 1302782,
+   "centroid": [
+    77.73303,
+    12.969953
+   ],
+   "areaKm2": 11.0187,
+   "neighbours": [
+    105,
+    106,
+    108,
+    109,
+    111,
+    112,
+    113
+   ],
+   "zoneId": 2,
+   "zoneShare": 0.6984,
+   "venueCount": 185,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 111,
+   "name": "Hagadur",
+   "kgisWardId": 5098,
+   "lgdWardCode": 1302783,
+   "centroid": [
+    77.764694,
+    12.972405
+   ],
+   "areaKm2": 6.6691,
+   "neighbours": [
+    104,
+    105,
+    110,
+    112
+   ],
+   "zoneId": 42,
+   "zoneShare": 0.8195,
+   "venueCount": 46,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 112,
+   "name": "Varthuru",
+   "kgisWardId": 5099,
+   "lgdWardCode": 1302784,
+   "centroid": [
+    77.743397,
+    12.938379
+   ],
+   "areaKm2": 22.4419,
+   "neighbours": [
+    110,
+    111,
+    113,
+    116
+   ],
+   "zoneId": 42,
+   "zoneShare": 0.9976,
+   "venueCount": 75,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 113,
+   "name": "Munnekollala",
+   "kgisWardId": 5102,
+   "lgdWardCode": 1302785,
+   "centroid": [
+    77.705313,
+    12.932708
+   ],
+   "areaKm2": 9.4294,
+   "neighbours": [
+    109,
+    110,
+    112,
+    114,
+    116
+   ],
+   "zoneId": 25,
+   "zoneShare": 0.623,
+   "venueCount": 79,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 114,
+   "name": "Marathahalli",
+   "kgisWardId": 5103,
+   "lgdWardCode": 1302786,
+   "centroid": [
+    77.696118,
+    12.940531
+   ],
+   "areaKm2": 4.263,
+   "neighbours": [
+    93,
+    108,
+    109,
+    113,
+    115,
+    116
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4502,
+   "venueCount": 91,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 115,
+   "name": "Bellanduru",
+   "kgisWardId": 5106,
+   "lgdWardCode": 1302787,
+   "centroid": [
+    77.665154,
+    12.942237
+   ],
+   "areaKm2": 9.5257,
+   "neighbours": [
+    93,
+    114,
+    116,
+    124,
+    178,
+    180,
+    229
+   ],
+   "zoneId": 12,
+   "zoneShare": 0.5204,
+   "venueCount": 78,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 116,
+   "name": "Doddakanahalli",
+   "kgisWardId": 5107,
+   "lgdWardCode": 1302788,
+   "centroid": [
+    77.681437,
+    12.908147
+   ],
+   "areaKm2": 12.6145,
+   "neighbours": [
+    112,
+    113,
+    114,
+    115,
+    229,
+    243
+   ],
+   "zoneId": 25,
+   "zoneShare": 0.9956,
+   "venueCount": 148,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 117,
+   "name": "C V Raman Nagar",
+   "kgisWardId": 5110,
+   "lgdWardCode": 1302789,
+   "centroid": [
+    77.657535,
+    12.993319
+   ],
+   "areaKm2": 3.0517,
+   "neighbours": [
+    84,
+    85,
+    91,
+    100,
+    118,
+    119,
+    121,
+    122
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.8281,
+   "venueCount": 27,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 118,
+   "name": "Lal Bahadur Nagar",
+   "kgisWardId": 5111,
+   "lgdWardCode": 1302790,
+   "centroid": [
+    77.64722,
+    13.000989
+   ],
+   "areaKm2": 3.7867,
+   "neighbours": [
+    100,
+    101,
+    103,
+    117,
+    119
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.7698,
+   "venueCount": 9,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 119,
+   "name": "New Bayappanahalli",
+   "kgisWardId": 5114,
+   "lgdWardCode": 1302791,
+   "centroid": [
+    77.630274,
+    12.990062
+   ],
+   "areaKm2": 3.6646,
+   "neighbours": [
+    79,
+    80,
+    102,
+    103,
+    117,
+    118,
+    120,
+    121,
+    131
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.6274,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 120,
+   "name": "Hoysala Nagar",
+   "kgisWardId": 5115,
+   "lgdWardCode": 1302792,
+   "centroid": [
+    77.63445,
+    12.979386
+   ],
+   "areaKm2": 1.5627,
+   "neighbours": [
+    119,
+    121,
+    131,
+    179
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.8829,
+   "venueCount": 151,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 121,
+   "name": "Old Thippasandra",
+   "kgisWardId": 5118,
+   "lgdWardCode": 1302793,
+   "centroid": [
+    77.648159,
+    12.97268
+   ],
+   "areaKm2": 2.0681,
+   "neighbours": [
+    117,
+    119,
+    120,
+    122,
+    124,
+    178,
+    179
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.8843,
+   "venueCount": 101,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 122,
+   "name": "New Thippasandra",
+   "kgisWardId": 5119,
+   "lgdWardCode": 1302794,
+   "centroid": [
+    77.659562,
+    12.975631
+   ],
+   "areaKm2": 2.635,
+   "neighbours": [
+    91,
+    92,
+    93,
+    117,
+    121,
+    123,
+    124
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.9999,
+   "venueCount": 50,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 123,
+   "name": "Jalakanteshwara Nagara",
+   "kgisWardId": 5122,
+   "lgdWardCode": 1302795,
+   "centroid": [
+    77.674382,
+    12.979823
+   ],
+   "areaKm2": 1.4667,
+   "neighbours": [
+    90,
+    91,
+    92,
+    122
+   ],
+   "zoneId": 18,
+   "zoneShare": 0.997,
+   "venueCount": 12,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 124,
+   "name": "Jeevanbhima Nagar",
+   "kgisWardId": 5123,
+   "lgdWardCode": 1302796,
+   "centroid": [
+    77.651353,
+    12.959324
+   ],
+   "areaKm2": 2.4798,
+   "neighbours": [
+    93,
+    115,
+    121,
+    122,
+    125,
+    178
+   ],
+   "zoneId": 26,
+   "zoneShare": 0.756,
+   "venueCount": 41,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 125,
+   "name": "Konena Agrahara",
+   "kgisWardId": 5126,
+   "lgdWardCode": 1302797,
+   "centroid": [
+    77.658734,
+    12.957848
+   ],
+   "areaKm2": 0.8955,
+   "neighbours": [
+    93,
+    124
+   ],
+   "zoneId": 26,
+   "zoneShare": 0.8559,
+   "venueCount": 35,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 126,
+   "name": "Ramaswamy Palya",
+   "kgisWardId": 5127,
+   "lgdWardCode": 1302798,
+   "centroid": [
+    77.601359,
+    13.002827
+   ],
+   "areaKm2": 0.9624,
+   "neighbours": [
+    74,
+    78,
+    80,
+    127
+   ],
+   "zoneId": 27,
+   "zoneShare": 0.5089,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 127,
+   "name": "Jayamahal",
+   "kgisWardId": 5130,
+   "lgdWardCode": 1302799,
+   "centroid": [
+    77.599455,
+    12.997286
+   ],
+   "areaKm2": 1.3647,
+   "neighbours": [
+    60,
+    73,
+    74,
+    80,
+    126,
+    128,
+    129,
+    130
+   ],
+   "zoneId": 37,
+   "zoneShare": 0.5836,
+   "venueCount": 9,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 128,
+   "name": "Vasanth Nagar",
+   "kgisWardId": 5131,
+   "lgdWardCode": 1302800,
+   "centroid": [
+    77.587596,
+    12.989168
+   ],
+   "areaKm2": 4.361,
+   "neighbours": [
+    60,
+    65,
+    127,
+    129,
+    132,
+    133
+   ],
+   "zoneId": 9,
+   "zoneShare": 0.5833,
+   "venueCount": 124,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 129,
+   "name": "Sampangiram Nagar",
+   "kgisWardId": 5134,
+   "lgdWardCode": 1302801,
+   "centroid": [
+    77.599899,
+    12.976255
+   ],
+   "areaKm2": 3.5551,
+   "neighbours": [
+    127,
+    128,
+    130,
+    131,
+    133,
+    138,
+    171,
+    172,
+    181,
+    182
+   ],
+   "zoneId": 9,
+   "zoneShare": 0.6087,
+   "venueCount": 73,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 130,
+   "name": "Bharathi Nagar",
+   "kgisWardId": 5135,
+   "lgdWardCode": 1302802,
+   "centroid": [
+    77.609484,
+    12.988532
+   ],
+   "areaKm2": 0.6695,
+   "neighbours": [
+    80,
+    127,
+    129,
+    131
+   ],
+   "zoneId": 23,
+   "zoneShare": 0.9985,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 131,
+   "name": "Ulsoor",
+   "kgisWardId": 5138,
+   "lgdWardCode": 1302803,
+   "centroid": [
+    77.619997,
+    12.980469
+   ],
+   "areaKm2": 1.8632,
+   "neighbours": [
+    80,
+    119,
+    120,
+    129,
+    130,
+    179,
+    180,
+    181
+   ],
+   "zoneId": 26,
+   "zoneShare": 0.7852,
+   "venueCount": 44,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 132,
+   "name": "Dattatreya Temple",
+   "kgisWardId": 5139,
+   "lgdWardCode": 1302804,
+   "centroid": [
+    77.574602,
+    12.997217
+   ],
+   "areaKm2": 0.717,
+   "neighbours": [
+    64,
+    65,
+    128,
+    133,
+    134
+   ],
+   "zoneId": 37,
+   "zoneShare": 0.5498,
+   "venueCount": 26,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 133,
+   "name": "Gandhinagar",
+   "kgisWardId": 5142,
+   "lgdWardCode": 1302805,
+   "centroid": [
+    77.574735,
+    12.981559
+   ],
+   "areaKm2": 1.9284,
+   "neighbours": [
+    128,
+    129,
+    132,
+    134,
+    137,
+    138
+   ],
+   "zoneId": 9,
+   "zoneShare": 0.6815,
+   "venueCount": 69,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 134,
+   "name": "Subhash Nagar",
+   "kgisWardId": 5143,
+   "lgdWardCode": 1302806,
+   "centroid": [
+    77.568255,
+    12.982922
+   ],
+   "areaKm2": 1.321,
+   "neighbours": [
+    63,
+    64,
+    132,
+    133,
+    135,
+    137,
+    139
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4273,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 135,
+   "name": "Okalipuram",
+   "kgisWardId": 5146,
+   "lgdWardCode": 1302807,
+   "centroid": [
+    77.5634,
+    12.982696
+   ],
+   "areaKm2": 0.8257,
+   "neighbours": [
+    134,
+    136,
+    137,
+    139,
+    140,
+    142
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.5971,
+   "venueCount": 17,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 136,
+   "name": "Binnipete",
+   "kgisWardId": 5147,
+   "lgdWardCode": 1302808,
+   "centroid": [
+    77.5593,
+    12.971392
+   ],
+   "areaKm2": 0.7764,
+   "neighbours": [
+    135,
+    137,
+    142,
+    146,
+    156,
+    157,
+    167
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.656,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 137,
+   "name": "Cottonpete",
+   "kgisWardId": 5150,
+   "lgdWardCode": 1302809,
+   "centroid": [
+    77.567278,
+    12.969908
+   ],
+   "areaKm2": 0.759,
+   "neighbours": [
+    133,
+    134,
+    135,
+    136,
+    138,
+    165,
+    166,
+    167
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.5445,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 138,
+   "name": "Chickpete",
+   "kgisWardId": 5151,
+   "lgdWardCode": 1302810,
+   "centroid": [
+    77.576179,
+    12.970503
+   ],
+   "areaKm2": 0.7148,
+   "neighbours": [
+    129,
+    133,
+    137,
+    165,
+    172
+   ],
+   "zoneId": 9,
+   "zoneShare": 1,
+   "venueCount": 16,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 139,
+   "name": "Dayananda Nagar",
+   "kgisWardId": 5154,
+   "lgdWardCode": 1302811,
+   "centroid": [
+    77.563596,
+    12.990658
+   ],
+   "areaKm2": 0.4467,
+   "neighbours": [
+    63,
+    134,
+    135,
+    140
+   ],
+   "zoneId": 15,
+   "zoneShare": 0.9994,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 140,
+   "name": "Prakash Nagar",
+   "kgisWardId": 5155,
+   "lgdWardCode": 1302812,
+   "centroid": [
+    77.559181,
+    12.991896
+   ],
+   "areaKm2": 0.5682,
+   "neighbours": [
+    51,
+    63,
+    135,
+    139,
+    141,
+    142
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.8608,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 141,
+   "name": "Rajaji Nagar",
+   "kgisWardId": 5158,
+   "lgdWardCode": 1302813,
+   "centroid": [
+    77.549806,
+    12.993967
+   ],
+   "areaKm2": 0.8308,
+   "neighbours": [
+    51,
+    63,
+    140,
+    142,
+    143,
+    144
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.5647,
+   "venueCount": 20,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 142,
+   "name": "Sriramamandir",
+   "kgisWardId": 5159,
+   "lgdWardCode": 1302814,
+   "centroid": [
+    77.555915,
+    12.982291
+   ],
+   "areaKm2": 1.0615,
+   "neighbours": [
+    135,
+    136,
+    140,
+    141,
+    143,
+    146
+   ],
+   "zoneId": 38,
+   "zoneShare": 0.9971,
+   "venueCount": 21,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 143,
+   "name": "Shivanagara",
+   "kgisWardId": 5162,
+   "lgdWardCode": 1302815,
+   "centroid": [
+    77.549124,
+    12.988335
+   ],
+   "areaKm2": 0.7371,
+   "neighbours": [
+    141,
+    142,
+    144,
+    146
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.5982,
+   "venueCount": 17,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 144,
+   "name": "Basaveshwara Nagar",
+   "kgisWardId": 5163,
+   "lgdWardCode": 1302816,
+   "centroid": [
+    77.543529,
+    12.991838
+   ],
+   "areaKm2": 0.841,
+   "neighbours": [
+    51,
+    55,
+    56,
+    57,
+    141,
+    143,
+    145,
+    146,
+    147
+   ],
+   "zoneId": 3,
+   "zoneShare": 1,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 145,
+   "name": "Kamakshipalya",
+   "kgisWardId": 5166,
+   "lgdWardCode": 1302817,
+   "centroid": [
+    77.533346,
+    12.986594
+   ],
+   "areaKm2": 0.9936,
+   "neighbours": [
+    57,
+    58,
+    144,
+    147,
+    148,
+    149
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.9977,
+   "venueCount": 11,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 146,
+   "name": "Dr. Raj Kumar Ward",
+   "kgisWardId": 5167,
+   "lgdWardCode": 1302818,
+   "centroid": [
+    77.547857,
+    12.978392
+   ],
+   "areaKm2": 1.3214,
+   "neighbours": [
+    136,
+    142,
+    143,
+    144,
+    147,
+    148,
+    150,
+    156,
+    157,
+    158
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.7665,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 147,
+   "name": "Agrahara Dasarahalli",
+   "kgisWardId": 5170,
+   "lgdWardCode": 1302819,
+   "centroid": [
+    77.539897,
+    12.981309
+   ],
+   "areaKm2": 0.6906,
+   "neighbours": [
+    144,
+    145,
+    146,
+    148
+   ],
+   "zoneId": 3,
+   "zoneShare": 0.7144,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 148,
+   "name": "Govindaraja Nagar",
+   "kgisWardId": 5171,
+   "lgdWardCode": 1302820,
+   "centroid": [
+    77.533077,
+    12.977542
+   ],
+   "areaKm2": 0.8162,
+   "neighbours": [
+    145,
+    146,
+    147,
+    149,
+    150
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9999,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 149,
+   "name": "Kaveripura",
+   "kgisWardId": 5174,
+   "lgdWardCode": 1302821,
+   "centroid": [
+    77.523894,
+    12.981847
+   ],
+   "areaKm2": 1.1204,
+   "neighbours": [
+    45,
+    58,
+    145,
+    148,
+    150,
+    152
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9979,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 150,
+   "name": "Marenahalli",
+   "kgisWardId": 5175,
+   "lgdWardCode": 1302822,
+   "centroid": [
+    77.529641,
+    12.972307
+   ],
+   "areaKm2": 0.8563,
+   "neighbours": [
+    146,
+    148,
+    149,
+    151,
+    152,
+    158,
+    159
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9991,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 151,
+   "name": "Maruthi Mandir ward",
+   "kgisWardId": 5178,
+   "lgdWardCode": 1302823,
+   "centroid": [
+    77.528248,
+    12.966929
+   ],
+   "areaKm2": 0.8075,
+   "neighbours": [
+    150,
+    152,
+    153,
+    159,
+    161
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9989,
+   "venueCount": 13,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 152,
+   "name": "Mudalapalya",
+   "kgisWardId": 5179,
+   "lgdWardCode": 1302824,
+   "centroid": [
+    77.52209,
+    12.972528
+   ],
+   "areaKm2": 0.6355,
+   "neighbours": [
+    45,
+    149,
+    150,
+    151,
+    153
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9684,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 153,
+   "name": "Nagarabhavi",
+   "kgisWardId": 5182,
+   "lgdWardCode": 1302825,
+   "centroid": [
+    77.516769,
+    12.960307
+   ],
+   "areaKm2": 1.422,
+   "neighbours": [
+    45,
+    48,
+    151,
+    152,
+    154,
+    161
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9994,
+   "venueCount": 12,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 154,
+   "name": "Chandra Layout",
+   "kgisWardId": 5183,
+   "lgdWardCode": 1302826,
+   "centroid": [
+    77.51983,
+    12.949132
+   ],
+   "areaKm2": 1.604,
+   "neighbours": [
+    48,
+    153,
+    155,
+    161
+   ],
+   "zoneId": 20,
+   "zoneShare": 1,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 155,
+   "name": "Nayandahalli",
+   "kgisWardId": 5186,
+   "lgdWardCode": 1302827,
+   "centroid": [
+    77.52071,
+    12.943699
+   ],
+   "areaKm2": 1.0789,
+   "neighbours": [
+    48,
+    154,
+    161,
+    162,
+    163
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.9993,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 156,
+   "name": "Kempapura Agrahara",
+   "kgisWardId": 5187,
+   "lgdWardCode": 1302828,
+   "centroid": [
+    77.555014,
+    12.97225
+   ],
+   "areaKm2": 0.3399,
+   "neighbours": [
+    136,
+    146,
+    157,
+    158,
+    167
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.9829,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 157,
+   "name": "Vijayanagar",
+   "kgisWardId": 5190,
+   "lgdWardCode": 1302829,
+   "centroid": [
+    77.549746,
+    12.97218
+   ],
+   "areaKm2": 0.5456,
+   "neighbours": [
+    136,
+    146,
+    156,
+    158
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.9966,
+   "venueCount": 9,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 158,
+   "name": "Hosahalli",
+   "kgisWardId": 5191,
+   "lgdWardCode": 1302830,
+   "centroid": [
+    77.547187,
+    12.969178
+   ],
+   "areaKm2": 0.7135,
+   "neighbours": [
+    146,
+    150,
+    156,
+    157,
+    159,
+    167,
+    168,
+    169
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.989,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 159,
+   "name": "Hampi Nagar",
+   "kgisWardId": 5194,
+   "lgdWardCode": 1302831,
+   "centroid": [
+    77.540499,
+    12.961668
+   ],
+   "areaKm2": 1.2036,
+   "neighbours": [
+    150,
+    151,
+    158,
+    160,
+    161,
+    162,
+    164,
+    168,
+    169
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.9907,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 160,
+   "name": "Bapuji Nagar",
+   "kgisWardId": 5195,
+   "lgdWardCode": 1302832,
+   "centroid": [
+    77.543575,
+    12.959019
+   ],
+   "areaKm2": 0.4559,
+   "neighbours": [
+    159,
+    164,
+    169
+   ],
+   "zoneId": 34,
+   "zoneShare": 0.9908,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 161,
+   "name": "Attiguppe",
+   "kgisWardId": 5198,
+   "lgdWardCode": 1302833,
+   "centroid": [
+    77.529011,
+    12.959343
+   ],
+   "areaKm2": 1.4092,
+   "neighbours": [
+    151,
+    153,
+    154,
+    155,
+    159,
+    162
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.8025,
+   "venueCount": 28,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 162,
+   "name": "Gali Anjenaya Temple ward",
+   "kgisWardId": 5199,
+   "lgdWardCode": 1302834,
+   "centroid": [
+    77.535428,
+    12.95132
+   ],
+   "areaKm2": 1.1769,
+   "neighbours": [
+    155,
+    159,
+    161,
+    163,
+    164
+   ],
+   "zoneId": 20,
+   "zoneShare": 0.6372,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 163,
+   "name": "Veerabhadranagar",
+   "kgisWardId": 5202,
+   "lgdWardCode": 1302835,
+   "centroid": [
+    77.536248,
+    12.94297
+   ],
+   "areaKm2": 1.4913,
+   "neighbours": [
+    48,
+    155,
+    162,
+    164,
+    209,
+    214
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.7327,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 164,
+   "name": "Avalahalli",
+   "kgisWardId": 5203,
+   "lgdWardCode": 1302836,
+   "centroid": [
+    77.547372,
+    12.949448
+   ],
+   "areaKm2": 1.0696,
+   "neighbours": [
+    159,
+    160,
+    162,
+    163,
+    169,
+    170,
+    213,
+    214
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.5836,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 165,
+   "name": "Chamrajapet",
+   "kgisWardId": 5206,
+   "lgdWardCode": 1302837,
+   "centroid": [
+    77.565865,
+    12.960025
+   ],
+   "areaKm2": 1.552,
+   "neighbours": [
+    137,
+    138,
+    166,
+    167,
+    168,
+    170,
+    171,
+    172,
+    173,
+    174,
+    211
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.8319,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 166,
+   "name": "Chalavadipalya",
+   "kgisWardId": 5207,
+   "lgdWardCode": 1302838,
+   "centroid": [
+    77.566158,
+    12.96437
+   ],
+   "areaKm2": 0.4413,
+   "neighbours": [
+    137,
+    165,
+    167
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.8301,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 167,
+   "name": "Jagajivanaram Nagar",
+   "kgisWardId": 5210,
+   "lgdWardCode": 1302839,
+   "centroid": [
+    77.559246,
+    12.965443
+   ],
+   "areaKm2": 0.6868,
+   "neighbours": [
+    136,
+    137,
+    156,
+    158,
+    165,
+    166,
+    168
+   ],
+   "zoneId": 6,
+   "zoneShare": 1,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 168,
+   "name": "Padarayanapura",
+   "kgisWardId": 5211,
+   "lgdWardCode": 1302840,
+   "centroid": [
+    77.552258,
+    12.962728
+   ],
+   "areaKm2": 0.5092,
+   "neighbours": [
+    158,
+    159,
+    165,
+    167,
+    169,
+    170
+   ],
+   "zoneId": 6,
+   "zoneShare": 1,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 169,
+   "name": "Devaraj Urs Nagar",
+   "kgisWardId": 5214,
+   "lgdWardCode": 1302841,
+   "centroid": [
+    77.547995,
+    12.961368
+   ],
+   "areaKm2": 0.4592,
+   "neighbours": [
+    158,
+    159,
+    160,
+    164,
+    168,
+    170
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.9954,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 170,
+   "name": "Azad Nagar",
+   "kgisWardId": 5215,
+   "lgdWardCode": 1302842,
+   "centroid": [
+    77.554558,
+    12.95371
+   ],
+   "areaKm2": 0.6815,
+   "neighbours": [
+    164,
+    165,
+    168,
+    169,
+    211,
+    212,
+    213
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.8714,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 171,
+   "name": "Sudham Nagara",
+   "kgisWardId": 5218,
+   "lgdWardCode": 1302843,
+   "centroid": [
+    77.585352,
+    12.957807
+   ],
+   "areaKm2": 1.0687,
+   "neighbours": [
+    129,
+    165,
+    172,
+    174,
+    177,
+    181,
+    182
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.7932,
+   "venueCount": 16,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 172,
+   "name": "Dharmaraya Swamy Temple Ward",
+   "kgisWardId": 5219,
+   "lgdWardCode": 1302844,
+   "centroid": [
+    77.583089,
+    12.964113
+   ],
+   "areaKm2": 1.3618,
+   "neighbours": [
+    129,
+    138,
+    165,
+    171
+   ],
+   "zoneId": 9,
+   "zoneShare": 0.6051,
+   "venueCount": 9,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 173,
+   "name": "Sunkenahalli",
+   "kgisWardId": 5222,
+   "lgdWardCode": 1302845,
+   "centroid": [
+    77.56582,
+    12.948057
+   ],
+   "areaKm2": 1.4829,
+   "neighbours": [
+    165,
+    174,
+    175,
+    210,
+    211
+   ],
+   "zoneId": 6,
+   "zoneShare": 0.5834,
+   "venueCount": 49,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 174,
+   "name": "Vishveshwara Puram",
+   "kgisWardId": 5223,
+   "lgdWardCode": 1302846,
+   "centroid": [
+    77.581831,
+    12.949145
+   ],
+   "areaKm2": 2.49,
+   "neighbours": [
+    165,
+    171,
+    173,
+    175,
+    177
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4735,
+   "venueCount": 42,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 175,
+   "name": "Ashoka Pillar",
+   "kgisWardId": 5226,
+   "lgdWardCode": 1302847,
+   "centroid": [
+    77.586216,
+    12.94201
+   ],
+   "areaKm2": 1.6964,
+   "neighbours": [
+    173,
+    174,
+    176,
+    177,
+    196,
+    200,
+    210
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.8015,
+   "venueCount": 28,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 176,
+   "name": "Someshwara Nagar",
+   "kgisWardId": 5227,
+   "lgdWardCode": 1302848,
+   "centroid": [
+    77.595016,
+    12.937526
+   ],
+   "areaKm2": 1.4747,
+   "neighbours": [
+    175,
+    177,
+    188,
+    189,
+    195,
+    196
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.9991,
+   "venueCount": 25,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 177,
+   "name": "Hombegowda Nagara",
+   "kgisWardId": 5230,
+   "lgdWardCode": 1302849,
+   "centroid": [
+    77.597504,
+    12.949447
+   ],
+   "areaKm2": 1.0905,
+   "neighbours": [
+    171,
+    174,
+    175,
+    176,
+    182,
+    188
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.9148,
+   "venueCount": 25,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 178,
+   "name": "Domlur",
+   "kgisWardId": 5231,
+   "lgdWardCode": 1302850,
+   "centroid": [
+    77.636181,
+    12.963656
+   ],
+   "areaKm2": 2.2709,
+   "neighbours": [
+    115,
+    121,
+    124,
+    179,
+    180
+   ],
+   "zoneId": 26,
+   "zoneShare": 0.7173,
+   "venueCount": 136,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 179,
+   "name": "Jogupalya",
+   "kgisWardId": 5234,
+   "lgdWardCode": 1302851,
+   "centroid": [
+    77.631683,
+    12.973543
+   ],
+   "areaKm2": 1.1799,
+   "neighbours": [
+    120,
+    121,
+    131,
+    178,
+    180
+   ],
+   "zoneId": 26,
+   "zoneShare": 0.7216,
+   "venueCount": 37,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 180,
+   "name": "Agaram",
+   "kgisWardId": 5235,
+   "lgdWardCode": 1302852,
+   "centroid": [
+    77.634206,
+    12.94577
+   ],
+   "areaKm2": 10.2705,
+   "neighbours": [
+    115,
+    131,
+    178,
+    179,
+    181,
+    183,
+    184,
+    185,
+    186,
+    188,
+    191,
+    229,
+    230
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4973,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 181,
+   "name": "Shantala Nagar",
+   "kgisWardId": 5238,
+   "lgdWardCode": 1302853,
+   "centroid": [
+    77.607971,
+    12.965413
+   ],
+   "areaKm2": 4.1432,
+   "neighbours": [
+    129,
+    131,
+    171,
+    180,
+    182,
+    183,
+    184
+   ],
+   "zoneId": 22,
+   "zoneShare": 0.7137,
+   "venueCount": 343,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 182,
+   "name": "Shanthi Nagar",
+   "kgisWardId": 5239,
+   "lgdWardCode": 1302854,
+   "centroid": [
+    77.601014,
+    12.953952
+   ],
+   "areaKm2": 1.2572,
+   "neighbours": [
+    129,
+    171,
+    177,
+    181,
+    183,
+    188
+   ],
+   "zoneId": 22,
+   "zoneShare": 0.9877,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 183,
+   "name": "Neelasandra",
+   "kgisWardId": 5242,
+   "lgdWardCode": 1302855,
+   "centroid": [
+    77.60954,
+    12.955462
+   ],
+   "areaKm2": 1.8748,
+   "neighbours": [
+    180,
+    181,
+    182,
+    184,
+    188
+   ],
+   "zoneId": 22,
+   "zoneShare": 0.9999,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 184,
+   "name": "Vannarapete",
+   "kgisWardId": 5243,
+   "lgdWardCode": 1302856,
+   "centroid": [
+    77.618964,
+    12.956154
+   ],
+   "areaKm2": 0.6747,
+   "neighbours": [
+    180,
+    181,
+    183
+   ],
+   "zoneId": 22,
+   "zoneShare": 1,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 185,
+   "name": "Ejipura",
+   "kgisWardId": 5246,
+   "lgdWardCode": 1302857,
+   "centroid": [
+    77.628025,
+    12.942852
+   ],
+   "areaKm2": 1.0601,
+   "neighbours": [
+    180,
+    186
+   ],
+   "zoneId": 22,
+   "zoneShare": 0.6449,
+   "venueCount": 38,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 186,
+   "name": "Koramangala",
+   "kgisWardId": 5247,
+   "lgdWardCode": 1302858,
+   "centroid": [
+    77.627809,
+    12.934627
+   ],
+   "areaKm2": 3.2307,
+   "neighbours": [
+    180,
+    185,
+    187,
+    188,
+    190,
+    191,
+    192
+   ],
+   "zoneId": 12,
+   "zoneShare": 0.9993,
+   "venueCount": 112,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 187,
+   "name": "Adugodi",
+   "kgisWardId": 5250,
+   "lgdWardCode": 1302859,
+   "centroid": [
+    77.616388,
+    12.937251
+   ],
+   "areaKm2": 2.0804,
+   "neighbours": [
+    186,
+    188,
+    189,
+    190,
+    192
+   ],
+   "zoneId": 12,
+   "zoneShare": 0.9945,
+   "venueCount": 191,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 188,
+   "name": "Lakkasandra",
+   "kgisWardId": 5251,
+   "lgdWardCode": 1302860,
+   "centroid": [
+    77.608395,
+    12.94463
+   ],
+   "areaKm2": 1.7844,
+   "neighbours": [
+    176,
+    177,
+    180,
+    182,
+    183,
+    186,
+    187,
+    189
+   ],
+   "zoneId": null,
+   "zoneShare": 0.4488,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 189,
+   "name": "Suddagunte Palya",
+   "kgisWardId": 5254,
+   "lgdWardCode": 1302861,
+   "centroid": [
+    77.607184,
+    12.928707
+   ],
+   "areaKm2": 1.4913,
+   "neighbours": [
+    176,
+    187,
+    188,
+    190,
+    192,
+    194,
+    195
+   ],
+   "zoneId": 16,
+   "zoneShare": 0.7735,
+   "venueCount": 44,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 190,
+   "name": "Madivala",
+   "kgisWardId": 5255,
+   "lgdWardCode": 1302862,
+   "centroid": [
+    77.613152,
+    12.924801
+   ],
+   "areaKm2": 1.0282,
+   "neighbours": [
+    186,
+    187,
+    189,
+    192
+   ],
+   "zoneId": 16,
+   "zoneShare": 0.9999,
+   "venueCount": 16,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 191,
+   "name": "Jakkasandra",
+   "kgisWardId": 5258,
+   "lgdWardCode": 1302863,
+   "centroid": [
+    77.632361,
+    12.921048
+   ],
+   "areaKm2": 1.5244,
+   "neighbours": [
+    180,
+    186,
+    192,
+    230,
+    232,
+    233
+   ],
+   "zoneId": 12,
+   "zoneShare": 0.9954,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 192,
+   "name": "BTM Layout",
+   "kgisWardId": 5259,
+   "lgdWardCode": 1302864,
+   "centroid": [
+    77.614653,
+    12.91636
+   ],
+   "areaKm2": 1.4729,
+   "neighbours": [
+    186,
+    187,
+    189,
+    190,
+    191,
+    193,
+    194,
+    232,
+    233,
+    237
+   ],
+   "zoneId": 16,
+   "zoneShare": 1,
+   "venueCount": 40,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 193,
+   "name": "N S Palya",
+   "kgisWardId": 5262,
+   "lgdWardCode": 1302865,
+   "centroid": [
+    77.606597,
+    12.910288
+   ],
+   "areaKm2": 1.3658,
+   "neighbours": [
+    192,
+    194,
+    198,
+    237,
+    240
+   ],
+   "zoneId": 16,
+   "zoneShare": 0.9979,
+   "venueCount": 45,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 194,
+   "name": "Gurappanapalya",
+   "kgisWardId": 5263,
+   "lgdWardCode": 1302866,
+   "centroid": [
+    77.606038,
+    12.921693
+   ],
+   "areaKm2": 0.687,
+   "neighbours": [
+    189,
+    192,
+    193,
+    195,
+    196,
+    198
+   ],
+   "zoneId": 16,
+   "zoneShare": 0.9967,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 195,
+   "name": "Tilak Nagar",
+   "kgisWardId": 5266,
+   "lgdWardCode": 1302867,
+   "centroid": [
+    77.59744,
+    12.927571
+   ],
+   "areaKm2": 0.7039,
+   "neighbours": [
+    176,
+    189,
+    194,
+    196
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.6229,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 196,
+   "name": "Byrasandra",
+   "kgisWardId": 5267,
+   "lgdWardCode": 1302868,
+   "centroid": [
+    77.589715,
+    12.929176
+   ],
+   "areaKm2": 2.2097,
+   "neighbours": [
+    175,
+    176,
+    194,
+    195,
+    197,
+    198,
+    200,
+    201
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.9737,
+   "venueCount": 74,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 197,
+   "name": "Shakambari Nagar",
+   "kgisWardId": 5270,
+   "lgdWardCode": 1302869,
+   "centroid": [
+    77.581248,
+    12.916604
+   ],
+   "areaKm2": 2.2244,
+   "neighbours": [
+    196,
+    198,
+    199,
+    201,
+    203
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.7885,
+   "venueCount": 57,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 198,
+   "name": "J P Nagar",
+   "kgisWardId": 5271,
+   "lgdWardCode": 1302870,
+   "centroid": [
+    77.595547,
+    12.910419
+   ],
+   "areaKm2": 1.9459,
+   "neighbours": [
+    193,
+    194,
+    196,
+    197,
+    199,
+    240
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.8113,
+   "venueCount": 87,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 199,
+   "name": "Sarakki",
+   "kgisWardId": 6964,
+   "lgdWardCode": null,
+   "centroid": [
+    77.582956,
+    12.90802
+   ],
+   "areaKm2": 1.5479,
+   "neighbours": [
+    197,
+    198,
+    203,
+    220,
+    240,
+    241,
+    242
+   ],
+   "zoneId": 19,
+   "zoneShare": 0.8136,
+   "venueCount": 61,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 200,
+   "name": "Yediyur",
+   "kgisWardId": 6935,
+   "lgdWardCode": null,
+   "centroid": [
+    77.574052,
+    12.934242
+   ],
+   "areaKm2": 1.1546,
+   "neighbours": [
+    175,
+    196,
+    201,
+    202,
+    210
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.6436,
+   "venueCount": 25,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 201,
+   "name": "Umamaheshwara Ward",
+   "kgisWardId": 6952,
+   "lgdWardCode": null,
+   "centroid": [
+    77.572809,
+    12.923481
+   ],
+   "areaKm2": 1.2501,
+   "neighbours": [
+    196,
+    197,
+    200,
+    202,
+    203
+   ],
+   "zoneId": 24,
+   "zoneShare": 0.9986,
+   "venueCount": 21,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 202,
+   "name": "Ganesh Mandir ward",
+   "kgisWardId": 6969,
+   "lgdWardCode": null,
+   "centroid": [
+    77.56193,
+    12.924161
+   ],
+   "areaKm2": 1.6631,
+   "neighbours": [
+    200,
+    201,
+    203,
+    204,
+    206,
+    207,
+    210,
+    216
+   ],
+   "zoneId": 24,
+   "zoneShare": 0.9534,
+   "venueCount": 39,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 203,
+   "name": "Banashankari Temple ward",
+   "kgisWardId": 6970,
+   "lgdWardCode": null,
+   "centroid": [
+    77.570038,
+    12.91361
+   ],
+   "areaKm2": 0.575,
+   "neighbours": [
+    197,
+    199,
+    201,
+    202,
+    204,
+    220,
+    242
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.819,
+   "venueCount": 0,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 204,
+   "name": "Kumaraswamy Layout",
+   "kgisWardId": 6953,
+   "lgdWardCode": null,
+   "centroid": [
+    77.563646,
+    12.911653
+   ],
+   "areaKm2": 1.0229,
+   "neighbours": [
+    202,
+    203,
+    205,
+    206,
+    220
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.9549,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 205,
+   "name": "Vikram Nagar",
+   "kgisWardId": 6950,
+   "lgdWardCode": null,
+   "centroid": [
+    77.556198,
+    12.903814
+   ],
+   "areaKm2": 1.2613,
+   "neighbours": [
+    204,
+    206,
+    217,
+    219,
+    220,
+    221
+   ],
+   "zoneId": 7,
+   "zoneShare": 1,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 206,
+   "name": "Padmanabha Nagar",
+   "kgisWardId": 6968,
+   "lgdWardCode": null,
+   "centroid": [
+    77.556065,
+    12.915236
+   ],
+   "areaKm2": 1.3393,
+   "neighbours": [
+    202,
+    204,
+    205,
+    207,
+    217,
+    219
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.9997,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 207,
+   "name": "Kamakya Nagar",
+   "kgisWardId": 6962,
+   "lgdWardCode": null,
+   "centroid": [
+    77.550454,
+    12.919952
+   ],
+   "areaKm2": 0.777,
+   "neighbours": [
+    202,
+    206,
+    208,
+    215,
+    216,
+    217
+   ],
+   "zoneId": 24,
+   "zoneShare": 0.6843,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 208,
+   "name": "Deen Dayalu Ward",
+   "kgisWardId": 6963,
+   "lgdWardCode": null,
+   "centroid": [
+    77.541914,
+    12.921488
+   ],
+   "areaKm2": 0.7953,
+   "neighbours": [
+    49,
+    207,
+    209,
+    214,
+    215,
+    217,
+    218
+   ],
+   "zoneId": 24,
+   "zoneShare": 0.9489,
+   "venueCount": 4,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 209,
+   "name": "Hosakerehalli",
+   "kgisWardId": 6961,
+   "lgdWardCode": null,
+   "centroid": [
+    77.53769,
+    12.929011
+   ],
+   "areaKm2": 0.8928,
+   "neighbours": [
+    48,
+    49,
+    163,
+    208,
+    214,
+    215
+   ],
+   "zoneId": 24,
+   "zoneShare": 0.9834,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 210,
+   "name": "Basavanagudi",
+   "kgisWardId": 6926,
+   "lgdWardCode": null,
+   "centroid": [
+    77.568567,
+    12.936474
+   ],
+   "areaKm2": 1.1167,
+   "neighbours": [
+    173,
+    175,
+    200,
+    202,
+    211,
+    216
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.9994,
+   "venueCount": 17,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 211,
+   "name": "Hanumanth Nagar",
+   "kgisWardId": 6931,
+   "lgdWardCode": null,
+   "centroid": [
+    77.561296,
+    12.945191
+   ],
+   "areaKm2": 1.1659,
+   "neighbours": [
+    165,
+    170,
+    173,
+    210,
+    212,
+    216
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.7444,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 212,
+   "name": "Srinivasa Nagar",
+   "kgisWardId": 6927,
+   "lgdWardCode": null,
+   "centroid": [
+    77.556764,
+    12.943611
+   ],
+   "areaKm2": 0.72,
+   "neighbours": [
+    170,
+    211,
+    213,
+    215,
+    216
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.8075,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 213,
+   "name": "Srinagar",
+   "kgisWardId": 6928,
+   "lgdWardCode": null,
+   "centroid": [
+    77.551819,
+    12.944718
+   ],
+   "areaKm2": 0.8432,
+   "neighbours": [
+    164,
+    170,
+    212,
+    214,
+    215
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.7112,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 214,
+   "name": "Girinagar",
+   "kgisWardId": 6929,
+   "lgdWardCode": null,
+   "centroid": [
+    77.5466,
+    12.941786
+   ],
+   "areaKm2": 1.4179,
+   "neighbours": [
+    163,
+    164,
+    208,
+    209,
+    213,
+    215
+   ],
+   "zoneId": 17,
+   "zoneShare": 0.8034,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 215,
+   "name": "Katriguppe",
+   "kgisWardId": 6933,
+   "lgdWardCode": null,
+   "centroid": [
+    77.551791,
+    12.931577
+   ],
+   "areaKm2": 0.9709,
+   "neighbours": [
+    207,
+    208,
+    209,
+    212,
+    213,
+    214,
+    216
+   ],
+   "zoneId": 24,
+   "zoneShare": 1,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 216,
+   "name": "Vidyapeeta ward",
+   "kgisWardId": 6932,
+   "lgdWardCode": null,
+   "centroid": [
+    77.557753,
+    12.929915
+   ],
+   "areaKm2": 0.8521,
+   "neighbours": [
+    202,
+    207,
+    210,
+    211,
+    212,
+    215
+   ],
+   "zoneId": 24,
+   "zoneShare": 1,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 217,
+   "name": "Uttarahalli",
+   "kgisWardId": 6967,
+   "lgdWardCode": null,
+   "centroid": [
+    77.546505,
+    12.90947
+   ],
+   "areaKm2": 1.3409,
+   "neighbours": [
+    205,
+    206,
+    207,
+    208,
+    218,
+    219
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.9545,
+   "venueCount": 10,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 218,
+   "name": "Subramanyapura",
+   "kgisWardId": 6936,
+   "lgdWardCode": null,
+   "centroid": [
+    77.536266,
+    12.900672
+   ],
+   "areaKm2": 8.7372,
+   "neighbours": [
+    35,
+    49,
+    208,
+    217,
+    219
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.7937,
+   "venueCount": 5,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 219,
+   "name": "Vasanthpura",
+   "kgisWardId": 6954,
+   "lgdWardCode": null,
+   "centroid": [
+    77.552179,
+    12.894263
+   ],
+   "areaKm2": 3.476,
+   "neighbours": [
+    35,
+    205,
+    206,
+    217,
+    218,
+    221
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.8457,
+   "venueCount": 18,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 220,
+   "name": "Yelachenahalli",
+   "kgisWardId": 6942,
+   "lgdWardCode": null,
+   "centroid": [
+    77.568644,
+    12.902049
+   ],
+   "areaKm2": 1.0182,
+   "neighbours": [
+    199,
+    203,
+    204,
+    205,
+    221,
+    242
+   ],
+   "zoneId": 7,
+   "zoneShare": 0.9987,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 221,
+   "name": "Konanakunte",
+   "kgisWardId": 6945,
+   "lgdWardCode": null,
+   "centroid": [
+    77.562265,
+    12.883399
+   ],
+   "areaKm2": 4.52,
+   "neighbours": [
+    35,
+    205,
+    219,
+    220,
+    222,
+    223,
+    224,
+    242
+   ],
+   "zoneId": 28,
+   "zoneShare": 0.6913,
+   "venueCount": 22,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 222,
+   "name": "RBI layout",
+   "kgisWardId": 6941,
+   "lgdWardCode": null,
+   "centroid": [
+    77.579552,
+    12.888583
+   ],
+   "areaKm2": 1.8392,
+   "neighbours": [
+    221,
+    223,
+    238,
+    239,
+    240,
+    241,
+    242
+   ],
+   "zoneId": 5,
+   "zoneShare": 1,
+   "venueCount": 22,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 223,
+   "name": "Chunchaghatta",
+   "kgisWardId": 6948,
+   "lgdWardCode": null,
+   "centroid": [
+    77.579009,
+    12.879425
+   ],
+   "areaKm2": 2.9677,
+   "neighbours": [
+    221,
+    222,
+    224,
+    225,
+    239
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.9997,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 224,
+   "name": "Anjanapura",
+   "kgisWardId": 6934,
+   "lgdWardCode": null,
+   "centroid": [
+    77.561491,
+    12.864361
+   ],
+   "areaKm2": 11.2481,
+   "neighbours": [
+    35,
+    221,
+    223,
+    225
+   ],
+   "zoneId": 28,
+   "zoneShare": 0.7971,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 225,
+   "name": "Gottigere",
+   "kgisWardId": 6951,
+   "lgdWardCode": null,
+   "centroid": [
+    77.586356,
+    12.858014
+   ],
+   "areaKm2": 4.7797,
+   "neighbours": [
+    223,
+    224,
+    226,
+    239
+   ],
+   "zoneId": 28,
+   "zoneShare": 0.9213,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 226,
+   "name": "Kalena Agrahara",
+   "kgisWardId": 6966,
+   "lgdWardCode": null,
+   "centroid": [
+    77.608655,
+    12.86454
+   ],
+   "areaKm2": 10.3605,
+   "neighbours": [
+    225,
+    227,
+    236,
+    238,
+    239
+   ],
+   "zoneId": 11,
+   "zoneShare": 0.6501,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 227,
+   "name": "Begur",
+   "kgisWardId": 6965,
+   "lgdWardCode": null,
+   "centroid": [
+    77.635728,
+    12.873514
+   ],
+   "areaKm2": 7.144,
+   "neighbours": [
+    226,
+    228,
+    232,
+    233,
+    236,
+    238
+   ],
+   "zoneId": 11,
+   "zoneShare": 0.9523,
+   "venueCount": 6,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 228,
+   "name": "Naganathapura",
+   "kgisWardId": 6938,
+   "lgdWardCode": null,
+   "centroid": [
+    77.661112,
+    12.872365
+   ],
+   "areaKm2": 4.8833,
+   "neighbours": [
+    227,
+    232,
+    233,
+    243
+   ],
+   "zoneId": 11,
+   "zoneShare": 0.9886,
+   "venueCount": 7,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 229,
+   "name": "Ibluru",
+   "kgisWardId": 6937,
+   "lgdWardCode": null,
+   "centroid": [
+    77.654255,
+    12.908548
+   ],
+   "areaKm2": 3.4292,
+   "neighbours": [
+    115,
+    116,
+    180,
+    230,
+    231,
+    232,
+    243
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.8059,
+   "venueCount": 28,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 230,
+   "name": "Agara",
+   "kgisWardId": 6949,
+   "lgdWardCode": null,
+   "centroid": [
+    77.644729,
+    12.912988
+   ],
+   "areaKm2": 3.6403,
+   "neighbours": [
+    180,
+    191,
+    229,
+    231,
+    232
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.8767,
+   "venueCount": 197,
+   "isFoodVenueWard": true
+  },
+  {
+   "id": 231,
+   "name": "Mangammanapalya",
+   "kgisWardId": 6944,
+   "lgdWardCode": null,
+   "centroid": [
+    77.639277,
+    12.900093
+   ],
+   "areaKm2": 1.0663,
+   "neighbours": [
+    229,
+    230,
+    232
+   ],
+   "zoneId": 35,
+   "zoneShare": 1,
+   "venueCount": 2,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 232,
+   "name": "HSR - Singasandra",
+   "kgisWardId": 6955,
+   "lgdWardCode": null,
+   "centroid": [
+    77.643182,
+    12.890346
+   ],
+   "areaKm2": 3.2701,
+   "neighbours": [
+    191,
+    192,
+    227,
+    228,
+    229,
+    230,
+    231,
+    233,
+    243
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.9265,
+   "venueCount": 44,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 233,
+   "name": "Rupenaagrahara",
+   "kgisWardId": 6958,
+   "lgdWardCode": null,
+   "centroid": [
+    77.633357,
+    12.893931
+   ],
+   "areaKm2": 2.9595,
+   "neighbours": [
+    191,
+    192,
+    227,
+    228,
+    232,
+    234,
+    235,
+    236,
+    237
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.9338,
+   "venueCount": 14,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 234,
+   "name": "Hongasandra",
+   "kgisWardId": 6957,
+   "lgdWardCode": null,
+   "centroid": [
+    77.628142,
+    12.897744
+   ],
+   "areaKm2": 0.6565,
+   "neighbours": [
+    233,
+    235,
+    236
+   ],
+   "zoneId": 35,
+   "zoneShare": 1,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 235,
+   "name": "Bommanahalli",
+   "kgisWardId": 6956,
+   "lgdWardCode": null,
+   "centroid": [
+    77.622373,
+    12.902144
+   ],
+   "areaKm2": 0.9724,
+   "neighbours": [
+    233,
+    234,
+    236,
+    237
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.8868,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 236,
+   "name": "Devarachikkanahalli",
+   "kgisWardId": 6943,
+   "lgdWardCode": null,
+   "centroid": [
+    77.623589,
+    12.89202
+   ],
+   "areaKm2": 1.7977,
+   "neighbours": [
+    226,
+    227,
+    233,
+    234,
+    235,
+    237,
+    238
+   ],
+   "zoneId": 35,
+   "zoneShare": 0.7674,
+   "venueCount": 3,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 237,
+   "name": "Bilekhalli",
+   "kgisWardId": 6959,
+   "lgdWardCode": null,
+   "centroid": [
+    77.611193,
+    12.900687
+   ],
+   "areaKm2": 3.045,
+   "neighbours": [
+    192,
+    193,
+    233,
+    235,
+    236,
+    238,
+    240
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.678,
+   "venueCount": 15,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 238,
+   "name": "Arakere",
+   "kgisWardId": 6946,
+   "lgdWardCode": null,
+   "centroid": [
+    77.607084,
+    12.886266
+   ],
+   "areaKm2": 2.3236,
+   "neighbours": [
+    222,
+    226,
+    227,
+    236,
+    237,
+    239,
+    240
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.9497,
+   "venueCount": 8,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 239,
+   "name": "Hulimavu",
+   "kgisWardId": 6939,
+   "lgdWardCode": null,
+   "centroid": [
+    77.604503,
+    12.87548
+   ],
+   "areaKm2": 4.7212,
+   "neighbours": [
+    222,
+    223,
+    225,
+    226,
+    238
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.7344,
+   "venueCount": 19,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 240,
+   "name": "Vinayakanagar",
+   "kgisWardId": 6960,
+   "lgdWardCode": null,
+   "centroid": [
+    77.597216,
+    12.900121
+   ],
+   "areaKm2": 2.4907,
+   "neighbours": [
+    193,
+    198,
+    199,
+    222,
+    237,
+    238,
+    241
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.8687,
+   "venueCount": 29,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 241,
+   "name": "Puttenahalli - Sarakki Lake",
+   "kgisWardId": 6940,
+   "lgdWardCode": null,
+   "centroid": [
+    77.582377,
+    12.90012
+   ],
+   "areaKm2": 1.3441,
+   "neighbours": [
+    199,
+    222,
+    240,
+    242
+   ],
+   "zoneId": 5,
+   "zoneShare": 1,
+   "venueCount": 30,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 242,
+   "name": "Jaraganahalli",
+   "kgisWardId": 6947,
+   "lgdWardCode": null,
+   "centroid": [
+    77.5745,
+    12.900436
+   ],
+   "areaKm2": 0.7508,
+   "neighbours": [
+    199,
+    203,
+    220,
+    221,
+    222,
+    241
+   ],
+   "zoneId": 5,
+   "zoneShare": 0.9993,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  },
+  {
+   "id": 243,
+   "name": "Kudlu",
+   "kgisWardId": 6930,
+   "lgdWardCode": null,
+   "centroid": [
+    77.660139,
+    12.88876
+   ],
+   "areaKm2": 3.3407,
+   "neighbours": [
+    116,
+    228,
+    229,
+    232
+   ],
+   "zoneId": 11,
+   "zoneShare": 0.9363,
+   "venueCount": 1,
+   "isFoodVenueWard": false
+  }
+ ],
+ "zones": [
+  {
+   "id": 1,
+   "name": "E12",
+   "wardIds": [
+    90,
+    91,
+    92,
+    108
+   ]
+  },
+  {
+   "id": 2,
+   "name": "E11",
+   "wardIds": [
+    106,
+    107,
+    109,
+    110
+   ]
+  },
+  {
+   "id": 3,
+   "name": "W13",
+   "wardIds": [
+    56,
+    57,
+    58,
+    143,
+    144,
+    145,
+    146,
+    147
+   ]
+  },
+  {
+   "id": 4,
+   "name": "W22",
+   "wardIds": [
+    31,
+    45,
+    46,
+    47
+   ]
+  },
+  {
+   "id": 5,
+   "name": "S11",
+   "wardIds": [
+    222,
+    223,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242
+   ]
+  },
+  {
+   "id": 6,
+   "name": "SW2",
+   "wardIds": [
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    173
+   ]
+  },
+  {
+   "id": 7,
+   "name": "SW5",
+   "wardIds": [
+    203,
+    204,
+    205,
+    206,
+    217,
+    218,
+    219,
+    220
+   ]
+  },
+  {
+   "id": 8,
+   "name": "E22",
+   "wardIds": [
+    100,
+    101
+   ]
+  },
+  {
+   "id": 9,
+   "name": "SW1",
+   "wardIds": [
+    128,
+    129,
+    133,
+    138,
+    172
+   ]
+  },
+  {
+   "id": 10,
+   "name": "E24",
+   "wardIds": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+   ]
+  },
+  {
+   "id": 11,
+   "name": "S22",
+   "wardIds": [
+    226,
+    227,
+    228,
+    243
+   ]
+  },
+  {
+   "id": 12,
+   "name": "SE5",
+   "wardIds": [
+    115,
+    186,
+    187,
+    191
+   ]
+  },
+  {
+   "id": 13,
+   "name": "W21",
+   "wardIds": [
+    32,
+    33,
+    34,
+    48,
+    49
+   ]
+  },
+  {
+   "id": 14,
+   "name": "NW3",
+   "wardIds": [
+    18,
+    19,
+    20,
+    21,
+    39,
+    40
+   ]
+  },
+  {
+   "id": 15,
+   "name": "NE1",
+   "wardIds": [
+    37,
+    38,
+    59,
+    61,
+    63,
+    64,
+    135,
+    139
+   ]
+  },
+  {
+   "id": 16,
+   "name": "S12",
+   "wardIds": [
+    189,
+    190,
+    192,
+    193,
+    194
+   ]
+  },
+  {
+   "id": 17,
+   "name": "SW3",
+   "wardIds": [
+    163,
+    164,
+    200,
+    210,
+    211,
+    212,
+    213,
+    214
+   ]
+  },
+  {
+   "id": 18,
+   "name": "SE4",
+   "wardIds": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123
+   ]
+  },
+  {
+   "id": 19,
+   "name": "S21",
+   "wardIds": [
+    175,
+    176,
+    177,
+    195,
+    196,
+    197,
+    198,
+    199
+   ]
+  },
+  {
+   "id": 20,
+   "name": "W12",
+   "wardIds": [
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    161,
+    162
+   ]
+  },
+  {
+   "id": 21,
+   "name": "NW5",
+   "wardIds": [
+    17
+   ]
+  },
+  {
+   "id": 22,
+   "name": "SE1",
+   "wardIds": [
+    181,
+    182,
+    183,
+    184,
+    185
+   ]
+  },
+  {
+   "id": 23,
+   "name": "C11",
+   "wardIds": [
+    130
+   ]
+  },
+  {
+   "id": 24,
+   "name": "SW4",
+   "wardIds": [
+    201,
+    202,
+    207,
+    208,
+    209,
+    215,
+    216
+   ]
+  },
+  {
+   "id": 25,
+   "name": "SE3",
+   "wardIds": [
+    113,
+    116
+   ]
+  },
+  {
+   "id": 26,
+   "name": "SE2",
+   "wardIds": [
+    124,
+    125,
+    131,
+    178,
+    179
+   ]
+  },
+  {
+   "id": 27,
+   "name": "C12",
+   "wardIds": [
+    76,
+    77,
+    78,
+    79,
+    80,
+    97,
+    102,
+    103,
+    126
+   ]
+  },
+  {
+   "id": 28,
+   "name": "S13",
+   "wardIds": [
+    221,
+    224,
+    225
+   ]
+  },
+  {
+   "id": 29,
+   "name": "NW2",
+   "wardIds": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    29,
+    41
+   ]
+  },
+  {
+   "id": 30,
+   "name": "E21",
+   "wardIds": [
+    94,
+    95,
+    98,
+    99
+   ]
+  },
+  {
+   "id": 31,
+   "name": "SW6",
+   "wardIds": []
+  },
+  {
+   "id": 32,
+   "name": "NW4",
+   "wardIds": [
+    27,
+    30,
+    42,
+    43,
+    44
+   ]
+  },
+  {
+   "id": 33,
+   "name": "E23",
+   "wardIds": [
+    81,
+    82,
+    83
+   ]
+  },
+  {
+   "id": 34,
+   "name": "W11",
+   "wardIds": [
+    136,
+    137,
+    156,
+    157,
+    158,
+    159,
+    160
+   ]
+  },
+  {
+   "id": 35,
+   "name": "SE6",
+   "wardIds": [
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236
+   ]
+  },
+  {
+   "id": 36,
+   "name": "N11",
+   "wardIds": [
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "id": 37,
+   "name": "NE2",
+   "wardIds": [
+    60,
+    65,
+    66,
+    67,
+    127,
+    132
+   ]
+  },
+  {
+   "id": 38,
+   "name": "NW1",
+   "wardIds": [
+    36,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    62,
+    140,
+    141,
+    142
+   ]
+  },
+  {
+   "id": 39,
+   "name": "N12",
+   "wardIds": [
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75
+   ]
+  },
+  {
+   "id": 40,
+   "name": "N21",
+   "wardIds": [
+    3,
+    5
+   ]
+  },
+  {
+   "id": 41,
+   "name": "N22",
+   "wardIds": [
+    11,
+    13,
+    14,
+    15
+   ]
+  },
+  {
+   "id": 42,
+   "name": "E13",
+   "wardIds": [
+    111,
+    112
+   ]
+  },
+  {
+   "id": 43,
+   "name": "N23",
+   "wardIds": [
+    2,
+    4,
+    6,
+    7
+   ]
+  }
+ ],
+ "approximateNeighbours": []
+}
