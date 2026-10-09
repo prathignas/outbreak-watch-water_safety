@@ -21,7 +21,9 @@ npm run dev                    # http://localhost:5173
   person-to-person outbreak in any ward, fast-forward a day, or reset.
 - **What the mock runs:** the detection module's own code (`../src`: `generateLiveDay`,
   `runDetector`, `wardRisk`). Nothing is copied. It runs in a Web Worker, with seed 2026 and
-  the demo clock starting at 2026-07-08 (the handoff scenario), plus real Open-Meteo rain.
+  the demo clock on today's date in India (Asia/Kolkata, from `src/lib/clock.ts`, moving on at
+  midnight IST), the real demo's planted outbreaks relative to today, plus real Open-Meteo rain
+  (bundled up to its last fetched day). Unit tests still use the fixed 2026-07-08 start.
 - **State:** kept in that browser tab only. A page reload starts the demo fresh.
 - **Bundle cost:** mock mode adds 711 KB to the build (209 KB gzip): the engine worker
   (128 KB), city and rain data (114 KB), and MSW with the slimmed results.

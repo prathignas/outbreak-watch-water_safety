@@ -13,6 +13,7 @@ import type {
   RainRow,
   WardRisk,
 } from "./types";
+import { istDay } from "@/lib/clock";
 import { getSession } from "./session";
 
 export type ApiMode = "mock" | "real";
@@ -131,9 +132,6 @@ export const api = {
   advanceDay: () => request<DemoState>("/demo/advance", { method: "POST" }),
   /** Mock mode: the demo clock. Real mode: today in Asia/Kolkata (no server route needed). */
   getDemoState: async (): Promise<DemoState> =>
-    config.mode === "mock" ? request<DemoState>("/demo/state") : { today: todayInKolkata(), seed: 0, injection: null },
+    config.mode === "mock" ? request<DemoState>("/demo/state") : { today: istDay(), seed: 0, injection: null },
 };
 
-export function todayInKolkata(now = new Date()): string {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
-}

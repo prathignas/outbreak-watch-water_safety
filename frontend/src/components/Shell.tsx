@@ -7,6 +7,7 @@ import { getSession } from "@/api/session";
 import { useTheme } from "@/app/theme";
 import { Switch } from "@/components/ui/switch";
 import { useAlerts, useDemoState } from "@/hooks/queries";
+import { secondsSince } from "@/lib/clock";
 import { fmtFull } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { DemoPanel } from "./DemoPanel";
@@ -112,7 +113,7 @@ function TopRight({ onDemo }: { onDemo: () => void }) {
     const t = setInterval(() => tick((n) => n + 1), 1000);
     return () => clearInterval(t);
   }, []);
-  const ago = demo.dataUpdatedAt ? Math.max(0, Math.round((Date.now() - demo.dataUpdatedAt) / 1000)) : null;
+  const ago = demo.dataUpdatedAt ? secondsSince(demo.dataUpdatedAt) : null;
   return (
     <div className="flex w-full items-center gap-2 sm:gap-3 md:w-auto md:gap-4">
       {demo.data && (

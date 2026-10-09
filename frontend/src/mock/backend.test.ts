@@ -3,6 +3,7 @@ import city from "./data/city.json";
 import rain from "./data/rain.json";
 import { MockBackend, MOCK } from "./backend";
 import type { CityFile } from "@engine/city.js";
+import { addDays } from "@/lib/format";
 
 let clock = 1_000_000;
 const make = () => new MockBackend({ city: city as unknown as CityFile, rain, now: () => clock });
@@ -67,4 +68,13 @@ describe("mock backend (runs the detection module's own code)", () => {
     expect(backend.state()).toMatchObject({ today: MOCK.startDate, injection: null });
     expect(backend.listAlerts()).toEqual(before);
   }, 120_000);
+  it("syncTo moves the demo day forward to the real day and keeps what happened", () => {
+    const backend = make();
+    const id = backend.listAlerts()[0].id;
+    backend.ack(id, "Asha Rao");
+    const next = addDays(MOCK.startDate, 2);
+    expect(backend.syncTo(next).today).toBe(next);
+    expect(backend.getAlert(id).status).toBe("acknowledged");
+    expect(backend.syncTo(MOCK.startDate).today).toBe(next); // never goes back
+  });
 });

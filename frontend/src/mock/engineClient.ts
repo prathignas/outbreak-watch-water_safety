@@ -1,4 +1,5 @@
 /* A promise interface to the mock backend: a Web Worker in the browser, a direct instance in tests. */
+import { istDay, nowMs } from "@/lib/clock";
 import type { MockBackend } from "./backend";
 import { MockError } from "./backend";
 
@@ -25,7 +26,8 @@ export function workerEngine(): Engine {
       const id = next++;
       return new Promise((resolve, reject) => {
         pending.set(id, { resolve: resolve as (v: unknown) => void, reject });
-        worker.postMessage({ id, method, args });
+        const now = nowMs();
+        worker.postMessage({ id, method, args, clock: { now, today: istDay(now) } });
       });
     },
   };

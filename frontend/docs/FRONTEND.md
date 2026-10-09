@@ -232,7 +232,7 @@ Desktop shell
   - **Engine:** the mock runs the detection module's own code (`generateLiveDay`,
     `generateHistory`, `runDetector`, `wardRisk`), imported from `../src`. No code is copied.
   - **Off the main thread:** the engine runs in a Web Worker, so the UI never freezes.
-  - **Repeatable:** seeds are deterministic (seed 2026, demo clock starting 2026-07-08).
+  - **Repeatable:** seeds are deterministic (seed 2026). In the browser the demo clock is today in IST; tests use 2026-07-08.
   - **Stubs:** only file reading is stubbed: `node:fs` and `node:url` are aliased to small stubs
     in `vite.config.ts`. `city.json` and rain are passed in as data.
   - **Bundle size:** the size the engine adds to the mock bundle will be measured and reported
@@ -293,7 +293,7 @@ outbreak in ward 18 from 6 Jul 2026) with real 2026 rain, and records:
     not include it.
 - **Mock-only routes** (not for P3): `GET /demo/state` (demo clock) and `POST /demo/advance`.
 - **Mock demo choices** (`MOCK` in `src/mock/backend.ts`):
-  - Seed 2026, starting 2026-07-08, as in the handoff samples.
+  - Seed 2026. Browser: starts today (IST) with the planted demo outbreaks; tests: 2026-07-08, as in the handoff samples.
   - 112 days of history, and the detector has run for 7 days when the demo opens.
   - **Injection:** an injected outbreak is placed 3 days back, so its signals are already
     arriving, and its alerts appear after 2.5 s. One injection at a time.

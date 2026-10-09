@@ -9,6 +9,7 @@ import { addDays, daysBetween } from "@engine/dates.js";
 import { describeInjection, generateLiveDay } from "@engine/live.js";
 import { emptyDetectorState, runDetector, RUN_DETECTOR_PARAMS, wardRisk, type DetectorState } from "@engine/runDetector.js";
 import { SignalIndex } from "@engine/scoring.js";
+import { isoAt } from "@/lib/clock";
 import type { AlertRecord, AlertStatus, DemoState, InjectableCause, Injection, InjectResponse, LiveSignalRow, RainRow, WardRisk } from "@/api/types";
 
 /** Mock settings. All are demo choices, documented in docs/FRONTEND.md and README. */
@@ -26,6 +27,18 @@ export const MOCK = {
   appearsAfterMs: 2500,
   /** The daily run is modelled at 06:00 India time; createdAt uses it. */
   runTime: "T06:00:00+05:30",
+  /** When the mock follows the real clock, the same planted outbreaks as the real demo
+   * (backend/src/demo/demo-scenario.json), relative to today, so the app is never empty. */
+  scenario: {
+    detectorFromDaysAgo: 10,
+    outbreaks: [
+      { cause: "water", wardId: 18, startDaysAgo: 6, seed: 2026 },
+      { cause: "water", wardId: 52, startDaysAgo: 5, seed: 2026 },
+      { cause: "water", wardId: 151, startDaysAgo: 4, seed: 2026 },
+      { cause: "food", wardId: 120, startDaysAgo: 3, seed: 2026 },
+      { cause: "p2p", wardId: 138, startDaysAgo: 8, seed: 2026 },
+    ] as Array<{ cause: InjectableCause; wardId: number; startDaysAgo: number; seed: number }>,
+  },
 };
 
 export class MockError extends Error {
@@ -40,6 +53,8 @@ interface Options {
   seed?: number;
   startDate?: string;
   now?: () => number;
+  /** Plant MOCK.scenario's outbreaks relative to the start day (the browser mock does). */
+  scenario?: boolean;
 }
 
 export class MockBackend {
@@ -48,6 +63,8 @@ export class MockBackend {
   private readonly seed: number;
   private readonly startDate: string;
   private readonly now: () => number;
+  private readonly withScenario: boolean;
+  private planted: Array<{ cause: InjectableCause; wardId: number; startDate: string; seed: number; affected: Set<number> }> = [];
   private today!: string;
   private firstRunDay!: string;
   private injection: Injection | null = null;
@@ -62,7 +79,8 @@ export class MockBackend {
     this.rainByDate = new Map(options.rain.map((r) => [r.date, r.mm]));
     this.seed = options.seed ?? MOCK.seed;
     this.startDate = options.startDate ?? MOCK.startDate;
-    this.now = options.now ?? (() => Date.now());
+    this.now = options.now ?? (() => Date.now()); // tests pass a fixed clock; the worker passes the page clock
+    this.withScenario = options.scenario ?? false;
     this.reset();
   }
 
@@ -70,7 +88,15 @@ export class MockBackend {
 
   reset(): DemoState {
     this.today = this.startDate;
-    this.firstRunDay = addDays(this.startDate, -MOCK.warmupRunDays);
+    this.firstRunDay = addDays(this.startDate, -(this.withScenario ? MOCK.scenario.detectorFromDaysAgo : MOCK.warmupRunDays));
+    this.planted = this.withScenario
+      ? MOCK.scenario.outbreaks.map((o) => {
+          const startDate = addDays(this.startDate, -o.startDaysAgo);
+          const options = { injectOutbreak: o.cause, wardId: o.wardId, startDate, city: this.city };
+          const affected = new Set((describeInjection(startDate, o.seed, options)?.affectedWards ?? []).map((w) => w.wardId));
+          return { ...o, startDate, affected };
+        })
+      : [];
     this.injection = null;
     this.rowsByDay.clear();
     this.stateAfter.clear();
@@ -83,6 +109,13 @@ export class MockBackend {
 
   state(): DemoState {
     return { today: this.today, seed: this.seed, injection: this.injection };
+  }
+
+  /** Moves the demo clock forward to `day` (the real IST day), one daily run per day, keeping
+   * alerts, actions and any injection. Used when the tab stays open past midnight IST. */
+  syncTo(day: string): DemoState {
+    while (this.today < day) this.advance();
+    return this.state();
   }
 
   advance(): DemoState {
@@ -138,7 +171,7 @@ export class MockBackend {
     if (!clean) throw new MockError(400, "A note cannot be empty.");
     if (clean.length > 2000) throw new MockError(400, "A note can be at most 2000 characters.");
     const record = this.mustGet(id);
-    record.events.push({ at: new Date(this.now()).toISOString(), by: who(by), kind: "note", text: clean });
+    record.events.push({ at: isoAt(this.now()), by: who(by), kind: "note", text: clean });
     return strip(record);
   }
 
@@ -178,7 +211,20 @@ export class MockBackend {
     const inject = this.injection && date >= this.injection.startDate
       ? { injectOutbreak: this.injection.cause, wardId: this.injection.originWardId ?? undefined, startDate: this.injection.startDate }
       : {};
-    return generateLiveDay(date, this.seed, { city: this.city, ...inject }) as LiveSignalRow[];
+    const rows = generateLiveDay(date, this.seed, { city: this.city, ...inject }) as LiveSignalRow[];
+    if (!this.planted.some((o) => o.startDate <= date)) return rows;
+    // Planted outbreaks: their rows for the wards they reach; where two overlap, the larger count wins.
+    const byKey = new Map(rows.map((row) => [`${row.wardId}|${row.signalType}|${row.date}`, row]));
+    for (const o of this.planted) {
+      if (o.startDate > date) continue;
+      for (const row of generateLiveDay(date, o.seed, { city: this.city, injectOutbreak: o.cause, wardId: o.wardId, startDate: o.startDate }) as LiveSignalRow[]) {
+        if (!o.affected.has(row.wardId)) continue;
+        const key = `${row.wardId}|${row.signalType}|${row.date}`;
+        const current = byKey.get(key);
+        if (!current || row.count > current.count) byKey.set(key, row);
+      }
+    }
+    return [...byKey.values()];
   }
 
   private rebuildIndex(): void {
@@ -230,7 +276,7 @@ export class MockBackend {
     const record = this.mustGet(id);
     if (!allowedFrom.includes(record.status)) throw new MockError(409, `Alert is ${record.status}; it cannot become ${to}.`);
     record.status = to;
-    record.events.push({ at: new Date(this.now()).toISOString(), by: who(by), kind: to === "acknowledged" ? "acknowledged" : "resolved" });
+    record.events.push({ at: isoAt(this.now()), by: who(by), kind: to === "acknowledged" ? "acknowledged" : "resolved" });
     return strip(record);
   }
 
