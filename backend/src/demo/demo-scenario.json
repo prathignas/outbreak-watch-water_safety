@@ -1,0 +1,16 @@
+{
+  "about": "The demo scenario loaded by POST /demo/reset and the DB-setup Lambda. Days are relative to today (IST). Only wards, start days and seeds are chosen here; no detector or classifier rule. Checked by backend/tests/demo-scenario.test.ts.",
+  "detectorFromDaysAgo": 10,
+  "outbreaks": [
+    { "cause": "water", "wardId": 18, "startDaysAgo": 6, "seed": 2026 },
+    { "cause": "water", "wardId": 52, "startDaysAgo": 5, "seed": 2026 },
+    { "cause": "water", "wardId": 151, "startDaysAgo": 4, "seed": 2026 },
+    { "cause": "food", "wardId": 120, "startDaysAgo": 3, "seed": 2026 },
+    { "cause": "p2p", "wardId": 138, "startDaysAgo": 8, "seed": 2026 }
+  ],
+  "officer": {
+    "name": "Demo officer",
+    "ackNote": "Asked BWSSB to check NW3 supply line",
+    "resolveNote": "Checked with the ward health officer: no further cases. Closing."
+  }
+}
