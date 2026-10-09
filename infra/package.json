@@ -1,0 +1,25 @@
+{
+  "name": "@outbreak/infra",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never",
+    "destroy": "cdk destroy --force"
+  },
+  "dependencies": {
+    "@outbreak/backend": "*",
+    "@outbreak/contract": "*",
+    "@outbreak/detection": "*",
+    "aws-cdk-lib": "^2.170.0",
+    "constructs": "^10.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "aws-cdk": "^2.170.0",
+    "tsx": "^4.19.2",
+    "esbuild": "^0.28.2"
+  }
+}
