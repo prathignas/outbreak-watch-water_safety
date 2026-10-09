@@ -8,6 +8,8 @@
   "workspaces": [
     "packages/*",
     "detection",
+    "pipeline",
+    "infra",
     "backend"
   ],
   "scripts": {
