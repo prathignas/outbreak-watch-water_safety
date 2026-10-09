@@ -1,0 +1,25 @@
+{
+  "latitude": 12.9716,
+  "longitude": 77.5946,
+  "generationtime_ms": 0.231,
+  "utc_offset_seconds": 19800,
+  "timezone": "Asia/Kolkata",
+  "timezone_abbreviation": "IST",
+  "elevation": 920.0,
+  "daily_units": {
+    "time": "iso8601",
+    "precipitation_sum": "mm"
+  },
+  "daily": {
+    "time": [
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07"
+    ],
+    "precipitation_sum": [
+      0.0,
+      12.4,
+      5.8
+    ]
+  }
+}
