@@ -22,7 +22,7 @@ export function ZoneMiniMap({ zoneId, wards, zones, city, statuses, label }: {
   if (!view) return null;
   const { proj, shown, zone, inZone } = view;
   return (
-    <svg viewBox={`0 0 520 ${proj.height.toFixed(0)}`} className="h-auto max-h-[280px] w-full" role="img" aria-label={label}>
+    <svg viewBox={`0 0 520 ${proj.height.toFixed(0)}`} className="h-auto max-h-[17.5rem] w-full" role="img" aria-label={label}>
       <defs><filter id={`glow-${fid}`} x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4" /></filter></defs>
       {shown.map((f) => {
         const id = wardIdOf(f);

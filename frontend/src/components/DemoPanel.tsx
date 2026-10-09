@@ -1,6 +1,5 @@
 import { FastForward, FlaskConical, RotateCcw } from "lucide-react";
 import { useMemo, useState } from "react";
-import { ApiError } from "@/api/client";
 import type { InjectableCause } from "@/api/types";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
@@ -26,7 +25,7 @@ export function DemoPanel({ open, onOpenChange }: { open: boolean; onOpenChange:
   const busy = inject.isPending || reset.isPending || advance.isPending;
 
   const failed = (e: unknown) =>
-    setMessage(e instanceof ApiError && e.status === 401 ? "The demo key was not accepted. Reload the page and enter it again." : e instanceof Error ? e.message : "That did not work.");
+    setMessage(e instanceof Error ? e.message : "That did not work.");
 
   const doInject = () =>
     inject.mutate({ cause, wardId: Number(wardId) }, {

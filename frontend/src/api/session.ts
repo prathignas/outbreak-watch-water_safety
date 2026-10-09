@@ -1,4 +1,4 @@
-/* Demo key and officer name, asked once per browser session on the gate screen.
+/* Demo key and officer name sent with every request. Defaults come from the build; no login page.
  * sessionStorage can be unavailable (private mode, blocked storage), so every access
  * is guarded and an in-memory copy is kept. */
 export interface Session {
@@ -7,19 +7,17 @@ export interface Session {
 }
 
 const KEY = "outbreak-watch-session";
-let memory: Session = { demoKey: null, officerName: null };
-const clearedListeners = new Set<() => void>();
-
-/** Called after clearSession(), e.g. when the server refuses the demo key. Returns an unsubscribe. */
-export function onSessionCleared(listener: () => void): () => void {
-  clearedListeners.add(listener);
-  return () => clearedListeners.delete(listener);
-}
+/** No login page: the demo key comes from the build (VITE_DEMO_KEY, same value as the API's DEMO_AUTH_TOKEN). */
+const DEFAULTS: Session = { demoKey: import.meta.env.VITE_DEMO_KEY || "watch-demo", officerName: "Demo officer" };
+let memory: Session = { ...DEFAULTS };
 
 export function getSession(): Session {
   try {
     const raw = sessionStorage.getItem(KEY);
-    if (raw) memory = { ...memory, ...(JSON.parse(raw) as Session) };
+    if (raw) {
+      const stored = JSON.parse(raw) as Session;
+      memory = { demoKey: stored.demoKey || DEFAULTS.demoKey, officerName: stored.officerName || DEFAULTS.officerName };
+    }
   } catch {
     // storage unavailable: use the in-memory copy
   }
@@ -36,11 +34,10 @@ export function setSession(next: Session): void {
 }
 
 export function clearSession(): void {
-  memory = { demoKey: null, officerName: null };
+  memory = { ...DEFAULTS };
   try {
     sessionStorage.removeItem(KEY);
   } catch {
     // ignore
   }
-  clearedListeners.forEach((listener) => listener());
 }

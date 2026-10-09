@@ -66,8 +66,3 @@ for (const theme of ["light", "dark"] as const) {
   });
 }
 
-test("gate", async ({ page }) => {
-  await page.goto("/");
-  await expect(page.getByRole("heading", { name: "Enter the demo" })).toBeVisible();
-  await audit(page, "gate");
-});

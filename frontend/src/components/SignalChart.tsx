@@ -76,7 +76,7 @@ export function SignalChart({ rows, signal, today, alertDate }: { rows: LiveSign
         {[...new Set(rows.filter((r) => r.signalType === signal).map((r) => r.sourceTag))].sort().map((tag) => <SourceBadge key={tag} tag={tag} />)}
         {latest && <span className="ml-auto text-sm text-muted">Latest {latest.count} on {fmtDay(latest.date)}{latest.normal !== null ? `, normal ${latest.normal}` : ""}</span>}
       </figcaption>
-      <div className="h-[150px] w-full" role="img"
+      <div className="h-[9.375rem] w-full" role="img"
         aria-label={`${SIGNAL_LABEL[signal]}, last 8 weeks.${latest ? ` Latest ${latest.count} on ${fmtDay(latest.date)}, normal ${latest.normal ?? "not known"}.` : ""}`}>
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={series} margin={{ top: 8, right: 28, bottom: 0, left: 24 }}>

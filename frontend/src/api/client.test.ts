@@ -8,7 +8,7 @@ import { directEngine } from "@/mock/engineClient";
 import { makeHandlers, MOCK_DEMO_KEY } from "@/mock/handlers";
 import type { CityFile } from "@engine/city.js";
 import { api, ApiError, config, request, urlFor } from "./client";
-import { clearSession, setSession } from "./session";
+import { clearSession, getSession, setSession } from "./session";
 
 const backend = new MockBackend({ city: city as unknown as CityFile, rain });
 const server = setupServer(...makeHandlers(directEngine(backend), 0));
@@ -32,8 +32,9 @@ describe("API client (mock mode, real MSW handlers)", () => {
     expect(Object.keys(alerts[0].alert).sort()).toEqual(["causeProbs", "contributingSignals", "date", "evidence", "method", "score", "suspectedZoneId", "wardId"]);
   });
 
-  it("sends X-Demo-Auth and X-Officer-Name; officer actions fail without the key", async () => {
+  it("sends X-Demo-Auth and X-Officer-Name; officer actions fail with a wrong key", async () => {
     const id = (await api.listAlerts())[0].id;
+    setSession({ demoKey: "wrong", officerName: "Asha Rao" });
     await expect(api.ackAlert(id)).rejects.toMatchObject({ status: 401 });
     setSession({ demoKey: MOCK_DEMO_KEY, officerName: "Asha Rao" });
     const acked = await api.ackAlert(id);
@@ -42,6 +43,15 @@ describe("API client (mock mode, real MSW handlers)", () => {
     await expect(api.ackAlert(id)).rejects.toMatchObject({ status: 409 });
     const noted = await api.addNote(id, "Valve checked");
     expect(noted.events.at(-1)).toMatchObject({ kind: "note", text: "Valve checked" });
+  });
+
+  it("never clears the session; a refused key is a plain error with a clear message", async () => {
+    setSession({ demoKey: "k", officerName: "Asha Rao" });
+    server.use(http.post("*/demo/reset", () => HttpResponse.json({ error: "UNAUTHORIZED", message: "The demo key is missing or wrong." }, { status: 401 })));
+    await expect(api.resetDemo()).rejects.toMatchObject({ status: 401, message: expect.stringMatching(/refused the demo key/) });
+    server.use(http.get("*/alerts", () => HttpResponse.error()));
+    await expect(api.listAlerts()).rejects.toMatchObject({ status: 0 });
+    expect(getSession().demoKey).toBe("k");
   });
 
   it("turns server errors into ApiError with the server's message", async () => {

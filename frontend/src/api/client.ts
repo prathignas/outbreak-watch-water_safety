@@ -13,7 +13,7 @@ import type {
   RainRow,
   WardRisk,
 } from "./types";
-import { clearSession, getSession } from "./session";
+import { getSession } from "./session";
 
 export type ApiMode = "mock" | "real";
 
@@ -39,13 +39,30 @@ export function urlFor(path: string): string {
   return config.mode === "real" ? `${config.baseUrl}${path}` : `${globalThis.location?.origin ?? ""}${path}`;
 }
 
-export async function request<T>(path: string, init: { method?: "GET" | "POST"; body?: unknown } = {}): Promise<T> {
+/** The one place the demo key and officer name are attached. Every call (GET, POST, PATCH...) goes through here. */
+export function authHeaders(): Record<string, string> {
   const session = getSession();
-  const headers: Record<string, string> = { Accept: "application/json" };
+  const headers: Record<string, string> = {};
   if (session.demoKey) headers["X-Demo-Auth"] = session.demoKey;
   if (session.officerName) headers["X-Officer-Name"] = session.officerName;
+  return headers;
+}
+
+/** True only when the server says the demo key itself was refused (not some other 401). */
+async function isKeyRefusal(response: Response): Promise<boolean> {
+  try {
+    const body = (await response.clone().json()) as { message?: string; error?: string | { code?: string; message?: string } };
+    const code = typeof body.error === "string" ? body.error : body.error?.code;
+    const text = `${code ?? ""} ${typeof body.error === "object" ? body.error?.message : ""} ${body.message ?? ""}`;
+    return /UNAUTHORIZED|demo key/i.test(text);
+  } catch {
+    return false;
+  }
+}
+
+export async function request<T>(path: string, init: { method?: "GET" | "POST" | "PATCH" | "PUT" | "DELETE"; body?: unknown } = {}): Promise<T> {
+  const headers: Record<string, string> = { Accept: "application/json", ...authHeaders() };
   if (init.body !== undefined) headers["Content-Type"] = "application/json";
-  if (import.meta.env.DEV) console.info(`[api] ${init.method ?? "GET"} ${urlFor(path)} X-Demo-Auth=${headers["X-Demo-Auth"] ?? "(none)"}`);
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), config.timeoutMs);
@@ -63,8 +80,11 @@ export async function request<T>(path: string, init: { method?: "GET" | "POST"; 
   } finally {
     clearTimeout(timer);
   }
-  // The demo key was refused: forget it so the gate asks again.
-  if (response.status === 401 && session.demoKey) clearSession();
+  if (response.status === 401) {
+    const refused = await isKeyRefusal(response);
+    console.warn(`[api] 401 on ${init.method ?? "GET"} ${path}; X-Demo-Auth ${headers["X-Demo-Auth"] ? "sent" : "missing"}${refused ? "; the server refused the demo key (VITE_DEMO_KEY must equal the API's DEMO_AUTH_TOKEN)" : ""}`);
+    if (refused) throw new ApiError(401, "The server refused the demo key. VITE_DEMO_KEY must match the API's DEMO_AUTH_TOKEN.", path);
+  }
   if (!response.ok) {
     let message = `Request failed (${response.status}).`;
     try {

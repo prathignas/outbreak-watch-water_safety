@@ -12,19 +12,24 @@
   --font-display: var(--font-display); --font-body: var(--font-body);
   --radius-chip: var(--r-chip); --radius-btn: var(--r-btn); --radius-card: var(--r-card); --radius-lg: var(--r-lg);
   --shadow-raise-sm: var(--raise-sm); --shadow-raise-md: var(--raise-md); --shadow-raise-lg: var(--raise-lg); --shadow-press: var(--press);
-  --text-sm: 15px; --text-sm--line-height: 22px;
-  --text-base: 16px; --text-base--line-height: 26px;
-  --text-lg: 18px; --text-lg--line-height: 28px;
-  --text-xl: 20px; --text-xl--line-height: 28px;
-  --text-2xl: 24px; --text-2xl--line-height: 32px;
-  --text-3xl: 32px; --text-3xl--line-height: 40px;
-  --text-4xl: 40px; --text-4xl--line-height: 48px;
-  --text-5xl: 56px; --text-5xl--line-height: 60px;
+  --text-sm: 0.9375rem; --text-sm--line-height: 1.375rem;
+  --text-base: 1rem; --text-base--line-height: 1.625rem;
+  --text-lg: 1.125rem; --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem; --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem; --text-2xl--line-height: 2rem;
+  --text-3xl: 2rem; --text-3xl--line-height: 2.5rem;
+  --text-4xl: 2.5rem; --text-4xl--line-height: 3rem;
+  --text-5xl: 3.5rem; --text-5xl--line-height: 3.75rem;
 }
 
 @layer base {
-  html { background: var(--bg); }
-  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 26px; -webkit-font-smoothing: antialiased; }
+  /* One scale for every screen. 1440x900 is the reference: 1rem = 16px there. The root size follows
+   * whichever of width/height is tighter, so the layout scales instead of reflowing (Windows 125%/150%
+   * and browser zoom just change the viewport size in CSS px). Phones keep 16px; 4K reaches 38.4px; the cap is 40px. */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: var(--bg); font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-synthesis: none; }
+  @media (min-width: 768px) { html { font-size: clamp(12px, min(1.1111vw, 1.7778vh), 40px); } }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1rem; line-height: 1.625rem; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, .font-display { font-family: var(--font-display); }
   .tabular { font-variant-numeric: tabular-nums; }
   :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
@@ -67,14 +72,14 @@
 }
 
 /* Map details */
-.ow-popup .maplibregl-popup-content { background: var(--bg); color: var(--ink); box-shadow: var(--raise-md); border-radius: var(--r-chip); padding: 12px 16px; font: 15px/22px var(--font-body); }
+.ow-popup .maplibregl-popup-content { background: var(--bg); color: var(--ink); box-shadow: var(--raise-md); border-radius: var(--r-chip); padding: 0.75rem 1rem; font: 0.9375rem/1.375rem var(--font-body); }
 .ow-popup .maplibregl-popup-tip { display: none; }
-.ow-pulse { width: 28px; height: 28px; border-radius: 50%; box-shadow: var(--glow); animation: ow-pulse 1.2s var(--ease-out) 1; }
+.ow-pulse { width: 1.75rem; height: 1.75rem; border-radius: 50%; box-shadow: var(--glow); animation: ow-pulse 1.2s var(--ease-out) 1; }
 @keyframes ow-pulse { from { transform: scale(0.6); opacity: 1; } to { transform: scale(2.2); opacity: 0; } }
-.maplibregl-ctrl-attrib { font: 13px/18px var(--font-body); background: color-mix(in srgb, var(--bg) 88%, transparent) !important; color: var(--ink); }
+.maplibregl-ctrl-attrib { font: 0.8125rem/1.125rem var(--font-body); background: color-mix(in srgb, var(--bg) 88%, transparent) !important; color: var(--ink); }
 .maplibregl-ctrl-attrib a { color: var(--ink) !important; }
-.maplibregl-ctrl-group { background: var(--bg) !important; box-shadow: var(--raise-sm) !important; border-radius: 12px !important; }
+.maplibregl-ctrl-group { background: var(--bg) !important; box-shadow: var(--raise-sm) !important; border-radius: 0.75rem !important; }
 .new-glow { animation: new-glow 1.2s var(--ease-out) 1; }
 @keyframes new-glow { 0% { box-shadow: var(--glow), var(--raise-md); } 100% { box-shadow: var(--raise-md); } }
 :root[data-theme="dark"] .maplibregl-ctrl-icon { filter: invert(1) brightness(1.4); }
-.maplibregl-ctrl-group button { width: 40px !important; height: 40px !important; }
+.maplibregl-ctrl-group button { width: 2.5rem !important; height: 2.5rem !important; }

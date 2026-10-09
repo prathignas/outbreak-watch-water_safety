@@ -59,7 +59,7 @@ export function MapPage() {
     <>
       <PageHeader title="Map"><HonestyPill /></PageHeader>
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-12 xl:gap-8">
-        <SoftCard size="lg" touch={false} className="relative h-[min(72vh,760px)] min-h-[420px] p-3 xl:col-span-9" aria-labelledby="map-h">
+        <SoftCard size="lg" touch={false} className="relative h-[min(72vh,760px)] min-h-[26.25rem] p-3 xl:col-span-9" aria-labelledby="map-h">
           <h2 id="map-h" className="sr-only">Wards by relative risk</h2>
           {error ? <div className="p-6"><ErrorState title="Could not load the map" error={error} onRetry={() => { void city.refetch(); void wardsGeo.refetch(); void zonesGeo.refetch(); void risk.refetch(); }} /></div>
             : loading ? <LoadingBlock label="Loading the map" className="p-6" /> : (
@@ -93,7 +93,7 @@ export function MapPage() {
           <SoftCard className="flex flex-col gap-3 p-6" aria-labelledby="list-h">
             <h2 id="list-h" className="text-xl font-bold">Wards on alert or watch</h2>
             {!risk.data ? <LoadingBlock label="Loading wards" /> : listed.length === 0 ? <p className="text-muted">Every ward is calm today.</p> : (
-              <ul className="grid max-h-[480px] gap-2 overflow-y-auto pr-1">
+              <ul className="grid max-h-[30rem] gap-2 overflow-y-auto pr-1">
                 {listed.map(([id, s]) => {
                   const Icon = STATUS_ICON[s];
                   return (

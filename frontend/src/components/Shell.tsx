@@ -23,7 +23,7 @@ const NAV = [
 
 export function HonestyPill() {
   return (
-    <p role="note" className="flex items-start gap-3 self-start rounded-[22px] bg-pill-bg px-5 py-2 text-sm text-pill-ink">
+    <p role="note" className="flex items-start gap-3 self-start rounded-[1.375rem] bg-pill-bg px-5 py-2 text-sm text-pill-ink">
       <Info className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
       <span>
         <b>{config.mode === "mock" ? "Prototype in mock mode." : "Prototype."}</b> Health signals are simulated, except reports sent through the Report form; rain, ward and water-zone boundaries are real.{" "}
@@ -45,16 +45,16 @@ function OpenCount() {
 
 function Rail({ onDemo }: { onDemo: () => void }) {
   return (
-    <nav aria-label="Main" className="sticky top-0 hidden h-screen w-[120px] shrink-0 flex-col items-center gap-6 py-6 md:flex">
+    <nav aria-label="Main" className="hidden h-full w-[7.5rem] shrink-0 flex-col items-center gap-[min(1.5rem,2.2vh)] overflow-hidden py-[min(1.5rem,2.2vh)] md:flex">
       <Link to="/" className="flex flex-col items-center gap-1 text-center font-display text-sm font-bold text-ink no-underline" aria-label="Outbreak Watch, home">
-        <Logo size={44} />
+        <Logo size={44} className="max-h-[5vh] max-w-[5vh]" />
         <span aria-hidden="true">Outbreak<br />Watch</span>
       </Link>
-      <ul className="mt-4 flex flex-col gap-4">
+      <ul className="mt-[min(1rem,1.5vh)] flex flex-col gap-[min(1rem,1.6vh)]">
         {NAV.map(({ to, label, icon: Icon }) => (
           <li key={to}>
             <NavLink to={to} end={to === "/"}
-              className={({ isActive }) => cn("soft-btn relative flex h-20 w-[88px] flex-col items-center justify-center gap-1 rounded-card text-sm text-ink no-underline", isActive && "font-bold text-teal")}>
+              className={({ isActive }) => cn("soft-btn relative flex h-[min(5rem,8.4vh)] w-[5.5rem] flex-col items-center justify-center gap-1 rounded-card text-sm text-ink no-underline", isActive && "font-bold text-teal")}>
               <Icon className="size-6" aria-hidden="true" />
               <span>{label}</span>
               {to === "/alerts" && <OpenCount />}
@@ -62,7 +62,7 @@ function Rail({ onDemo }: { onDemo: () => void }) {
           </li>
         ))}
       </ul>
-      <button type="button" onClick={onDemo} className="soft-btn mt-auto flex h-20 w-[88px] flex-col items-center justify-center gap-1 rounded-card text-sm" aria-keyshortcuts="Shift+D">
+      <button type="button" onClick={onDemo} className="soft-btn mt-auto flex h-[min(5rem,8.4vh)] w-[5.5rem] shrink-0 flex-col items-center justify-center gap-1 rounded-card text-sm" aria-keyshortcuts="Shift+D">
         <SlidersHorizontal className="size-6" aria-hidden="true" />
         <span>Demo</span>
       </button>
@@ -72,11 +72,11 @@ function Rail({ onDemo }: { onDemo: () => void }) {
 
 function BottomBar() {
   return (
-    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-40 flex h-[88px] items-center justify-around bg-bg px-2 shadow-[0_-6px_16px_var(--shadow-lo)] md:hidden">
+    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-40 flex h-[5.5rem] items-center justify-around bg-bg px-2 shadow-[0_-6px_16px_var(--shadow-lo)] md:hidden">
       {NAV.map(({ to, label, icon: Icon }) => (
         <NavLink key={to} to={to} end={to === "/"}
           className={({ isActive }) => cn("relative flex h-16 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-btn text-xs text-ink no-underline sm:text-sm", isActive && "font-bold text-teal shadow-press")}>
-          <Icon className="size-[22px]" aria-hidden="true" />
+          <Icon className="size-[1.375rem]" aria-hidden="true" />
           <span>{label}</span>
         </NavLink>
       ))}
@@ -86,13 +86,13 @@ function BottomBar() {
 
 export function PageHeader({ title, brand, children }: { title?: string; brand?: boolean; children?: ReactNode }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className={cn("flex flex-col gap-4", brand && "xl:flex-row xl:items-center xl:justify-between xl:gap-6")}>
       {brand ? (
         <div className="flex items-center gap-4">
-          <Logo size={64} ripple />
+          <Logo size={52} ripple />
           <div>
-            <h1 className="text-[26px] leading-8 font-bold md:text-3xl">Outbreak Watch</h1>
-            <p className="text-muted md:text-lg">Early warning for contaminated water, Bengaluru</p>
+            <h1 className="text-[1.625rem] leading-8 font-bold md:text-3xl">Outbreak Watch</h1>
+            <p className="text-muted md:text-lg xl:whitespace-nowrap">Early warning for contaminated water, Bengaluru</p>
           </div>
         </div>
       ) : (
@@ -145,14 +145,14 @@ export function Shell() {
   }, []);
   const section = location.pathname.split("/")[1] || "home";
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen md:h-screen md:w-screen md:overflow-hidden">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-btn focus:bg-bg focus:p-4">Skip to content</a>
       <Rail onDemo={() => setDemoOpen(true)} />
-      <div className="min-w-0 flex-1 px-4 pt-6 pb-[112px] md:px-8 md:pb-12 lg:pr-12">
-        <div className="mx-auto flex max-w-[1680px] flex-col gap-4">
+      <div data-scroller className="min-w-0 flex-1 px-4 pt-6 pb-[7rem] md:h-full md:overflow-y-auto md:px-8 md:pt-[min(1.5rem,2.2vh)] md:pb-8 lg:pr-12">
+        <div data-content className={cn("mx-auto flex max-w-[105rem] flex-col gap-4", section === "home" ? "md:h-full" : "md:min-h-full")}>
           <div className="flex md:justify-end"><TopRight onDemo={() => setDemoOpen(true)} /></div>
           <AnimatePresence mode="wait">
-            <motion.main id="main" key={section} tabIndex={-1} className="flex flex-col gap-6 outline-none"
+            <motion.main id="main" key={section} tabIndex={-1} className={cn("flex flex-col gap-6 outline-none md:flex-1", section === "home" && "md:min-h-0")}
               initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={reduce ? undefined : { opacity: 0, y: -8 }}
               transition={{ duration: 0.2, ease: "easeOut" }}>
               <Outlet />

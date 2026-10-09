@@ -165,6 +165,6 @@ export function CityMap({ wards, zones, city, statuses, risk, suspectedZones, ne
     };
   }, [ready, newAlertWards, lookup]);
 
-  return <div ref={box} className="h-full min-h-[360px] w-full overflow-hidden rounded-card" role="region" aria-label={label} tabIndex={0} />;
+  return <div ref={box} className="h-full min-h-[22.5rem] w-full overflow-hidden rounded-card" role="region" aria-label={label} tabIndex={0} />;
 }
 

@@ -22,7 +22,7 @@ function Tile({ icon: Icon, title, badge, to, children }: { icon: typeof Bell; t
     void navigate(to);
   };
   return (
-    <SoftCard touch={!to} onClick={openTile} className={cn("flex h-full min-h-[260px] flex-col gap-2 p-6 md:p-8", to && "card-link")} aria-label={title}>
+    <SoftCard touch={!to} onClick={openTile} className={cn("flex h-full min-h-0 flex-col gap-2 overflow-hidden p-6 md:p-[min(2rem,2.6vh)]", to && "card-link")} aria-label={title}>
       <div className="flex items-center gap-3">
         <Icon className="size-5 text-teal" aria-hidden="true" />
         <h2 className="text-lg font-bold">{title}</h2>
@@ -33,7 +33,7 @@ function Tile({ icon: Icon, title, badge, to, children }: { icon: typeof Bell; t
   );
 }
 
-const big = "font-display text-4xl font-bold md:text-[48px] md:leading-[56px]";
+const big = "font-display text-4xl font-bold md:text-[3rem] md:leading-[3.5rem]";
 
 export function HomePage() {
   const today = useToday();
@@ -61,14 +61,14 @@ export function HomePage() {
   return (
     <>
       <PageHeader brand><HonestyPill /></PageHeader>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-12 xl:gap-8">
-        <SoftCard size="lg" touch={false} className="flex flex-col items-center gap-3 p-6 text-center md:col-span-2 xl:col-span-6 xl:row-span-2 xl:justify-center xl:p-8" aria-labelledby="health-h">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:min-h-0 xl:flex-1 xl:grid-cols-12 xl:grid-rows-[minmax(0,1fr)_minmax(0,1fr)] xl:gap-[min(2rem,2.8vh)]">
+        <SoftCard size="lg" touch={false} className="flex flex-col items-center gap-3 p-6 text-center md:col-span-2 xl:col-span-6 xl:row-span-2 xl:min-h-0 xl:justify-center xl:overflow-hidden xl:p-[min(2rem,2.6vh)]" aria-labelledby="health-h">
           <h2 id="health-h" className="text-2xl font-bold">City water health today</h2>
           <p className="text-muted">Share of wards calm. Relative risk from simulated health data.</p>
           {risk.isError ? (
             <ErrorState title="Could not load ward risk" error={risk.error} onRetry={() => risk.refetch()} />
           ) : !risk.data ? (
-            <Skeleton className="my-6 size-[260px] rounded-full xl:size-[340px]" />
+            <Skeleton className="my-6 size-[16.25rem] rounded-full xl:size-[21.25rem]" />
           ) : (
             <>
               <div className="my-3 hidden xl:block">
@@ -92,7 +92,7 @@ export function HomePage() {
           )}
         </SoftCard>
 
-        <div className="h-full xl:col-span-3">
+        <div className="h-full xl:col-span-3 xl:min-h-0">
           <Tile icon={Bell} title="Open alerts" to={alertsHref}>
             {alerts.isError ? <ErrorState title="Could not load alerts" error={alerts.error} onRetry={() => alerts.refetch()} /> : !alerts.data ? <LoadingBlock label="Loading alerts" /> : (
               <>
@@ -106,7 +106,7 @@ export function HomePage() {
             )}
           </Tile>
         </div>
-        <div className="h-full xl:col-span-3">
+        <div className="h-full xl:col-span-3 xl:min-h-0">
           <Tile icon={Eye} title="Wards on watch" to="/map">
             {!risk.data ? <LoadingBlock label="Loading ward risk" /> : (
               <>
@@ -118,14 +118,14 @@ export function HomePage() {
             )}
           </Tile>
         </div>
-        <div className="h-full xl:col-span-3">
+        <div className="h-full xl:col-span-3 xl:min-h-0">
           <Tile icon={CloudRain} title="Rain" badge={<SourceBadge tag="real" />}>
             {rain.isError ? <ErrorState title="Rain data not available" error={rain.error} onRetry={() => rain.refetch()} /> : !rain.data ? <LoadingBlock label="Loading rain" /> : !rainLatest ? (
               <p className="text-muted">Rain data not available</p>
             ) : (
               <>
                 <div className={big}><span className="mr-2 text-xl font-semibold text-muted">{rainDayLabel}:</span><CountUp value={rainLatest.mm} decimals={1} /><span className="ml-1 text-xl font-semibold text-muted">mm</span></div>
-                <svg viewBox="0 0 280 56" className="h-14 w-full" role="img" aria-label={`Rain, last ${rain.data.length} days, highest ${rainMax} mm`}>
+                <svg viewBox="0 0 280 56" className="h-14 w-full min-h-0 shrink" role="img" aria-label={`Rain, last ${rain.data.length} days, highest ${rainMax} mm`}>
                   {rain.data.map((r, i) => {
                     const h = Math.max(6, (r.mm / rainMax) * 48);
                     return <rect key={r.date} x={i * 20 + 2} y={52 - h} width="12" height={h} rx="6" fill="var(--rain)" />;
@@ -136,13 +136,13 @@ export function HomePage() {
             )}
           </Tile>
         </div>
-        <div className="h-full xl:col-span-3">
+        <div className="h-full xl:col-span-3 xl:min-h-0">
           <Tile icon={BadgeCheck} title="How well it works" to="/proof">
             {!backtest.data || !water?.detectionRate ? <LoadingBlock label="Loading results" /> : (
               <>
                 <div className="flex items-center gap-4">
                   <div className="hidden sm:block">
-                    <Ring value={water.detectionRate.median} size={112} stroke={12} label={`${pct(water.detectionRate.median)} of water outbreaks found`}>
+                    <Ring value={water.detectionRate.median} size={88} stroke={10} label={`${pct(water.detectionRate.median)} of water outbreaks found`}>
                       <span className="font-display text-lg font-bold">{pct(water.detectionRate.median)}</span>
                     </Ring>
                   </div>
@@ -151,10 +151,14 @@ export function HomePage() {
                     <p className="text-muted">By chance: {waterChance?.phantomDetectionRate ? pct(waterChance.phantomDetectionRate.median) : "not computed"}</p>
                   </div>
                 </div>
-                <ul className="grid gap-1 text-sm" aria-label="Water outbreaks found, and days to first alert">
-                  {headlineWater(backtest.data).map((h) => <li key={h.id}><b>{h.name}</b>: found {h.found}, {h.days} days to first alert</li>)}
-                </ul>
-                <p className="text-sm text-muted">Simulated outbreaks; realistic, 0.25 false alarms per ward-year; {backtest.data.seeds.length} seeds.</p>
+                <table className="w-full text-[0.8125rem] leading-5">
+                  <caption className="sr-only">Water outbreaks found, and days to first alert</caption>
+                  <thead className="text-muted"><tr><th scope="col" className="text-left font-normal">Method</th><th scope="col" className="text-right font-normal">Found</th><th scope="col" className="text-right font-normal">Days to alert</th></tr></thead>
+                  <tbody className="tabular">
+                    {headlineWater(backtest.data).map((h) => <tr key={h.id}><th scope="row" className="text-left">{h.name}</th><td className="text-right">{h.found}</td><td className="text-right">{h.days}</td></tr>)}
+                  </tbody>
+                </table>
+                <p className="text-[0.8125rem] leading-5 text-muted">Simulated outbreaks; realistic, 0.25 false alarms per ward-year; {backtest.data.seeds.length} seeds.</p>
                 <Link to="/proof" className={buttonVariants({ size: "sm", className: "mt-auto self-start" })}><ChevronRight aria-hidden="true" />See the proof</Link>
               </>
             )}

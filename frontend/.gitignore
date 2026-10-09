@@ -4,3 +4,4 @@ test-results
 playwright-report
 .env.local
 design/node_modules
+e2e/screens

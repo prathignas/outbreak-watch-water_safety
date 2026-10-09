@@ -27,14 +27,6 @@ for (const size of SIZES) {
     const shot = (page: Page, screen: string, fullPage = false) =>
       page.screenshot({ path: `e2e/screenshots/${screen}-${size.name}.png`, fullPage });
 
-    test("gate", async ({ page }) => {
-      await page.addInitScript((t) => localStorage.setItem("outbreak-watch-theme", t), size.theme);
-      await page.goto("/");
-      await expect(page.getByRole("heading", { name: "Enter the demo" })).toBeVisible();
-      await settle(page);
-      await shot(page, "gate");
-    });
-
     test("screens", async ({ page }) => {
       await preEnter(page, size.theme);
       await page.goto("/");

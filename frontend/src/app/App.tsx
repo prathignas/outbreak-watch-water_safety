@@ -1,8 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
+import { lazy, Suspense, type ReactNode } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { getSession, onSessionCleared } from "@/api/session";
-import { Gate } from "@/components/Gate";
 import { Shell } from "@/components/Shell";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LoadingBlock } from "@/components/States";
@@ -22,22 +20,10 @@ export const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } },
 });
 
-/** The gate sits inside the router so its links work; it shows once per browser session,
- * and again when the server refuses the demo key (the client clears the session on a 401). */
-function Root() {
-  const [entered, setEntered] = useState(() => !!getSession().demoKey);
-  const [wrongKey, setWrongKey] = useState(false);
-  useEffect(() => onSessionCleared(() => {
-    setWrongKey(true);
-    setEntered(false);
-  }), []);
-  return entered ? <Shell /> : <Gate key={String(wrongKey)} wrongKey={wrongKey} onDone={() => { setWrongKey(false); setEntered(true); }} />;
-}
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Shell />,
     errorElement: <RouteError />,
     children: [
       { index: true, element: <HomePage /> },

@@ -1,10 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 /** Water drop with a small pulse line inside. Ripples once on load (not under reduced motion). */
-export function Logo({ size = 48, ripple = false }: { size?: number; ripple?: boolean }) {
+export function Logo({ size = 48, ripple = false, className = "" }: { size?: number; ripple?: boolean; className?: string }) {
   const reduce = useReducedMotion();
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden="true" className="shrink-0 overflow-visible">
+    <svg viewBox="0 0 48 48" aria-hidden="true" style={{ width: `${size / 16}rem`, height: `${size / 16}rem` }} className={`shrink-0 overflow-visible ${className}`}>
       {ripple && !reduce && (
         <motion.circle cx="24" cy="31" r="14" fill="none" stroke="var(--aqua)" strokeWidth="1.5"
           initial={{ r: 12, opacity: 0.8 }} animate={{ r: 24, opacity: 0 }} transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }} />

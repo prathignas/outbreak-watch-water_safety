@@ -36,9 +36,9 @@ function AlertCard({ record, selected, fresh, wardName, zoneLabel }: { record: A
   return (
     <motion.div animate={fb.animate} className="rounded-card">
       <Link to={`/alerts/${record.id}`} {...fb.handlers} aria-current={selected ? "true" : undefined}
-        className={cn("soft-btn edge card-link relative grid grid-cols-[76px_1fr] items-center gap-4 rounded-card px-5 py-4 text-ink no-underline", fb.shineClass, fresh && "new-glow")}>
+        className={cn("soft-btn edge card-link relative grid grid-cols-[4.75rem_1fr] items-center gap-4 rounded-card px-5 py-4 text-ink no-underline", fb.shineClass, fresh && "new-glow")}>
         <Ring value={record.alert.score} size={76} stroke={9} color="var(--alert-ring)" label={`${pct(record.alert.score)} chance of an outbreak`}>
-          <span className="font-display text-[17px] leading-5 font-bold">{pct(record.alert.score)}</span>
+          <span className="font-display text-[1.0625rem] leading-5 font-bold">{pct(record.alert.score)}</span>
         </Ring>
         <span className="min-w-0">
           <span className="block truncate text-lg font-bold">{wardName}</span>
@@ -115,10 +115,10 @@ function AlertDetail({ id }: { id: string }) {
         .map((x) => [x.alert.wardId, x])).values()]
     : [];
 
-  const act = (v: Parameters<typeof action.mutate>[0], done: string) =>
+  const act = (v: Parameters<typeof action.mutate>[0], done: string, after?: () => void) =>
     action.mutate(v, {
-      onSuccess: () => setMessage(done),
-      onError: (e) => setMessage(e instanceof ApiError && e.status === 401 ? "The demo key was not accepted. Reload the page and enter it again." : e instanceof Error ? e.message : "That did not work."),
+      onSuccess: () => { setMessage(done); after?.(); },
+      onError: (e) => setMessage(e instanceof Error ? e.message : "That did not work."),
     });
 
   return (
@@ -148,7 +148,7 @@ function AlertDetail({ id }: { id: string }) {
         </div>
         <Ring value={a.score} size={232} stroke={22} color="var(--alert-ring)" label={`${pct(a.score)} chance of an outbreak`}>
           <span className="font-display text-5xl font-bold"><CountUp value={Math.round(a.score * 100)} suffix="%" /></span>
-          <span className="max-w-[140px] text-muted">chance of an outbreak</span>
+          <span className="max-w-[8.75rem] text-muted">chance of an outbreak</span>
         </Ring>
       </div>
 
@@ -199,7 +199,7 @@ function AlertDetail({ id }: { id: string }) {
             <h3 id="act-h" className="text-xl font-bold">Activity</h3>
             <ol className="grid gap-4">
               {r.events.map((ev, i) => (
-                <li key={i} className="grid grid-cols-[44px_1fr] items-start gap-3">
+                <li key={i} className="grid grid-cols-[2.75rem_1fr] items-start gap-3">
                   <span className="soft-sm grid size-11 place-items-center rounded-full text-teal" aria-hidden="true">
                     {ev.kind === "raised" ? <Siren className="size-5" /> : ev.kind === "note" ? <MessageSquarePlus className="size-5" /> : ev.kind === "resolved" ? <CircleCheck className="size-5" /> : <Check className="size-5" />}
                   </span>
@@ -254,7 +254,7 @@ function AlertDetail({ id }: { id: string }) {
         </SoftCard>
       </div>
       <NoteDialog open={noteOpen} onOpenChange={setNoteOpen} saving={action.isPending}
-        onSave={(text) => act({ id, action: "note", text }, "Note saved.")} />
+        onSave={(text) => act({ id, action: "note", text }, "Note saved.", () => setNoteOpen(false))} />
     </SoftCard>
   );
 }
@@ -278,7 +278,7 @@ export function AlertsPage() {
         {STATUS_FILTERS.map(({ value, label, icon: Icon }) => (
           <button key={value} type="button" aria-pressed={status === value} onClick={() => setStatus(value)}
             className={cn("soft-btn inline-flex h-11 items-center gap-2 rounded-full px-4 text-sm", status === value && "font-bold text-teal")}>
-            <Icon className="size-[18px]" aria-hidden="true" />{label} {count(value as AlertStatus)}
+            <Icon className="size-[1.125rem]" aria-hidden="true" />{label} {count(value as AlertStatus)}
           </button>
         ))}
         <button type="button" aria-pressed={status === "all"} onClick={() => setStatus("all")} className={cn("soft-btn h-11 rounded-full px-4 text-sm", status === "all" && "font-bold text-teal")}>All {alerts.data?.length ?? 0}</button>
