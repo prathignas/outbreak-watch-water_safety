@@ -133,8 +133,12 @@ function TopRight({ onDemo }: { onDemo: () => void }) {
 
 /** The app frame: rail (bottom bar on phone), header row, honesty pill, page transitions. */
 export function Shell() {
-  const [demoOpen, setDemoOpen] = useState(false);
   const location = useLocation();
+  // /demo (the judge link) is Home with the Demo panel open.
+  const [demoOpen, setDemoOpen] = useState(location.pathname === "/demo");
+  useEffect(() => {
+    if (location.pathname === "/demo") setDemoOpen(true);
+  }, [location.pathname]);
   const reduce = useReducedMotion();
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -144,7 +148,8 @@ export function Shell() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
-  const section = location.pathname.split("/")[1] || "home";
+  const first = location.pathname.split("/")[1];
+  const section = !first || first === "demo" ? "home" : first;
   return (
     <div className="flex min-h-screen md:h-screen md:w-screen md:overflow-hidden">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-btn focus:bg-bg focus:p-4">Skip to content</a>

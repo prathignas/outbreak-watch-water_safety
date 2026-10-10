@@ -33,11 +33,9 @@ export function makeHandlers(engine: Engine, latencyMs = 120): HttpHandler[] {
   return [
     http.get("/alerts", () => run(() => engine.call("listAlerts"))),
     http.get("/alerts/:id", ({ params }) => run(() => engine.call("getAlert", String(params.id)))),
-    http.post("/alerts/:id/ack", ({ request, params }) => guarded(request) ?? run(() => engine.call("ack", String(params.id), officer(request)))),
-    http.post("/alerts/:id/resolve", ({ request, params }) => guarded(request) ?? run(() => engine.call("resolve", String(params.id), officer(request)))),
+    http.post("/alerts/:id/ack", ({ request, params }) => run(() => engine.call("ack", String(params.id), officer(request)))),
+    http.post("/alerts/:id/resolve", ({ request, params }) => run(() => engine.call("resolve", String(params.id), officer(request)))),
     http.post("/alerts/:id/notes", async ({ request, params }) => {
-      const denied = guarded(request);
-      if (denied) return denied;
       const body = (await request.json().catch(() => ({}))) as { text?: unknown };
       return run(() => engine.call("addNote", String(params.id), officer(request), typeof body.text === "string" ? body.text : ""));
     }),
@@ -74,8 +72,9 @@ export function makeHandlers(engine: Engine, latencyMs = 120): HttpHandler[] {
     http.post("/demo/inject", async ({ request }) => {
       const denied = guarded(request);
       if (denied) return denied;
-      const body = (await request.json().catch(() => ({}))) as { cause?: unknown; wardId?: unknown };
-      return run(() => engine.call("inject", body.cause as "water", Number(body.wardId)));
+      const body = (await request.json().catch(() => ({}))) as { cause?: unknown; wardId?: unknown; daysAgo?: unknown };
+      const daysAgo = typeof body.daysAgo === "number" ? body.daysAgo : undefined;
+      return run(() => engine.call("inject", body.cause as "water", Number(body.wardId), daysAgo));
     }),
     http.post("/demo/reset", ({ request }) => guarded(request) ?? run(() => engine.call("reset"))),
     http.post("/demo/advance", ({ request }) => guarded(request) ?? run(() => engine.call("advance"))),

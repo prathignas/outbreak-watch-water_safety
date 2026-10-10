@@ -126,11 +126,11 @@ export class MockBackend {
     return this.state();
   }
 
-  inject(cause: InjectableCause, wardId: number): InjectResponse {
+  inject(cause: InjectableCause, wardId: number, daysAgo: number = MOCK.injectBackdateDays): InjectResponse {
     if (!["water", "food", "p2p"].includes(cause)) throw new MockError(400, `Unknown outbreak type: ${cause}`);
     if (!this.city.wardIds().includes(wardId)) throw new MockError(400, `Unknown ward: ${wardId}`);
     // One injected outbreak at a time: a new one replaces the previous one.
-    let start = addDays(this.today, -MOCK.injectBackdateDays);
+    let start = addDays(this.today, -daysAgo);
     if (start <= this.firstRunDay) start = addDays(this.firstRunDay, 1);
     const options = { injectOutbreak: cause, wardId, startDate: start, city: this.city };
     this.injection = describeInjection(start, this.seed, options) as Injection;

@@ -1,6 +1,7 @@
 import * as maplibregl from "maplibre-gl";
 import type { GeoJSONSource, MapLayerMouseEvent, StyleSpecification } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { WardRisk } from "@/api/types";
 import { cityLookup, type CityFile } from "@/lib/city";
@@ -15,6 +16,11 @@ const OSM_FALLBACK: StyleSpecification = {
   sources: { osm: { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256, attribution: "© OpenStreetMap contributors" } },
   layers: [{ id: "osm", type: "raster", source: "osm" }],
 };
+
+/* MapLibre looks for its worker next to its own file (./maplibre-gl-worker.mjs). In a production
+ * build MapLibre is inside the MapPage chunk and that file is never emitted (404, no ward shapes),
+ * so the worker is bundled by Vite (with the shared code it imports) and its URL is set here. */
+maplibregl.setWorkerUrl(maplibreWorkerUrl);
 
 const css = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);

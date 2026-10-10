@@ -83,7 +83,7 @@ export function useAlertAction() {
 export function useDemoActions() {
   const invalidate = useInvalidateLive();
   const inject = useMutation({
-    mutationFn: (v: { cause: InjectableCause; wardId: number }) => api.injectOutbreak(v.cause, v.wardId),
+    mutationFn: (v: { cause: InjectableCause; wardId: number; daysAgo?: number }) => api.injectOutbreak(v.cause, v.wardId, v.daysAgo),
     onSuccess: async (res) => {
       await invalidate();
       // Alerts appear after the mock's short delay; fetch again then (polling would also catch it).

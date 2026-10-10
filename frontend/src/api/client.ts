@@ -14,7 +14,7 @@ import type {
   WardRisk,
 } from "./types";
 import { istDay } from "@/lib/clock";
-import { getSession } from "./session";
+import { getSession, setDemoKey } from "./session";
 
 export type ApiMode = "mock" | "real";
 
@@ -22,6 +22,8 @@ export const config = {
   mode: (import.meta.env.VITE_API_MODE === "real" ? "real" : "mock") as ApiMode,
   baseUrl: (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, ""),
   timeoutMs: 15_000,
+  /** Reset and Inject re-run the detector day by day (~20 s on AWS); API Gateway stops at 29 s. */
+  demoTimeoutMs: 30_000,
 };
 
 export class ApiError extends Error {
@@ -40,11 +42,12 @@ export function urlFor(path: string): string {
   return config.mode === "real" ? `${config.baseUrl}${path}` : `${globalThis.location?.origin ?? ""}${path}`;
 }
 
-/** The one place the demo key and officer name are attached. Every call (GET, POST, PATCH...) goes through here. */
-export function authHeaders(): Record<string, string> {
+/** The one place the demo key and officer name are attached. The demo key goes only on demo
+ * routes (Reset, Inject; mock-only advance): never on reads, reports or officer actions. */
+export function authHeaders(demoAuth = false): Record<string, string> {
   const session = getSession();
   const headers: Record<string, string> = {};
-  if (session.demoKey) headers["X-Demo-Auth"] = session.demoKey;
+  if (demoAuth && session.demoKey) headers["X-Demo-Auth"] = session.demoKey;
   if (session.officerName) headers["X-Officer-Name"] = session.officerName;
   return headers;
 }
@@ -61,12 +64,12 @@ async function isKeyRefusal(response: Response): Promise<boolean> {
   }
 }
 
-export async function request<T>(path: string, init: { method?: "GET" | "POST" | "PATCH" | "PUT" | "DELETE"; body?: unknown } = {}): Promise<T> {
-  const headers: Record<string, string> = { Accept: "application/json", ...authHeaders() };
+export async function request<T>(path: string, init: { method?: "GET" | "POST" | "PATCH" | "PUT" | "DELETE"; body?: unknown; demoAuth?: boolean } = {}): Promise<T> {
+  const headers: Record<string, string> = { Accept: "application/json", ...authHeaders(init.demoAuth) };
   if (init.body !== undefined) headers["Content-Type"] = "application/json";
 
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), config.timeoutMs);
+  const timer = setTimeout(() => controller.abort(), init.demoAuth ? config.demoTimeoutMs : config.timeoutMs);
   let response: Response;
   try {
     response = await fetch(urlFor(path), {
@@ -83,8 +86,11 @@ export async function request<T>(path: string, init: { method?: "GET" | "POST" |
   }
   if (response.status === 401) {
     const refused = await isKeyRefusal(response);
-    console.warn(`[api] 401 on ${init.method ?? "GET"} ${path}; X-Demo-Auth ${headers["X-Demo-Auth"] ? "sent" : "missing"}${refused ? "; the server refused the demo key (VITE_DEMO_KEY must equal the API's DEMO_AUTH_TOKEN)" : ""}`);
-    if (refused) throw new ApiError(401, "The server refused the demo key. VITE_DEMO_KEY must match the API's DEMO_AUTH_TOKEN.", path);
+    console.warn(`[api] 401 on ${init.method ?? "GET"} ${path}; X-Demo-Auth ${headers["X-Demo-Auth"] ? "sent" : "missing"}${refused ? "; the server refused the demo key" : ""}`);
+    if (refused) {
+      if (config.mode === "real") setDemoKey(null);
+      throw new ApiError(401, headers["X-Demo-Auth"] ? "The server refused the demo key. Enter it again." : "Enter the demo key first.", path);
+    }
   }
   if (!response.ok) {
     let message = `Request failed (${response.status}).`;
@@ -126,10 +132,11 @@ export const api = {
   getRain: (from: string, to: string) => request<RainRow[]>(`/rain?${q({ from, to })}`),
   getBacktest: () => request<BacktestResult>("/backtest"),
   submitComplaint: (input: ComplaintInput) => request<ComplaintResponse>("/complaints", { method: "POST", body: input }),
-  injectOutbreak: (cause: InjectableCause, wardId: number) => request<InjectResponse>("/demo/inject", { method: "POST", body: { cause, wardId } }),
-  resetDemo: () => request<DemoState>("/demo/reset", { method: "POST" }),
+  injectOutbreak: (cause: InjectableCause, wardId: number, daysAgo?: number) =>
+    request<InjectResponse>("/demo/inject", { method: "POST", demoAuth: true, body: daysAgo === undefined ? { cause, wardId } : { cause, wardId, daysAgo } }),
+  resetDemo: () => request<DemoState>("/demo/reset", { method: "POST", demoAuth: true }),
   /** Mock mode only. */
-  advanceDay: () => request<DemoState>("/demo/advance", { method: "POST" }),
+  advanceDay: () => request<DemoState>("/demo/advance", { method: "POST", demoAuth: true }),
   /** Mock mode: the demo clock. Real mode: today in Asia/Kolkata (no server route needed). */
   getDemoState: async (): Promise<DemoState> =>
     config.mode === "mock" ? request<DemoState>("/demo/state") : { today: istDay(), seed: 0, injection: null },

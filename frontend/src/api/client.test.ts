@@ -32,11 +32,11 @@ describe("API client (mock mode, real MSW handlers)", () => {
     expect(Object.keys(alerts[0].alert).sort()).toEqual(["causeProbs", "contributingSignals", "date", "evidence", "method", "score", "suspectedZoneId", "wardId"]);
   });
 
-  it("sends X-Demo-Auth and X-Officer-Name; officer actions fail with a wrong key", async () => {
+  it("officer actions need only X-Officer-Name; Reset needs the demo key", async () => {
     const id = (await api.listAlerts())[0].id;
     setSession({ demoKey: "wrong", officerName: "Asha Rao" });
-    await expect(api.ackAlert(id)).rejects.toMatchObject({ status: 401 });
-    setSession({ demoKey: MOCK_DEMO_KEY, officerName: "Asha Rao" });
+    await expect(api.resetDemo()).rejects.toMatchObject({ status: 401 });
+    setSession({ demoKey: null, officerName: "Asha Rao" });
     const acked = await api.ackAlert(id);
     expect(acked.status).toBe("acknowledged");
     expect(acked.events.at(-1)).toMatchObject({ kind: "acknowledged", by: "Asha Rao" });
@@ -52,6 +52,19 @@ describe("API client (mock mode, real MSW handlers)", () => {
     server.use(http.get("*/alerts", () => HttpResponse.error()));
     await expect(api.listAlerts()).rejects.toMatchObject({ status: 0 });
     expect(getSession().demoKey).toBe("k");
+  });
+
+  it("sends the demo key only on Reset and Inject, never on reads, reports or officer actions", async () => {
+    setSession({ demoKey: MOCK_DEMO_KEY, officerName: "Asha Rao" });
+    const seen: Array<[string, string | null]> = [];
+    server.events.on("request:start", ({ request }) => { seen.push([new URL(request.url).pathname, request.headers.get("X-Demo-Auth")]); });
+    const id = (await api.listAlerts())[0].id;
+    await api.addNote(id, "Checked the valve");
+    await api.injectOutbreak("water", 18, 4);
+    await api.resetDemo();
+    server.events.removeAllListeners();
+    const withKey = seen.filter(([, key]) => key !== null).map(([path]) => path);
+    expect(withKey).toEqual(["/demo/inject", "/demo/reset"]);
   });
 
   it("turns server errors into ApiError with the server's message", async () => {
