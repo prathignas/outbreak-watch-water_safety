@@ -31,6 +31,8 @@ playwright-report/
 test-results/
 frontend/e2e/screenshots/
 frontend/e2e/screens/
-node_modules
-cdk.out
-.env
+
+# Lambda env dumps and db-setup output (they hold secrets / are run output)
+lambda-*env.json
+infra/db-setup.json
+db-setup.json

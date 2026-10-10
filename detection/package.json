@@ -14,8 +14,17 @@
   "scripts": {
     "test": "vitest run",
     "build": "tsc",
+    "sim-summary": "tsx scripts/sim-summary.ts",
+    "fetch-rain": "tsx scripts/fetch-rain.ts",
+    "detect-demo": "tsx scripts/detect-demo.ts",
     "check-city-data": "tsx scripts/checkCityData.ts",
-    "build-city": "tsx scripts/buildCity.ts"
+    "fetch-osm-food": "tsx scripts/fetchOsmFood.ts",
+    "build-city": "tsx scripts/buildCity.ts",
+    "backtest": "tsx scripts/backtest.ts",
+    "eval-classifier": "tsx scripts/eval-classifier.ts",
+    "handoff": "tsx scripts/handoff.ts",
+    "chance-check": "tsx scripts/chance-check.ts",
+    "add-chance": "tsx scripts/add-chance.ts"
   },
   "dependencies": {
     "@tmcw/togeojson": "^7.1.2",

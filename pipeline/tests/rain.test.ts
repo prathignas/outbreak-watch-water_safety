@@ -379,6 +379,30 @@ describe("Rain job (hourly): all 243 wards, real only, nothing on failure", () =
     expect(url.searchParams.get("end_date")).toBe("2026-10-07");
   });
 
+  it("between 00:00 and 05:30 IST: archive stops at today in UTC, today in India comes from the forecast API", async () => {
+    const urls: string[] = [];
+    const spy = (async (url: string) => {
+      urls.push(url);
+      const answer = loadFixture("open-meteo-rain") as { daily: { time: string[]; precipitation_sum: number[] } };
+      // Like the real archive: nothing after its end_date (the fixture runs to 2026-10-07).
+      const end = new URL(url).searchParams.get("end_date")!;
+      const keep = answer.daily.time.filter((d) => d <= end).length;
+      answer.daily.time = answer.daily.time.slice(0, keep);
+      answer.daily.precipitation_sum = answer.daily.precipitation_sum.slice(0, keep);
+      return { ok: true, status: 200, json: async () => answer };
+    }) as unknown as typeof fetch;
+    // 20:00 UTC on 6 Oct = 01:30 IST on 7 Oct: the archive only goes up to 2026-10-06.
+    const store = new InMemorySignalStore();
+    const result = await runRainJob({ sink: store, wardIds: [40], log: quiet, fetchFn: spy, now: () => new Date("2026-10-06T20:00:00Z") });
+    const [archive, forecast] = urls.map((u) => new URL(u));
+    expect(archive.origin + archive.pathname).toBe(RAIN_SOURCE.url);
+    expect(archive.searchParams.get("end_date")).toBe("2026-10-06");
+    expect(forecast.origin + forecast.pathname).toBe("https://api.open-meteo.com/v1/forecast");
+    expect([forecast.searchParams.get("start_date"), forecast.searchParams.get("end_date")]).toEqual(["2026-10-07", "2026-10-07"]);
+    expect(result.ok && result.today).toBe("2026-10-07");
+    expect(store.get(40, "rain", "2026-10-07", "real")?.count).toBe(5.8);
+  });
+
   it("on a failed fetch: logs it and writes nothing (no zeros)", async () => {
     const store = new InMemorySignalStore();
     const errors: string[] = [];

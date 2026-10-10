@@ -52,26 +52,27 @@ describe("REST API Endpoints", () => {
     expect(res.body.events.map((e: { kind: string }) => e.kind)).toEqual(["raised", "note"]); // the email note
   });
 
-  it("POST /alerts/:id/ack requires demo auth, records X-Officer-Name and returns the AlertRecord", async () => {
+  it("POST /alerts/:id/ack needs no demo key, records X-Officer-Name and returns the AlertRecord", async () => {
     const record = await firstAlert();
-    expect((await call(db, { method: "POST", path: `/alerts/${record.id}/ack` })).status).toBe(401);
-    expect((await call(db, { method: "POST", path: `/alerts/${record.id}/ack`, headers: { "X-Demo-Auth": "wrong" } })).status).toBe(401);
-
-    const res = await call(db, { method: "POST", path: `/alerts/${record.id}/ack`, headers: officer("Dr. Meera") });
+    const res = await call(db, { method: "POST", path: `/alerts/${record.id}/ack`, headers: { "X-Officer-Name": "Dr. Meera" } });
     expect(res.status).toBe(200);
     expect(res.body.status).toBe("acknowledged");
     expect(res.body.events.at(-1)).toEqual({ at: expect.any(String), by: "Dr. Meera", kind: "acknowledged" });
 
+    // A missing name is the caller's mistake (400).
+    const noName = await call(db, { method: "POST", path: `/alerts/${record.id}/ack` });
+    expect(noName.status).toBe(400);
+    expect(noName.body.error).toBe("OFFICER_NAME_REQUIRED");
+
     // Header names in any case (API Gateway REST keeps the client's case).
-    const again = await call(db, { method: "POST", path: `/alerts/${record.id}/ack`, headers: { "x-demo-auth": DEMO_KEY } });
+    const again = await call(db, { method: "POST", path: `/alerts/${record.id}/ack`, headers: { "x-officer-name": "Dr. Meera" } });
     expect(again.status).toBe(409);
     expect(again.body.message).toBe("Alert is acknowledged; it cannot become acknowledged.");
   });
 
-  it("POST /alerts/:id/resolve requires demo auth and transitions status; resolving twice is 409", async () => {
+  it("POST /alerts/:id/resolve needs no demo key and transitions status; resolving twice is 409", async () => {
     const record = await firstAlert();
-    expect((await call(db, { method: "POST", path: `/alerts/${record.id}/resolve` })).status).toBe(401);
-    const res = await call(db, { method: "POST", path: `/alerts/${record.id}/resolve`, headers: officer() });
+    const res = await call(db, { method: "POST", path: `/alerts/${record.id}/resolve`, headers: { "X-Officer-Name": "Asha Rao" } });
     expect(res.status).toBe(200);
     expect(res.body.status).toBe("resolved");
     expect((await call(db, { method: "POST", path: `/alerts/${record.id}/resolve`, headers: officer() })).status).toBe(409);
@@ -85,7 +86,7 @@ describe("REST API Endpoints", () => {
     expect(res.body.events.at(-1)).toEqual({ at: expect.any(String), by: "Asha Rao", kind: "note", text: "Sent a team to test the water." });
     expect((await call(db, { method: "POST", path: `/alerts/${record.id}/notes`, headers: officer(), body: { text: " " } })).body.message).toBe("A note cannot be empty.");
     expect((await call(db, { method: "POST", path: `/alerts/${record.id}/notes`, headers: officer(), body: { text: "x".repeat(2001) } })).status).toBe(400);
-    expect((await call(db, { method: "POST", path: `/alerts/${record.id}/notes`, body: { text: "hi" } })).status).toBe(401);
+    expect((await call(db, { method: "POST", path: `/alerts/${record.id}/notes`, headers: { "X-Officer-Name": "Asha Rao" }, body: { text: "hi" } })).status).toBe(200);
   });
 
   it("POST /complaints: the form's body gives a 'user' row; a retry with the same complaintId counts once", async () => {

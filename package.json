@@ -14,7 +14,16 @@
   ],
   "scripts": {
     "test": "npm run synth --silent -- --quiet > /dev/null && npm test --workspaces --if-present",
-    "synth": "npm run --workspace=@outbreak/infra synth"
+    "deploy": "npm run --workspace=@outbreak/infra deploy",
+    "destroy": "npm run --workspace=@outbreak/infra destroy",
+    "synth": "npm run --workspace=@outbreak/infra synth",
+    "audit:security": "npx tsx scripts/security-audit.ts",
+    "db:setup": "npm run --workspace=@outbreak/backend db:setup",
+    "typecheck": "tsc --noEmit -p packages/contract && tsc --noEmit -p pipeline && tsc --noEmit -p backend && tsc --noEmit -p infra",
+    "dev": "npm run dev --prefix frontend",
+    "dev:all": "bash scripts/dev-all.sh",
+    "stop:all": "bash scripts/stop-all.sh",
+    "postinstall": "npm install --prefix frontend --no-audit --no-fund"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",

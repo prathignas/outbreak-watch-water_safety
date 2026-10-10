@@ -16,7 +16,8 @@ AWS CDK (TypeScript) for Outbreak Watch. Region: `ap-south-1` (Mumbai) unless `A
 | SES email identities | from `SES_FROM_EMAIL` and `OFFICER_EMAIL` | Alert emails. |
 | SSM parameters | `/outbreak/ses-from-email`, `/outbreak/officer-email` | A copy of the two addresses, for reference. |
 | CloudWatch | dashboard `OutbreakWatch-Operational-Dashboard`, alarm `OutbreakWatch-DetectorErrors`, 30-day log groups | The dashboard reads the metric names in `backend/src/metrics.ts`, the same list the detector emits. |
-| AWS Budgets | `OutbreakWatch-Monthly-Budget` | $15 a month; emails at 80%. |
+| AWS Budgets | `outbreak-watch-monthly-30usd` | $30 a month; emails at 80%. |
+| Web app hosting | AWS Amplify Hosting (not in this stack) | Builds `frontend/` from the repo with `VITE_API_MODE=real` and `VITE_API_BASE_URL` = the `ApiUrl` output. An S3 + CloudFront option is in the stack, off unless deployed with `-c cloudfront=true`. |
 
 **What goes into each bundle.** P1's `city.json` is imported, so esbuild puts it inside every
 bundle. After bundling, CDK copies these files next to each bundle:
@@ -36,7 +37,7 @@ esbuild runs on your machine; Docker is not needed.
 | Demo password | `demoAuthToken` | `DEMO_AUTH_TOKEN` | No: if not given, it is read from the SSM parameter `/outbreak/demo-auth-token` |
 | Webhook secret | `webhookSecret` | `WEBHOOK_SECRET` | No: if not given, it is read from the SSM parameter `/outbreak/webhook-secret` |
 | Webhook secret header name | `webhookSecretHeader` | `WEBHOOK_SECRET_HEADER` | No (default `X-Webhook-Secret`) |
-| Allowed web origin | `corsOrigin` | `CORS_ALLOW_ORIGIN` | No (default `*`; set it to the CloudFront URL) |
+| Allowed web origin | `corsOrigin` | `CORS_ALLOW_ORIGIN` | No (default `*`; set it to the Amplify URL) |
 
 - **The SES sandbox.** Both email addresses must be **verified**. After deploy, AWS sends each
   address a link; click it. Until both are verified, alerts are still saved, but the email

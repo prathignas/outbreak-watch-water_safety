@@ -15,6 +15,8 @@ import * as ses from "aws-cdk-lib/aws-ses";
 import * as logs from "aws-cdk-lib/aws-logs";
 import * as budgets from "aws-cdk-lib/aws-budgets";
 import * as s3 from "aws-cdk-lib/aws-s3";
+import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
+import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { METRICS, METRIC_DIMENSIONS, METRIC_NAMESPACE, PIPELINE_METRICS } from "@outbreak/backend/metrics";
@@ -114,6 +116,10 @@ export class OutbreakWatchStack extends cdk.Stack {
       securityGroups: [dbSecurityGroup],
       credentials: rds.Credentials.fromSecret(dbSecret),
       databaseName: "outbreak_watch",
+      // Cost (infra/README.md): smallest single-AZ instance, 20 GB (autoscaling capped at 50 GB). The live
+      // instance already runs 1-day backups, no Performance Insights, no enhanced monitoring (RDS defaults).
+      // Not set explicitly here: on the live stack CloudFormation marks backup/Multi-AZ/gp3 edits as
+      // "may replace" the instance (and its data). Change them in a planned window with a snapshot first.
       allocatedStorage: 20,
       maxAllocatedStorage: 50,
       storageEncrypted: true,
@@ -150,31 +156,31 @@ export class OutbreakWatchStack extends cdk.Stack {
     // ==========================================
     const backendLogGroup = new logs.LogGroup(this, "BackendApiLogGroup", {
       logGroupName: "/aws/lambda/outbreak-watch-backend-api",
-      retention: logs.RetentionDays.ONE_MONTH,
+      retention: logs.RetentionDays.ONE_WEEK,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
     const detectorLogGroup = new logs.LogGroup(this, "DetectorScheduleLogGroup", {
       logGroupName: "/aws/lambda/outbreak-watch-detector",
-      retention: logs.RetentionDays.ONE_MONTH,
+      retention: logs.RetentionDays.ONE_WEEK,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
     const rainLogGroup = new logs.LogGroup(this, "RainLogGroup", {
       logGroupName: "/aws/lambda/outbreak-watch-rain",
-      retention: logs.RetentionDays.ONE_MONTH,
+      retention: logs.RetentionDays.ONE_WEEK,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
     const feedLogGroup = new logs.LogGroup(this, "FeedLogGroup", {
       logGroupName: "/aws/lambda/outbreak-watch-feed",
-      retention: logs.RetentionDays.ONE_MONTH,
+      retention: logs.RetentionDays.ONE_WEEK,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
     const dbSetupLogGroup = new logs.LogGroup(this, "DbSetupLogGroup", {
       logGroupName: "/aws/lambda/outbreak-watch-db-setup",
-      retention: logs.RetentionDays.ONE_MONTH,
+      retention: logs.RetentionDays.ONE_WEEK,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
@@ -495,15 +501,49 @@ export class OutbreakWatchStack extends cdk.Stack {
     });
 
     // ==========================================
-    // 8.1 AWS BUDGET & COST CONTROLS ($15/MONTH)
+    // 7.1 FRONTEND HOSTING: private S3 bucket behind CloudFront (origin access control)
+    // ==========================================
+    // Off by default: the live frontend is on AWS Amplify Hosting (built from the repo). Deploy with
+    // -c cloudfront=true (or FRONTEND_CLOUDFRONT=true) to host it here instead.
+    // The built frontend (frontend/dist) is synced here (DEPLOY.md). Nothing in the bucket is public:
+    // only this distribution can read it. Unknown paths fall back to index.html (the app's own router).
+    if (setting(this, "cloudfront", "FRONTEND_CLOUDFRONT") === "true") {
+      const siteBucket = new s3.Bucket(this, "SiteBucket", {
+        blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+        encryption: s3.BucketEncryption.S3_MANAGED,
+        enforceSSL: true,
+        removalPolicy: cdk.RemovalPolicy.DESTROY,
+        autoDeleteObjects: true,
+      });
+      const distribution = new cloudfront.Distribution(this, "SiteDistribution", {
+        comment: "Outbreak Watch frontend",
+        defaultRootObject: "index.html",
+        // Price class 200 includes the Indian edge locations; the free tier (1 TB, 10M requests a month) covers the demo.
+        priceClass: cloudfront.PriceClass.PRICE_CLASS_200,
+        defaultBehavior: {
+          origin: origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
+          viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+          cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
+          compress: true,
+        },
+        // SPA fallback: a private bucket answers 403 for a missing key; serve the app instead.
+        errorResponses: [403, 404].map((httpStatus) => ({ httpStatus, responseHttpStatus: 200, responsePagePath: "/index.html", ttl: cdk.Duration.seconds(0) })),
+      });
+      new cdk.CfnOutput(this, "SiteUrl", { value: `https://${distribution.distributionDomainName}`, description: "The live frontend (CloudFront)" });
+      new cdk.CfnOutput(this, "SiteBucketName", { value: siteBucket.bucketName, description: "Sync frontend/dist here" });
+      new cdk.CfnOutput(this, "SiteDistributionId", { value: distribution.distributionId, description: "Invalidate after each sync" });
+    }
+
+    // ==========================================
+    // 8.1 AWS BUDGET & COST CONTROLS ($30/MONTH)
     // ==========================================
     new budgets.CfnBudget(this, "OutbreakMonthlyBudget", {
       budget: {
-        budgetName: "OutbreakWatch-Monthly-Budget",
+        budgetName: "outbreak-watch-monthly-30usd",
         budgetType: "COST",
         timeUnit: "MONTHLY",
         budgetLimit: {
-          amount: 15,
+          amount: 30,
           unit: "USD",
         },
       },

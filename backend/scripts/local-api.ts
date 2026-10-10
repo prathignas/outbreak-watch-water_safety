@@ -28,7 +28,9 @@ createServer(async (req, res) => {
     })) as { statusCode: number; headers?: Record<string, string>; body?: string };
     res.writeHead(result.statusCode, result.headers);
     res.end(result.body ?? "");
-    console.log(`${req.method} ${url.pathname}${url.search} -> ${result.statusCode}`);
+    const key = req.headers["x-demo-auth"];
+    const why = result.statusCode === 401 ? ` [x-demo-auth ${key === undefined ? "MISSING" : `sent, ${String(key).length} chars, starts "${String(key).slice(0, 2)}"`}; origin ${req.headers.origin ?? "-"}]` : "";
+    console.log(`${req.method} ${url.pathname}${url.search} -> ${result.statusCode}${why}`);
   } catch (err) {
     console.error(err);
     res.writeHead(500, { "Content-Type": "application/json" });

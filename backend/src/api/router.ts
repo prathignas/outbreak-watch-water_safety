@@ -44,7 +44,7 @@ const DISCLAIMER =
 export const CORS_HEADERS = {
   "Access-Control-Allow-Origin": process.env.CORS_ALLOW_ORIGIN || "*",
   "Access-Control-Allow-Headers": "Content-Type,X-Demo-Auth,X-Officer-Name,Authorization",
-  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+  "Access-Control-Allow-Methods": "GET,POST,PATCH,OPTIONS",
 };
 
 function jsonResponse(statusCode: number, data: unknown): HttpResponse {
@@ -155,10 +155,11 @@ export async function handleRequest(req: HttpRequest, db: IDatabase = getDatabas
       return jsonResponse(200, record);
     }
 
-    // 3-5. POST /alerts/:id/ack | resolve | notes (officer routes)
+    // 3-5. POST /alerts/:id/ack | resolve | notes (officer routes). No demo key: any visitor can
+    //      work an alert, like the citizen form. Only Reset and Inject (demo routes) need the key.
     const actionMatch = path.match(/^\/alerts\/([a-zA-Z0-9-]+)\/(ack|resolve|notes)$/);
     if (method === "POST" && actionMatch) {
-      if (!verifyDemoAuth(headers)) return unauthorized();
+      if (!(headerValue(headers, "X-Officer-Name") ?? "").trim()) return errorResponse(400, "OFFICER_NAME_REQUIRED", "Enter your name: the X-Officer-Name header is missing.");
       const [, id, action] = actionMatch;
       const alert = await db.getAlertById(id);
       if (!alert) return errorResponse(404, "NOT_FOUND", `No alert with id ${id}`);

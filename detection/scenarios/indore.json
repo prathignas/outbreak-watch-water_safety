@@ -1,0 +1,98 @@
+{
+  "title": "Indore Bhagirathpura drinking water contamination, Dec 2025 - Jan 2026",
+  "claim": "case study only; no detection result is computed",
+  "label": "reconstruction from public reports; dates are as each source states them, conflicting dates are kept as separate entries",
+  "place": {
+    "locality": "Bhagirathpura, Indore, Madhya Pradesh",
+    "ward": "Ward No. 11 of Indore Municipal Corporation",
+    "wardSource": {
+      "name": "Madhya Pradesh High Court, Indore bench, order in WP No. 50641 of 2025, dated 06-01-2026, para 1",
+      "url": "https://mphc.gov.in/upload/indore/MPHCIND/2025/WP/50641/WP_50641_2025_Order_06-01-2026.pdf"
+    }
+  },
+  "events": [
+    {
+      "id": "first-death-cremation",
+      "date": "2025-12-21",
+      "kind": "first_death",
+      "what": "First death, per cremation ground records: a 50-year-old woman visiting from Bihar was cremated on 21 December after 10-12 days of stomach pain, vomiting and diarrhoea.",
+      "sourceSays": "the first death occurred on December 21, not a few days ago as officially suggested",
+      "source": "Free Press Journal, \"MP News: Bhagirathpura Turns Into A Death Zone\" (updated 1 Jan 2026)",
+      "url": "https://www.freepressjournal.in/indore/mp-news-bhagirathpura-turns-into-a-death-zone",
+      "verified": "2026-10-06: page fetched, quote found"
+    },
+    {
+      "id": "first-cases-dec24",
+      "date": "2025-12-24",
+      "kind": "first_cases_reported",
+      "what": "Cases first reported (date as given by Scroll in its report on the High Court appointing an inquiry commission).",
+      "sourceSays": "The cases were first reported on December 24.",
+      "source": "Scroll, \"Indore water contamination: Madhya Pradesh HC appoints commission to probe deaths\" (28 Jan 2026)",
+      "url": "https://scroll.in/latest/1090318/scroll_in",
+      "verified": "2026-10-06: page fetched, quote found. The article states this itself; it does not cite a court document for this date.",
+      "todo": "TODO: find the High Court record that gives 24 December. The 06-01-2026 order (WP 50641/2025) was checked and does not state a first-case date."
+    },
+    {
+      "id": "first-cases-dec27-wikipedia",
+      "date": "2025-12-27",
+      "kind": "first_cases_reported",
+      "what": "First cases of illness reported (vomiting, diarrhoea, dehydration, weakness after drinking municipal tap water).",
+      "sourceSays": "On 27 December 2025, the first cases of illness were reported.",
+      "source": "Wikipedia, \"2025 Indore drinking water contamination\"",
+      "url": "https://en.wikipedia.org/wiki/2025_Indore_drinking_water_contamination",
+      "verified": "2026-10-06: page fetched, quote found. Wikipedia is a secondary source and can change."
+    },
+    {
+      "id": "first-cases-dec27-biotecnika",
+      "date": "2025-12-27",
+      "kind": "first_cases_reported",
+      "what": "First cases reported (as listed in the team brief for this source).",
+      "sourceSays": "TODO: not verified",
+      "source": "Biotecnika, \"Contaminated water outbreak in Bhagirathpura Indore causing waterborne infectious disease and mass hospitalisation\" (Jan 2026)",
+      "url": "https://www.biotecnika.org/2026/01/contaminated-water-waterborne-disease-bhagirathpura-indore",
+      "verified": "NOT VERIFIED: the site returned HTTP 403 on 2026-10-06. A search snippet of it says only \"late December 2025\".",
+      "todo": "TODO: open the page in a browser and confirm it says 27 December; remove this entry if it does not."
+    },
+    {
+      "id": "surveillance-intensified",
+      "date": "2026-01-04",
+      "kind": "surveillance_intensified",
+      "what": "Door-to-door health survey under way and a team from the Kolkata-based National Institute for Research in Bacterial Infections (NIRBI) arrived to probe the outbreak.",
+      "sourceSays": "a team from the Kolkata-based National Institute for Research in Bacterial Infections (NIRBI) has arrived in Indore to probe the health crisis",
+      "source": "WaterToday (5 Jan 2026), quoting the Chief Medical and Health Officer",
+      "url": "https://magazine.watertoday.org/news/national/indore-water-contamination-diarrhoea-outbreak-cases-bhagirathpura-indore-diarrhoea-death-toll-update-bhagirathpura-water-crisis-2026-nirbi-indore-probe-contaminated-water",
+      "verified": "2026-10-06: page fetched, quote found"
+    },
+    {
+      "id": "screening-jan4",
+      "date": "2026-01-04",
+      "kind": "screening_counts",
+      "what": "Screening counts for the day.",
+      "counts": { "peopleScreened": 9416, "households": 2354, "newCases": 20, "hospitalised": 142, "inIcu": 11 },
+      "sourceSays": "health teams examined 9,416 individuals from 2,354 households ... identified 20 fresh cases ... 142 patients are currently undergoing treatment in hospitals, including 11 admitted to intensive care units",
+      "sources": [
+        {
+          "name": "DT Next, \"Indore water contamination: 20 new diarrhoea cases detected; over 9,000 screened\" (4 Jan 2026)",
+          "url": "https://www.dtnext.in/news/national/indore-water-contamination-20-new-diarrhoea-cases-detected-over-9000-screened",
+          "verified": "2026-10-06: page fetched, all four numbers found"
+        },
+        {
+          "name": "WaterToday (5 Jan 2026)",
+          "url": "https://magazine.watertoday.org/news/national/indore-water-contamination-diarrhoea-outbreak-cases-bhagirathpura-indore-diarrhoea-death-toll-update-bhagirathpura-water-crisis-2026-nirbi-indore-probe-contaminated-water",
+          "verified": "2026-10-06: page fetched, same numbers found. The Hindu is credited there only for a photo.",
+          "todo": "TODO: find The Hindu's own article if it is to be cited directly."
+        }
+      ]
+    }
+  ],
+  "todo": [
+    "TODO: total cases and total deaths (sources disagree and the counts changed over time; not included).",
+    "TODO: when the contamination itself started and when the pipeline leak was found.",
+    "TODO: daily case counts before 4 Jan 2026 (none sourced; nothing may be invented to fill them).",
+    "TODO: any mapping of Bhagirathpura onto our data (we have no Indore ward or pipeline data)."
+  ],
+  "notes": [
+    "This file is a timeline for the story in the demo. Our detectors have never been run on Indore data and no Indore signal data exists in this project.",
+    "The gap between the first death (21 Dec, cremation records) and the first reported cases (24 or 27 Dec, depending on source) is what the case study illustrates."
+  ]
+}

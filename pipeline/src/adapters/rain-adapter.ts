@@ -1,7 +1,7 @@
 import { addDays } from "@outbreak/detection";
 import { toIstDateString } from "../date.js";
 import { type IngestResult, type SignalIngestionEngine } from "../engine.js";
-import { type FetchRainOptions, fetchOpenMeteoRain, validatePastDays } from "./rain-fetcher.js";
+import { type FetchRainOptions, fetchOpenMeteoRain, OPEN_METEO_FORECAST_URL, validatePastDays } from "./rain-fetcher.js";
 import {
   createRainSignalRows,
   type DailyRainReading,
@@ -64,12 +64,34 @@ export class RainAdapter {
     const clock = options.now ?? (() => new Date());
     const todayIst = toIstDateString(clock());
 
-    const rawJson = await this.fetcher({
-      startDate: addDays(todayIst, -pastDays),
-      endDate: todayIst,
-      fetchFn: options.fetchFn,
-    });
-    const { readings, skipped } = parseOpenMeteoRainResponse(rawJson);
+    const startDate = addDays(todayIst, -pastDays);
+    // The archive API answers up to today in UTC. Between 00:00 and 05:30 IST that is yesterday
+    // in India, so asking for todayIst would be refused (400): stop the archive at its last day.
+    const todayUtc = clock().toISOString().slice(0, 10);
+    const archiveEnd = todayUtc < todayIst ? todayUtc : todayIst;
+    const archive = parseOpenMeteoRainResponse(
+      await this.fetcher({ startDate, endDate: archiveEnd, fetchFn: options.fetchFn })
+    );
+    const readings = [...archive.readings];
+    let skipped = archive.skipped;
+
+    // Days the archive cannot give (after its last day) or left empty (null, not processed yet)
+    // come from the forecast API: same model, same point, its value for days already observed.
+    const missing = new Set(skipped.map((s) => s.date));
+    for (let day = addDays(archiveEnd, 1); day <= todayIst; day = addDays(day, 1)) {
+      if (!readings.some((r) => r.date === day)) missing.add(day);
+    }
+    if (missing.size > 0) {
+      const firstMissing = [...missing].sort()[0];
+      const forecast = parseOpenMeteoRainResponse(
+        await this.fetcher({ startDate: firstMissing, endDate: todayIst, baseUrl: OPEN_METEO_FORECAST_URL, fetchFn: options.fetchFn })
+      );
+      const filled = forecast.readings.filter((r) => missing.has(r.date));
+      readings.push(...filled);
+      readings.sort((a, b) => a.date.localeCompare(b.date));
+      const filledDates = new Set(filled.map((r) => r.date));
+      skipped = skipped.filter((s) => !filledDates.has(s.date));
+    }
 
     const validReadings: DailyRainReading[] = [];
     const droppedFuture: string[] = [];

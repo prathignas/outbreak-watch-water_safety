@@ -7,12 +7,15 @@ import { isValidDateString } from "../date.js";
  * RAIN_SOURCE, detection/scripts/fetch-rain.ts, detection/data/raw/rain.json):
  * the Open-Meteo **archive** API, the same point, daily precipitation_sum, Asia/Kolkata days,
  * and the default unit (mm). So live rain matches the rain the detector was scored on.
- * The archive API has no forecast days. (Checked 2026-10-07: it answers up to today.)
+ * The archive API has no forecast days and answers up to today in UTC (checked 2026-10-10),
+ * so the adapter asks the forecast API for any later India day (rain-adapter.ts).
  */
 export const BENGALURU_LATITUDE = RAIN_SOURCE.latitude;
 export const BENGALURU_LONGITUDE = RAIN_SOURCE.longitude;
 export const BENGALURU_TIMEZONE = RAIN_SOURCE.timezone;
 export const OPEN_METEO_BASE_URL = RAIN_SOURCE.url;
+/** Forecast API: fills the days the archive does not have yet (today in India before 05:30 IST, or a null day). */
+export const OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast";
 
 /**
  * Validates pastDays parameter (integer between 0 and 92 inclusive).
