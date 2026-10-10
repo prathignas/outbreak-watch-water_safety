@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740" font-family="Helvetica, Arial, sans-serif">
+  <title>Outbreak Watch architecture on AWS</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+    <style>
+      .box { fill: #fff; stroke-width: 2; rx: 8; }
+      .t { font-size: 14px; font-weight: 700; fill: #111; text-anchor: middle; }
+      .s { font-size: 12px; fill: #444; text-anchor: middle; }
+      .l { font-size: 12px; fill: #222; }
+      .flow { fill: none; stroke: #333; stroke-width: 1.8; marker-end: url(#a); }
+      .side { fill: none; stroke: #888; stroke-width: 1.5; stroke-dasharray: 6 4; marker-end: url(#g); }
+      .ext { fill: #f4f4f4; stroke: #999; stroke-width: 1.5; stroke-dasharray: 4 3; rx: 8; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="740" fill="#ffffff"/>
+
+  <!-- AWS boundary -->
+  <rect x="210" y="40" width="970" height="560" rx="12" fill="#fbfaf7" stroke="#232f3e" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="345" y="588" class="l" font-weight="700">AWS, ap-south-1. One CDK stack (infra/src/outbreak-stack.ts), deployed with npm run deploy</text>
+
+  <!-- Outside AWS -->
+  <rect x="20" y="90" width="170" height="60" class="ext"/>
+  <text x="105" y="116" class="t">Open-Meteo</text>
+  <text x="105" y="134" class="s">real rainfall</text>
+
+  <rect x="20" y="290" width="150" height="60" class="ext"/>
+  <text x="95" y="316" class="t">Citizen</text>
+  <text x="95" y="334" class="s">Report form</text>
+
+  <rect x="230" y="650" width="250" height="64" class="box" stroke="#DD344C"/>
+  <text x="355" y="676" class="t">AWS Amplify Hosting</text>
+  <text x="355" y="695" class="s">React web app: map, alerts, Report form</text>
+
+  <rect x="940" y="650" width="230" height="64" class="ext"/>
+  <text x="1055" y="676" class="t">Health officer</text>
+  <text x="1055" y="695" class="s">email inbox</text>
+
+  <!-- Ingestion column -->
+  <rect x="240" y="80" width="160" height="60" class="box" stroke="#E7157B"/>
+  <text x="320" y="106" class="t">Amazon EventBridge</text>
+  <text x="320" y="124" class="s">every hour</text>
+
+  <rect x="450" y="80" width="170" height="60" class="box" stroke="#ED7100"/>
+  <text x="535" y="106" class="t">AWS Lambda</text>
+  <text x="535" y="124" class="s">rain job</text>
+
+  <rect x="240" y="180" width="160" height="60" class="box" stroke="#E7157B"/>
+  <text x="320" y="206" class="t">Amazon EventBridge</text>
+  <text x="320" y="224" class="s">daily, 06:00 IST</text>
+
+  <rect x="450" y="180" width="170" height="60" class="box" stroke="#ED7100"/>
+  <text x="535" y="206" class="t">AWS Lambda</text>
+  <text x="535" y="224" class="s">daily feed job</text>
+
+  <rect x="240" y="290" width="160" height="60" class="box" stroke="#8C4FFF"/>
+  <text x="320" y="316" class="t">Amazon API Gateway</text>
+  <text x="320" y="334" class="s">REST API</text>
+
+  <rect x="450" y="290" width="170" height="60" class="box" stroke="#ED7100"/>
+  <text x="535" y="316" class="t">AWS Lambda</text>
+  <text x="535" y="334" class="s">API</text>
+
+  <!-- Database -->
+  <rect x="680" y="160" width="180" height="180" class="box" stroke="#3B48CC"/>
+  <text x="770" y="215" class="t">Amazon RDS</text>
+  <text x="770" y="235" class="s">PostgreSQL 16</text>
+  <text x="770" y="252" class="s">+ PostGIS</text>
+  <text x="770" y="285" class="s">signals, alerts,</text>
+  <text x="770" y="302" class="s">243 wards, 43 zones</text>
+
+  <!-- Detection column -->
+  <rect x="980" y="80" width="180" height="60" class="box" stroke="#E7157B"/>
+  <text x="1070" y="106" class="t">Amazon EventBridge</text>
+  <text x="1070" y="124" class="s">every 5 minutes</text>
+
+  <rect x="980" y="200" width="180" height="60" class="box" stroke="#ED7100"/>
+  <text x="1070" y="226" class="t">AWS Lambda</text>
+  <text x="1070" y="244" class="s">detector</text>
+
+  <rect x="980" y="330" width="180" height="60" class="box" stroke="#DD344C"/>
+  <text x="1070" y="356" class="t">Amazon SES</text>
+  <text x="1070" y="374" class="s">alert email</text>
+
+  <!-- Side services -->
+  <rect x="450" y="440" width="170" height="60" class="box" stroke="#7AA116"/>
+  <text x="535" y="466" class="t">Amazon S3</text>
+  <text x="535" y="484" class="s">raw copies by day</text>
+
+  <rect x="680" y="440" width="180" height="60" class="box" stroke="#E7157B"/>
+  <text x="770" y="466" class="t">Amazon CloudWatch</text>
+  <text x="770" y="484" class="s">logs, metrics, alarms</text>
+
+  <rect x="450" y="512" width="230" height="56" class="box" stroke="#DD344C"/>
+  <text x="565" y="536" class="t">Secrets Manager + SSM</text>
+  <text x="565" y="553" class="s">DB password, demo key, webhook secret</text>
+
+  <rect x="700" y="512" width="180" height="56" class="box" stroke="#7AA116"/>
+  <text x="790" y="536" class="t">AWS Budgets</text>
+  <text x="790" y="553" class="s">$30 a month, email at 80%</text>
+
+  <!-- Main flows -->
+  <path d="M105,90 V60 H535 V78" class="flow"/>
+  <text x="250" y="55" class="l">rainfall (mm)</text>
+
+  <path d="M400,110 H448" class="flow"/>
+  <path d="M400,210 H448" class="flow"/>
+  <path d="M170,320 H238" class="flow"/>
+  <text x="174" y="312" class="l">complaint</text>
+  <path d="M400,320 H448" class="flow"/>
+
+  <path d="M470,240 V265 H320 V288" class="flow"/>
+  <text x="478" y="262" class="l">pharmacy + hospital counts</text>
+
+  <path d="M620,110 H650 V180 H678" class="flow"/>
+  <text x="628" y="100" class="l">daily rain</text>
+  <path d="M620,210 H678" class="flow"/>
+  <text x="626" y="202" class="l">counts</text>
+  <path d="M620,320 H678" class="flow" marker-start="url(#a)"/>
+  <text x="626" y="312" class="l">counts</text>
+
+  <path d="M1070,140 V198" class="flow"/>
+  <text x="1078" y="174" class="l">run</text>
+
+  <path d="M860,215 H978" class="flow"/>
+  <text x="868" y="207" class="l">70 days of signals</text>
+  <path d="M980,245 H862" class="flow"/>
+  <text x="872" y="262" class="l">alerts</text>
+
+  <path d="M1070,260 V328" class="flow"/>
+  <text x="1078" y="298" class="l">alert</text>
+
+  <path d="M1070,390 V648" class="flow"/>
+  <text x="1078" y="625" class="l">email</text>
+
+  <path d="M320,350 V648" class="flow" marker-start="url(#a)"/>
+  <text x="328" y="625" class="l">alerts, map, officer actions</text>
+
+  <path d="M940,690 H482" class="flow" stroke-dasharray="5 4"/>
+  <text x="560" y="682" class="l">officer opens the alert in the app</text>
+
+  <!-- Side flows -->
+  <path d="M450,130 H430 V470 H448" class="side"/>
+  <path d="M450,230 H430" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M450,340 H430" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="440" y="395" class="l" fill="#666">raw copies</text>
+  <text x="440" y="411" class="l" fill="#666">(rain, feed, webhooks)</text>
+
+  <path d="M980,252 H930 V470 H862" class="side"/>
+  <text x="938" y="428" class="l" fill="#666">logs + metrics</text>
+</svg>
